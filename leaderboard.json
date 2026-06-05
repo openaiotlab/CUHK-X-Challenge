@@ -1,0 +1,13 @@
+{
+  "updated_at": "2026-06-05T06:36:50.269352Z",
+  "small": {
+    "error": "HTTPError: 401 Client Error: Unauthorized for url: https://api.kaggle.com/v1/competitions.CompetitionApiService/GetLeaderboard",
+    "entries": [],
+    "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-har-2026/leaderboard"
+  },
+  "large": {
+    "error": "HTTPError: 401 Client Error: Unauthorized for url: https://api.kaggle.com/v1/competitions.CompetitionApiService/GetLeaderboard",
+    "entries": [],
+    "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-vqa-2026/leaderboard"
+  }
+}

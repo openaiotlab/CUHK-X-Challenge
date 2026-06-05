@@ -1,0 +1,1607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>CUHK-X Multimodal Human Activity Challenge</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --navy: #06101f;
+    --navy2: #0c1a30;
+    --navy3: #112240;
+    --navy4: #1a3050;
+    --navy5: #223d63;
+    --cyan: #38bdf8;
+    --cyan-dim: rgba(56,189,248,0.13);
+    --teal: #2dd4bf;
+    --teal-dim: rgba(45,212,191,0.11);
+    --amber: #fbbf24;
+    --red: #f87171;
+    --text-primary: #e2eaf5;
+    --text-secondary: #8faac8;
+    --text-muted: #4d6b8a;
+    --border: rgba(56,189,248,0.1);
+    --border2: rgba(56,189,248,0.22);
+    --section-alt: #08121f;
+    --card-bg: #0d1e33;
+    --card-border: rgba(56,189,248,0.13);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; font-size: 18px; }
+  body {
+    background: var(--navy);
+    color: var(--text-primary);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 1rem;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--cyan); text-decoration: none; }
+  a:hover { opacity: 0.8; }
+
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(6,16,31,0.96);
+    border-bottom: 1px solid var(--border);
+    padding: 0 3rem;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 58px;
+    backdrop-filter: blur(12px);
+  }
+  .nav-logo { font-weight: 700; font-size: 1.05rem; color: var(--text-primary); }
+  .nav-logo span { color: var(--cyan); }
+  .nav-links { display: flex; gap: 1rem; list-style: none; align-items: center; }
+  .nav-links a { font-size: 0.88rem; font-weight: 500; color: var(--text-secondary); transition: color 0.15s; }
+  .nav-links a:hover { color: var(--text-primary); }
+  .nav-page-divider { color: var(--text-muted); opacity: 0.4; font-size: 1.1rem; user-select: none; padding: 0 0.3rem; }
+  .nav-page-label { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); padding: 0.18rem 0.5rem; border: 1px solid var(--border); border-radius: 3px; user-select: none; }
+  .nav-past { font-size: 0.88rem; border: 1px solid var(--border2); padding: 0.4rem 1rem; border-radius: 4px; color: var(--text-secondary); font-weight: 500; transition: all 0.15s; }
+  .nav-past:hover { color: var(--cyan); border-color: var(--cyan); }
+
+  section { padding: 80px 3rem; }
+  .inner { max-width: 960px; margin: 0 auto; }
+  .section-tag { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--cyan); margin-bottom: 0.5rem; display: block; }
+  h2.section-title { font-size: 2.1rem; font-weight: 700; line-height: 1.2; color: var(--text-primary); margin-bottom: 1rem; }
+  .section-desc { color: var(--text-secondary); max-width: 760px; font-size: 1rem; line-height: 1.8; }
+  .divider { height: 1px; background: var(--border); }
+
+  /* HERO */
+  #hero { padding-top: 150px; padding-bottom: 80px; text-align: center; }
+  .hero-badge { display: inline-block; font-size: 0.82rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; background: var(--cyan-dim); border: 1px solid var(--border2); padding: 0.4rem 1.1rem; border-radius: 20px; color: var(--cyan); margin-bottom: 1.5rem; }
+  #hero h1 { font-size: clamp(2.2rem, 4.5vw, 3.4rem); font-weight: 700; line-height: 1.15; color: var(--text-primary); margin-bottom: 1rem; letter-spacing: -0.02em; }
+  #hero h1 span { color: var(--cyan); }
+  #hero .lead { font-size: 1.1rem; color: var(--text-secondary); max-width: 660px; margin: 0 auto 2.5rem; line-height: 1.8; }
+  .hero-btns { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; }
+  .btn-p { background: var(--cyan); color: #06101f; font-weight: 600; font-size: 0.95rem; padding: 0.75rem 1.8rem; border-radius: 5px; transition: opacity 0.15s; }
+  .btn-p:hover { opacity: 0.85; }
+  .btn-o { border: 1px solid var(--border2); color: var(--text-secondary); font-size: 0.95rem; padding: 0.75rem 1.8rem; border-radius: 5px; transition: all 0.15s; font-weight: 500; }
+  .btn-o:hover { border-color: var(--cyan); color: var(--cyan); }
+  .hero-stats { display: grid; grid-template-columns: repeat(4,1fr); gap: 0; margin-top: 4rem; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+  .hero-stat { background: var(--card-bg); padding: 1.4rem 0.5rem; text-align: center; border-right: 1px solid var(--border); }
+  .hero-stat:last-child { border-right: none; }
+  .hero-stat .val { font-size: 1.75rem; font-weight: 700; color: var(--cyan); line-height: 1; }
+  .hero-stat .lbl { font-size: 0.78rem; color: var(--text-muted); margin-top: 0.4rem; line-height: 1.4; }
+
+  /* NEWS */
+  #news { background: var(--section-alt); }
+  .news-list { margin-top: 2rem; }
+  .news-item { display: flex; gap: 2rem; padding: 1rem 0; border-bottom: 1px solid var(--border); align-items: flex-start; }
+  .news-item:last-child { border-bottom: none; }
+  .news-date { font-size: 0.8rem; color: var(--text-muted); min-width: 85px; padding-top: 0.15rem; font-weight: 500; }
+  .news-tag { font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.07em; background: var(--cyan-dim); color: var(--cyan); padding: 0.15rem 0.6rem; border-radius: 3px; margin-right: 0.6rem; }
+  .news-tag.green { background: var(--teal-dim); color: var(--teal); }
+  .news-text { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.65; }
+
+  /* OVERVIEW & DATASET */
+  #overview { background: var(--navy); }
+  #dataset { background: var(--navy); }
+  .ov-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem; }
+  .no-rgb-callout { background: linear-gradient(135deg, rgba(248,113,113,0.09), rgba(56,189,248,0.05)); border: 1px solid rgba(248,113,113,0.28); border-radius: 8px; padding: 1.3rem 1.6rem; margin-top: 1.8rem; margin-bottom: 0.5rem; }
+  .callout-head { display: flex; align-items: center; gap: 0.65rem; margin-bottom: 0.6rem; }
+  .callout-icon { font-size: 1.4rem; color: var(--red); font-weight: 700; line-height: 1; }
+  .callout-title { font-size: 1rem; font-weight: 700; color: var(--text-primary); letter-spacing: 0.01em; }
+  .no-rgb-callout p { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.75; }
+  .tag-excluded { background: rgba(248,113,113,0.08); border: 1px solid rgba(248,113,113,0.25); color: var(--red); text-decoration: line-through; opacity: 0.85; }
+  .info-block { border-left: 2px solid var(--border2); padding-left: 1rem; margin-bottom: 1.2rem; }
+  .info-block dt { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 0.25rem; }
+  .info-block dd { font-size: 0.98rem; color: var(--text-primary); line-height: 1.6; }
+  .split-card { margin-top: 1.5rem; background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 8px; padding: 1.2rem 1.5rem; }
+  .split-card h4 { font-size: 0.85rem; font-weight: 600; color: var(--text-secondary); margin-bottom: 1rem; }
+  .split-row { display: flex; gap: 1rem; }
+  .split-item { flex: 1; text-align: center; padding: 1rem 0.5rem; background: var(--navy3); border-radius: 6px; }
+  .split-item .sv { font-size: 1.7rem; font-weight: 700; color: var(--cyan); }
+  .split-item .sl { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem; }
+  .split-item .su { font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.4rem; font-family: 'SF Mono', Menlo, monospace; }
+  .dataset-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem; }
+  .dl-btn { background: var(--card-bg); border: 1px solid var(--border2); border-radius: 8px; padding: 1.1rem 1.4rem; display: flex; align-items: center; gap: 1rem; color: var(--text-primary); transition: all 0.15s; }
+  .dl-btn:hover { border-color: var(--cyan); background: var(--navy3); opacity: 1; }
+  .dl-icon { font-size: 1.6rem; flex-shrink: 0; line-height: 1; }
+  .dl-text { display: flex; flex-direction: column; gap: 0.2rem; }
+  .dl-text strong { font-size: 0.95rem; font-weight: 600; color: var(--text-primary); }
+  .dl-text span { font-size: 0.8rem; color: var(--text-muted); font-family: 'SF Mono', Menlo, monospace; }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
+  .tag { background: var(--navy3); border: 1px solid var(--border); padding: 0.32rem 0.8rem; border-radius: 4px; font-size: 0.85rem; color: var(--text-secondary); font-weight: 500; }
+  .tag.b { background: var(--cyan-dim); border-color: var(--border2); color: var(--cyan); }
+  .tag.t { background: var(--teal-dim); border-color: rgba(45,212,191,0.25); color: var(--teal); }
+  .tag-label { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.09em; color: var(--text-muted); margin-top: 1.3rem; margin-bottom: 0.5rem; }
+
+  /* TRACKS */
+  #format { background: var(--section-alt); }
+  .tracks { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2.5rem; }
+  .track-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 8px; overflow: hidden; }
+  .track-head { padding: 1.1rem 1.4rem; border-bottom: 1px solid var(--border); }
+  .track-head-top { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.2rem; }
+  .track-head h3 { font-size: 1.1rem; font-weight: 600; color: var(--text-primary); }
+  .track-badge { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; padding: 0.22rem 0.65rem; border-radius: 3px; }
+  .track-badge.sm { background: var(--teal-dim); color: var(--teal); border: 1px solid rgba(45,212,191,0.25); }
+  .track-badge.lm { background: var(--cyan-dim); color: var(--cyan); border: 1px solid var(--border2); }
+  .track-head p { font-size: 0.82rem; color: var(--text-muted); }
+  .track-body { padding: 1.4rem; }
+  .tdesc { font-size: 0.93rem; color: var(--text-secondary); margin-bottom: 1.2rem; line-height: 1.75; }
+  .track-motiv { background: var(--navy3); border-left: 2px solid var(--cyan); padding: 0.8rem 1rem; margin-bottom: 1.2rem; border-radius: 0 5px 5px 0; }
+  .track-motiv .lbl { font-size: 0.66rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.09em; color: var(--cyan); margin-bottom: 0.3rem; }
+  .track-motiv p { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.65; }
+  .spec-list { margin-bottom: 1.2rem; }
+  .spec-item { display: flex; gap: 0.75rem; padding: 0.5rem 0; border-bottom: 1px solid var(--border); font-size: 0.9rem; }
+  .spec-item:last-child { border-bottom: none; }
+  .spec-k { color: var(--text-muted); font-weight: 500; min-width: 130px; font-size: 0.83rem; }
+  .spec-v { color: var(--text-primary); }
+  .score-h { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 0.7rem; }
+  .sc-row { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.5rem; }
+  .sc-label { font-size: 0.86rem; color: var(--text-secondary); flex: 1; }
+  .sc-bg { flex: 1.2; height: 4px; background: var(--navy5); border-radius: 2px; }
+  .sc-bar { height: 100%; border-radius: 2px; }
+  .sc-bar.c { background: var(--cyan); }
+  .sc-bar.t { background: var(--teal); }
+  .sc-pct { font-size: 0.8rem; color: var(--text-muted); min-width: 32px; text-align: right; }
+  .vqa-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; margin-top: 0.9rem; }
+  .vqa-table th { padding: 0.45rem 0.7rem; background: var(--navy3); color: var(--text-muted); font-weight: 600; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.07em; text-align: left; }
+  .vqa-table td { padding: 0.5rem 0.7rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+  .vqa-table td:first-child { color: var(--cyan); font-weight: 600; font-size: 0.85rem; }
+
+  /* STAGES */
+  .stages-intro { margin-top: 1.5rem; padding: 1rem 1.3rem; background: linear-gradient(135deg, rgba(56,189,248,0.10), rgba(45,212,191,0.04)); border-left: 3px solid var(--cyan); border-radius: 0 6px 6px 0; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7; }
+  .stages-intro strong { color: var(--text-primary); }
+  .stages { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; margin-top: 1.2rem; }
+  .stage.stage-selection { border-color: rgba(251,191,36,0.25); background: linear-gradient(135deg, var(--card-bg), rgba(251,191,36,0.04)); }
+  .stage { background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 1.4rem 1.5rem; position: relative; }
+  .stage.stage-finals { border-color: var(--border2); background: linear-gradient(135deg, var(--card-bg), rgba(56,189,248,0.04)); }
+  .stage-n { font-size: 1.9rem; font-weight: 700; color: rgba(56,189,248,0.12); line-height: 1; margin-bottom: 0.5rem; }
+  .stage h4 { font-size: 1.02rem; font-weight: 600; color: var(--cyan); margin-bottom: 0.35rem; }
+  .stage-period { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 0.7rem; font-family: 'SF Mono', Menlo, monospace; }
+  .stage p { font-size: 0.87rem; color: var(--text-secondary); line-height: 1.7; }
+  .stage ul { list-style: none; margin-top: 0.4rem; }
+  .stage ul li { font-size: 0.88rem; color: var(--text-secondary); padding: 0.32rem 0 0.32rem 1.1rem; position: relative; line-height: 1.55; }
+  .stage ul li::before { content: '›'; position: absolute; left: 0.2rem; top: 0.32rem; color: var(--cyan); font-weight: 700; }
+  .stage ul li strong { color: var(--text-primary); }
+  .ubicomp-badge { display: inline-block; background: var(--cyan-dim); color: var(--cyan); border: 1px solid var(--border2); padding: 0.15rem 0.55rem; border-radius: 3px; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-left: 0.45rem; vertical-align: middle; }
+
+  /* TRAVEL GRANTS */
+  /* VERIFICATION */
+  #verification { background: var(--section-alt); }
+  .verif-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2rem; }
+  .verif-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 8px; padding: 1.5rem; }
+  .verif-badge { display: inline-block; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.25rem 0.7rem; border-radius: 3px; margin-bottom: 0.8rem; }
+  .verif-badge.a { background: var(--teal-dim); color: var(--teal); border: 1px solid rgba(45,212,191,0.25); }
+  .verif-badge.b { background: var(--cyan-dim); color: var(--cyan); border: 1px solid var(--border2); }
+  .verif-card h3 { font-size: 1.05rem; color: var(--text-primary); margin-bottom: 0.5rem; }
+  .verif-card p { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: 0.8rem; }
+  .verif-card ul { list-style: none; }
+  .verif-card li { font-size: 0.85rem; color: var(--text-secondary); padding: 0.32rem 0 0.32rem 1rem; position: relative; line-height: 1.55; }
+  .verif-card li::before { content: '›'; position: absolute; left: 0.2rem; color: var(--cyan); font-weight: 700; }
+  .verif-card code { background: var(--navy3); padding: 0.1rem 0.4rem; border-radius: 3px; font-size: 0.78rem; color: var(--cyan); font-family: 'SF Mono', Menlo, monospace; }
+  .verif-section-h3 { font-size: 1.05rem; color: var(--text-primary); margin-top: 2.5rem; margin-bottom: 1rem; font-weight: 700; }
+  .rules-block { margin-top: 1.1rem; padding: 1rem 1.3rem; background: var(--card-bg); border: 1px solid var(--border); border-radius: 7px; border-left: 3px solid var(--red); }
+  .rules-block:has(.rules-h4.ok) { border-left-color: var(--teal); }
+  .rules-h4 { font-size: 0.9rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem; letter-spacing: 0.01em; }
+  .rules-list { list-style: none; }
+  .rules-list li { font-size: 0.88rem; color: var(--text-secondary); padding: 0.25rem 0 0.25rem 1.2rem; position: relative; line-height: 1.55; }
+  .rules-list li::before { content: '✗'; position: absolute; left: 0.2rem; color: var(--red); font-weight: 700; }
+  .rules-list.ok li::before { content: '✓'; color: var(--teal); }
+
+  .tier-table { width: 100%; border-collapse: collapse; margin-top: 1rem; background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 8px; overflow: hidden; }
+  .tier-table th { padding: 0.7rem 1rem; background: var(--navy3); font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.07em; color: var(--text-muted); text-align: left; border-bottom: 1px solid var(--border2); }
+  .tier-table td { padding: 0.8rem 1rem; font-size: 0.9rem; color: var(--text-secondary); border-bottom: 1px solid var(--border); }
+  .tier-table tr:last-child td { border-bottom: none; }
+  .tier-table td:first-child { font-size: 1.2rem; width: 50px; text-align: center; }
+  .tier-table tr.tier-1 td { color: var(--amber); }
+  .tier-table tr.tier-1 td strong { color: var(--amber); }
+
+  .travel-grants { margin-top: 2rem; background: linear-gradient(135deg, rgba(251,191,36,0.08), rgba(56,189,248,0.04)); border: 1px solid rgba(251,191,36,0.22); border-radius: 10px; padding: 1.5rem 1.7rem; }
+  .travel-grants h3 { font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.3rem; }
+  .travel-sub { font-size: 0.83rem; color: var(--text-muted); margin-bottom: 1rem; }
+  .travel-list { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; margin-bottom: 1rem; }
+  .travel-item { background: var(--card-bg); border: 1px solid var(--border); border-radius: 6px; padding: 0.9rem; text-align: center; }
+  .travel-medal { font-size: 1.4rem; display: block; margin-bottom: 0.3rem; }
+  .travel-place { font-size: 0.82rem; color: var(--text-secondary); margin-bottom: 0.3rem; font-weight: 600; }
+  .travel-amount { font-size: 1.2rem; font-weight: 700; color: var(--amber); }
+  .travel-note { font-size: 0.83rem; color: var(--text-muted); line-height: 1.6; margin-top: 0.3rem; }
+
+  /* LEADERBOARD */
+  #leaderboard { background: var(--section-alt); }
+  .lb-tabs { display: flex; gap: 0.6rem; margin-top: 2rem; margin-bottom: 1.2rem; flex-wrap: wrap; }
+  .lb-tab { padding: 0.5rem 1.2rem; border-radius: 5px; font-size: 0.88rem; font-weight: 600; border: 1px solid var(--border); color: var(--text-muted); cursor: pointer; transition: all 0.15s; background: transparent; }
+  .lb-tab:hover { color: var(--text-secondary); }
+  .lb-tab.active { background: var(--cyan-dim); border-color: var(--border2); color: var(--cyan); }
+  .lb-meta { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.7rem; flex-wrap: wrap; gap: 0.5rem; }
+  .lb-updated { font-size: 0.78rem; color: var(--text-muted); font-family: 'SF Mono', Menlo, monospace; }
+  .lb-source-link { font-size: 0.82rem; color: var(--cyan); }
+  .lb-table-wrap { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 8px; overflow: hidden; }
+  .lb-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+  .lb-table th { padding: 0.7rem 1rem; background: var(--navy3); border-bottom: 1px solid var(--border2); font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.07em; color: var(--text-muted); text-align: left; }
+  .lb-table td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); }
+  .lb-table tr:last-child td { border-bottom: none; }
+  .lb-table tr.r1 td { color: var(--amber); }
+  .lb-table tr.r2 td, .lb-table tr.r3 td { color: var(--text-primary); }
+  .lb-table .lb-team { font-weight: 600; }
+  .lb-table .lb-score { font-family: 'SF Mono', Menlo, monospace; font-weight: 600; color: var(--cyan); }
+  .lb-table .lb-date { color: var(--text-muted); font-size: 0.83rem; }
+  .lb-empty { padding: 2.5rem 1rem; text-align: center; color: var(--text-muted); font-size: 0.9rem; line-height: 1.7; }
+  .lb-empty strong { display: block; color: var(--text-secondary); font-size: 1rem; margin-bottom: 0.4rem; }
+  .rc { display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px; border-radius: 50%; font-size: 0.78rem; font-weight: 700; }
+  .rc.g { background: rgba(251,191,36,0.18); color: var(--amber); }
+  .rc.s { background: rgba(226,234,245,0.12); color: var(--text-primary); }
+  .rc.b { background: rgba(180,120,80,0.18); color: #d4a87a; }
+  .rc.n { background: var(--navy4); color: var(--text-muted); }
+
+  /* AWARDS */
+  #awards { background: var(--section-alt); }
+  .awards-top { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; margin-top: 2rem; }
+  .awards-bottom { display: flex; gap: 1rem; justify-content: center; margin-top: 1rem; }
+  .awards-bottom .award-card { max-width: 250px; flex: 1; }
+  .award-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 8px; padding: 1.4rem 1rem; text-align: center; }
+  .award-medal { font-size: 1.75rem; display: block; margin-bottom: 0.55rem; }
+  .award-place { font-size: 0.92rem; font-weight: 600; color: var(--text-secondary); margin-bottom: 0.5rem; }
+  .award-amount { font-size: 1.6rem; font-weight: 700; color: var(--amber); }
+  .award-note { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.35rem; }
+  .per-track { text-align: center; margin-top: 1.3rem; font-size: 0.88rem; color: var(--text-muted); }
+
+  /* TIMELINE */
+  #timeline { background: var(--navy); }
+  .tl { margin-top: 2.5rem; position: relative; padding-left: 150px; }
+  .tl::before { content: ''; position: absolute; left: 122px; top: 8px; bottom: 0; width: 1px; background: var(--border); }
+  .tl-item { margin-bottom: 2.2rem; position: relative; }
+  .tl-date { position: absolute; left: -150px; width: 105px; font-size: 0.78rem; color: var(--text-muted); font-weight: 500; text-align: right; padding-top: 0.2rem; line-height: 1.5; }
+  .tl-dot { position: absolute; left: -28px; width: 9px; height: 9px; border-radius: 50%; background: var(--navy); border: 2px solid var(--border2); margin-top: 0.38rem; }
+  .tl-dot.done { background: var(--cyan); border-color: var(--cyan); }
+  .tl-content h4 { font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.25rem; }
+  .tl-content p { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.7; max-width: 560px; }
+
+  /* REGISTRATION */
+  #registration { background: var(--section-alt); }
+  .prereg-card { background: linear-gradient(135deg, rgba(56,189,248,0.10), rgba(45,212,191,0.05)); border: 1px solid var(--border2); border-radius: 10px; padding: 1.8rem 2rem; margin-top: 2rem; display: grid; grid-template-columns: 1.5fr 1fr; gap: 2rem; align-items: center; }
+  .prereg-left h3 { font-size: 1.2rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.55rem; }
+  .prereg-left h3 .badge-soon { display: inline-block; font-size: 0.62rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; background: var(--amber); color: var(--navy); padding: 0.18rem 0.5rem; border-radius: 3px; vertical-align: middle; margin-left: 0.5rem; }
+  .prereg-left p { font-size: 0.93rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.2rem; }
+  .prereg-cta { display: inline-flex; align-items: center; gap: 0.5rem; }
+  .prereg-fields-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); font-weight: 600; margin-bottom: 0.7rem; }
+  .prereg-fields-list { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 0.4rem 1rem; }
+  .prereg-fields-list li { font-size: 0.83rem; color: var(--text-secondary); padding-left: 1.1rem; position: relative; line-height: 1.5; }
+  .prereg-fields-list li::before { content: '✓'; position: absolute; left: 0; top: 0; color: var(--cyan); font-weight: 700; font-size: 0.85rem; }
+  .reg-tracks { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2rem; }
+  .reg-track-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 8px; padding: 1.5rem; display: flex; flex-direction: column; align-items: flex-start; transition: border-color 0.15s; }
+  .reg-track-card:hover { border-color: var(--border2); }
+  .reg-tag { font-size: 0.63rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; padding: 0.2rem 0.6rem; border-radius: 3px; margin-bottom: 0.9rem; }
+  .reg-tag.sm { background: var(--teal-dim); color: var(--teal); border: 1px solid rgba(45,212,191,0.25); }
+  .reg-tag.lm { background: var(--cyan-dim); color: var(--cyan); border: 1px solid var(--border2); }
+  .reg-track-card h3 { font-size: 1.15rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.45rem; }
+  .reg-track-card p { font-size: 0.93rem; color: var(--text-secondary); line-height: 1.75; margin-bottom: 1.3rem; flex-grow: 1; }
+  .reg-btn { align-self: stretch; text-align: center; }
+  .reg-steps { display: grid; grid-template-columns: repeat(4,1fr); gap: 0.9rem; margin-top: 1rem; }
+  .reg-step { background: var(--card-bg); border: 1px solid var(--border); border-radius: 7px; padding: 1.1rem; }
+  .reg-step-n { font-size: 1.6rem; font-weight: 700; color: rgba(56,189,248,0.1); line-height: 1; margin-bottom: 0.45rem; }
+  .reg-step h4 { font-size: 0.95rem; font-weight: 600; color: var(--cyan); margin-bottom: 0.4rem; }
+  .reg-step p { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.65; }
+  .reg-info { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-top: 2rem; }
+  .reg-info-block { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 7px; padding: 1.3rem 1.5rem; }
+  .reg-info-block h4 { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--cyan); margin-bottom: 0.8rem; }
+  .reg-info-block ul { list-style: none; }
+  .reg-info-block li { font-size: 0.93rem; color: var(--text-secondary); padding: 0.38rem 0 0.38rem 1rem; position: relative; line-height: 1.65; }
+  .reg-info-block li::before { content: '›'; position: absolute; left: 0; top: 0.32rem; color: var(--cyan); font-weight: 700; }
+
+  /* SPONSORS */
+  #sponsors { background: var(--section-alt); }
+  .sponsor-row { display: flex; gap: 1.2rem; flex-wrap: wrap; margin-top: 2rem; align-items: center; }
+  .sponsor-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 8px; padding: 1.2rem 2rem; display: flex; align-items: center; gap: 0.9rem; }
+  .sponsor-name { font-size: 1.45rem; font-weight: 700; color: var(--text-primary); letter-spacing: -0.01em; }
+  .sponsor-tier { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--amber); border: 1px solid rgba(251,191,36,0.25); background: rgba(251,191,36,0.08); padding: 0.25rem 0.65rem; border-radius: 3px; }
+
+  /* ORGANIZERS */
+  #organizers { background: var(--navy); }
+  .org-group { margin-top: 2rem; }
+  .org-group-title { font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
+  .org-grid { display: flex; flex-wrap: wrap; gap: 1.2rem; justify-content: center; }
+  .org-card { flex: 0 1 220px; min-width: 200px; max-width: 240px; }
+  .org-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 7px; padding: 1.1rem; text-align: center; }
+  .org-av { width: 112px; height: 112px; border-radius: 50%; background: var(--navy4); border: 1px solid var(--border2); display: flex; align-items: center; justify-content: center; font-size: 1.25rem; font-weight: 600; color: var(--cyan); margin: 0 auto 1rem; overflow: hidden; }
+  .org-av img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 15%; display: block; }
+  .org-name { font-size: 0.95rem; font-weight: 600; color: var(--text-primary); }
+  .org-role { font-size: 0.78rem; color: var(--text-muted); margin-top: 0.2rem; }
+  .org-affil { font-size: 0.78rem; color: var(--cyan); margin-top: 0.3rem; }
+  .org-email { font-size: 0.75rem; color: var(--text-muted); margin-top: 0.3rem; word-break: break-all; }
+
+  /* CONTACT */
+  #contact { background: var(--section-alt); }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-top: 2rem; }
+  .contact-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 7px; padding: 1.3rem 1.4rem; }
+  .contact-card h4 { font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.09em; color: var(--text-muted); margin-bottom: 0.9rem; }
+  .contact-row { display: flex; align-items: flex-start; gap: 0.6rem; margin-bottom: 0.55rem; font-size: 0.93rem; }
+  .cdot { width: 5px; height: 5px; border-radius: 50%; background: var(--cyan); flex-shrink: 0; margin-top: 0.5rem; }
+
+  /* PAST */
+  #past { background: var(--navy); }
+  .past-links { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1.5rem; }
+  .past-link { background: var(--navy3); border: 1px solid var(--border); padding: 0.6rem 1.2rem; border-radius: 5px; font-size: 0.83rem; color: var(--text-secondary); transition: all 0.15s; font-weight: 500; }
+  .past-link:hover { border-color: var(--cyan); color: var(--cyan); }
+
+  /* REGISTRATION MODAL */
+  .modal-backdrop { position: fixed; inset: 0; background: rgba(6,16,31,0.85); backdrop-filter: blur(6px); z-index: 1000; display: none; align-items: flex-start; justify-content: center; padding: 4rem 1rem 2rem; overflow-y: auto; }
+  .modal-backdrop.open { display: flex; }
+  .modal { background: var(--card-bg); border: 1px solid var(--border2); border-radius: 12px; max-width: 640px; width: 100%; padding: 2rem 2.2rem; box-shadow: 0 20px 60px rgba(0,0,0,0.5); position: relative; }
+  .modal-close { position: absolute; top: 1rem; right: 1.2rem; background: transparent; border: none; color: var(--text-muted); font-size: 1.5rem; cursor: pointer; line-height: 1; padding: 0.3rem; }
+  .modal-close:hover { color: var(--cyan); }
+  .modal h3 { font-size: 1.4rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.3rem; }
+  .modal-sub { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1.5rem; }
+  .form-row { margin-bottom: 1.1rem; }
+  .form-row.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .form-row label { display: block; font-size: 0.78rem; font-weight: 600; color: var(--text-secondary); margin-bottom: 0.4rem; letter-spacing: 0.02em; }
+  .form-row label .req { color: var(--red); margin-left: 0.2rem; }
+  .form-row input, .form-row select, .form-row textarea { width: 100%; background: var(--navy3); border: 1px solid var(--border); border-radius: 5px; padding: 0.6rem 0.8rem; color: var(--text-primary); font-family: inherit; font-size: 0.92rem; transition: border-color 0.15s; }
+  .form-row input:focus, .form-row select:focus, .form-row textarea:focus { outline: none; border-color: var(--cyan); }
+  .form-row textarea { resize: vertical; min-height: 70px; }
+  .form-row .helper { font-size: 0.75rem; color: var(--text-muted); margin-top: 0.3rem; }
+  .member-input { display: flex; gap: 0.5rem; margin-bottom: 0.45rem; align-items: center; }
+  .member-input input { flex: 1; }
+  .remove-member-btn { background: transparent; border: 1px solid var(--border); color: var(--text-muted); width: 34px; height: 34px; min-width: 34px; border-radius: 4px; cursor: pointer; font-size: 1.1rem; line-height: 1; padding: 0; transition: all 0.15s; font-family: inherit; }
+  .remove-member-btn:hover { color: var(--red); border-color: var(--red); }
+  .add-member-btn { background: transparent; border: 1px dashed var(--border2); color: var(--cyan); padding: 0.5rem 1rem; border-radius: 5px; cursor: pointer; font-size: 0.85rem; font-weight: 600; margin-top: 0.4rem; transition: all 0.15s; font-family: inherit; }
+  .add-member-btn:hover { background: var(--cyan-dim); }
+  .add-member-btn:disabled { opacity: 0.4; cursor: not-allowed; color: var(--text-muted); border-style: solid; }
+  .checkbox-group { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .checkbox-group label { display: inline-flex; align-items: center; gap: 0.45rem; font-weight: 500; font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 0; cursor: pointer; text-transform: none; letter-spacing: 0; }
+  .checkbox-group input[type="checkbox"], .checkbox-group input[type="radio"] { width: 16px; height: 16px; accent-color: var(--cyan); cursor: pointer; }
+  .form-actions { display: flex; gap: 0.7rem; margin-top: 1.5rem; align-items: center; }
+  .form-actions .btn-p { padding: 0.7rem 1.6rem; cursor: pointer; border: none; font-family: inherit; }
+  .form-actions .btn-p:disabled { opacity: 0.5; cursor: not-allowed; }
+  .form-status { font-size: 0.85rem; }
+  .form-status.success { color: var(--teal); }
+  .form-status.error { color: var(--red); }
+  .form-status.loading { color: var(--text-muted); }
+  body.modal-open { overflow: hidden; }
+
+  /* 2-Page mode — sections grouped into 2 pages */
+  body.page-mode section[data-page]:not(.visible-page) { display: none; }
+  body.page-mode .nav-links a.active { color: var(--cyan); }
+  body.page-mode .nav-logo { cursor: pointer; }
+  /* Compact hero when not on home page */
+  body.page-mode:not(.home-view) #hero { padding-top: 110px; padding-bottom: 50px; }
+  body.page-mode:not(.home-view) #hero h1 { font-size: clamp(1.8rem, 3.5vw, 2.6rem); }
+  body.page-mode:not(.home-view) #hero .lead { display: none; }
+  body.page-mode:not(.home-view) #hero .hero-stats { display: none; }
+  body.page-mode:not(.home-view) #hero .hero-btns { margin-bottom: 0; }
+
+  footer { background: var(--navy2); border-top: 1px solid var(--border); padding: 2rem 3rem; text-align: center; font-size: 0.88rem; color: var(--text-muted); }
+  footer a { color: var(--text-muted); }
+  footer a:hover { color: var(--cyan); }
+
+  @media(max-width:720px){
+    nav { padding: 0 1.2rem; }
+    .nav-links { display: none; }
+    section { padding: 60px 1.2rem; }
+    .tracks { grid-template-columns: 1fr; }
+    .stages { grid-template-columns: 1fr; }
+    .hero-stats { grid-template-columns: repeat(2,1fr); }
+    .ov-cols { grid-template-columns: 1fr; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .awards-top { grid-template-columns: 1fr; }
+    .awards-bottom { flex-direction: column; align-items: center; }
+    .reg-tracks { grid-template-columns: 1fr; }
+    .reg-steps { grid-template-columns: repeat(2,1fr); }
+    .reg-info { grid-template-columns: 1fr; }
+    .dataset-actions { grid-template-columns: 1fr; }
+    .prereg-card { grid-template-columns: 1fr; gap: 1.5rem; padding: 1.5rem; }
+    .travel-list { grid-template-columns: 1fr; }
+    .stages { grid-template-columns: 1fr; }
+    .verif-cards { grid-template-columns: 1fr; }
+    .tier-table { font-size: 0.82rem; }
+    .tier-table td, .tier-table th { padding: 0.6rem 0.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">CUHK<span>-X</span> Challenge</div>
+  <ul class="nav-links">
+    <li class="nav-page-label">Page 1</li>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#format">Challenge Format</a></li>
+    <li><a href="#awards">Awards</a></li>
+    <li><a href="#timeline">Timeline</a></li>
+    <li><a href="#organizers">Organizers</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li class="nav-page-divider">│</li>
+    <li class="nav-page-label">Page 2</li>
+    <li><a href="#news">News</a></li>
+    <li><a href="#leaderboard">Leaderboard</a></li>
+    <li><a href="#registration">Registration</a></li>
+    <li><a href="#dataset">Dataset Intro</a></li>
+    <li><a href="#verification">Rules</a></li>
+  </ul>
+  <a href="#registration" class="nav-past">Register Now</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="inner">
+    <div class="hero-badge">Co-located with UbiComp 2026 · Kaggle · Two Tracks</div>
+    <h1>CUHK-X Multimodal<br/><span>Human Activity</span> Challenge</h1>
+    <p class="lead">An international competition spanning lightweight efficient models and frontier multimodal LLMs on depth, IMU, mmWave radar, and skeleton modalities — built on the CUHK-X benchmark for HAR, HAU, and HARn tasks.</p>
+    <div class="hero-btns">
+      <a href="https://www.kaggle.com/" class="btn-p">Join on Kaggle</a>
+      <a href="https://openaiotlab.github.io/CUHK-X/" class="btn-o">Dataset Homepage</a>
+      <a href="https://github.com/openaiotlab/CUHK-X" class="btn-o">GitHub</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="val">2</div><div class="lbl">Parallel Tracks</div></div>
+      <div class="hero-stat"><div class="val">6</div><div class="lbl">Modalities</div></div>
+      <div class="hero-stat"><div class="val">40</div><div class="lbl">Action Classes</div></div>
+      <div class="hero-stat"><div class="val">$20K</div><div class="lbl">Total Prize Pool</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- OVERVIEW -->
+<section id="overview" data-page="1">
+  <div class="inner">
+    <span class="section-tag">The Challenge</span>
+    <h2 class="section-title">Competition Overview</h2>
+    <p class="section-desc">
+      The CUHK-X Multimodal Human Activity Challenge is the first large-scale international competition that <strong style="color:var(--text-primary)">excludes RGB data entirely</strong> — models must learn human dynamics from <strong style="color:var(--text-primary)">depth, IMU, mmWave radar, and skeleton</strong> modalities alone. This privacy-preserving design mirrors the deployment reality of healthcare, smart home, and elderly-care systems, where visual privacy must be preserved at every stage of training, validation, and inference.
+    </p>
+    <p class="section-desc" style="margin-top:0.8rem;">
+      Hosted by the AIoT Lab at The Chinese University of Hong Kong on Kaggle across two parallel tracks, with finals held alongside <strong style="color:var(--text-primary)">UbiComp 2026 in Shanghai</strong>. The Small Model Track targets efficient, edge-deployable HAR; the Large Model Track pushes multimodal LLMs on depth-video VQA covering action understanding and reasoning. Total prize pool: <strong style="color:var(--amber)">USD $20,000</strong>.
+    </p>
+
+    <div class="ov-cols">
+      <div>
+        <div class="info-block">
+          <dt>Host</dt>
+          <dd>CUHK · AIoT Lab</dd>
+        </div>
+        <div class="info-block">
+          <dt>Platform</dt>
+          <dd>Kaggle — two parallel competitions</dd>
+        </div>
+        <div class="info-block">
+          <dt>Duration</dt>
+          <dd>June 15 – September 15, 2026</dd>
+        </div>
+        <div class="info-block">
+          <dt>Finals Venue</dt>
+          <dd>UbiComp 2026 · Shanghai · Oct 11, 2026</dd>
+        </div>
+      </div>
+      <div>
+        <div class="info-block">
+          <dt>Two Tracks</dt>
+          <dd>Small Model (HAR) · Large Model (VQA)</dd>
+        </div>
+        <div class="info-block">
+          <dt>Permitted Modalities</dt>
+          <dd>Depth · IMU · mmWave · Skeleton · Thermal · Infrared</dd>
+        </div>
+        <div class="info-block">
+          <dt>Total Prize Pool</dt>
+          <dd style="color:var(--amber);font-weight:700;font-size:1.05rem;">USD $20,000</dd>
+        </div>
+        <div class="info-block">
+          <dt>Finals Format</dt>
+          <dd>On-site deployment · technical report · awards</dd>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- NEWS -->
+<section id="news" data-page="2">
+  <div class="inner">
+    <span class="section-tag">Latest</span>
+    <h2 class="section-title">News</h2>
+    <div class="news-list">
+      <div class="news-item">
+        <div class="news-date">May 23, 2026</div>
+        <div><span class="news-tag">Website</span><span class="news-text">Official CUHK-X Challenge website is now live, and the full CUHK-X dataset has been officially released to the public.</span></div>
+      </div>
+      <div class="news-item">
+        <div class="news-date">Apr 15, 2026</div>
+        <div><span class="news-tag green">Paper</span><span class="news-text">CUHK-X paper has been accepted by <strong style="color:var(--text-primary)">MobiSys 2026</strong> — camera-ready version submitted.</span></div>
+      </div>
+      <div class="news-item">
+        <div class="news-date">Mar 2026</div>
+        <div><span class="news-tag">Dataset</span><span class="news-text">CUHK-S (a subset of CUHK-X with 18 users, RGB excluded) released for community preview and feedback.</span></div>
+      </div>
+      <div class="news-item">
+        <div class="news-date">Nov 4, 2025</div>
+        <div><span class="news-tag green">Award</span><span class="news-text">CUHK-X received the <strong style="color:var(--text-primary)">Best Presentation Award</strong> at the ANAI Workshop @ MobiCom 2025.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- FORMAT -->
+<section id="format" data-page="1">
+  <div class="inner">
+    <span class="section-tag">Competition structure</span>
+    <h2 class="section-title">Challenge Format</h2>
+    <p class="section-desc">Two independent parallel tracks, each with its own Kaggle leaderboard, prize pool, and evaluation criteria.</p>
+
+    <div class="tracks">
+      <div class="track-card">
+        <div class="track-head">
+          <div class="track-head-top">
+            <h3>Small Model Track</h3>
+            <span class="track-badge sm">HAR · Lightweight</span>
+          </div>
+          <p>Efficient multimodal Human Activity Recognition</p>
+        </div>
+        <div class="track-body">
+          <p class="tdesc">Targeted at <strong style="color:var(--text-primary)">resource-constrained edge deployment</strong> in smart home and healthcare scenarios — applications such as Alzheimer's monitoring, fall detection, and elderly care, where models must run on low-power devices with limited memory and compute.</p>
+          <p class="tdesc">Participants build lightweight multimodal models that fuse <strong style="color:var(--text-primary)">depth imagery, IMU streams, mmWave radar, and skeleton keypoints</strong> to classify 40 daily activities under strict <strong style="color:var(--text-primary)">cross-subject</strong> evaluation. Traditional architectures (CNN, RNN, Transformer) are encouraged; large pretrained foundation models are not permitted — placing the spotlight on architecture design, sensor fusion, and inference efficiency.</p>
+          <div class="spec-list">
+            <div class="spec-item"><span class="spec-k">Task</span><span class="spec-v">40-class HAR · Cross-Subject</span></div>
+            <div class="spec-item"><span class="spec-k">Cross-Subject Split</span><span class="spec-v">Train: user 1–9, 16–24 · Test: user 10–12, 25–27</span></div>
+            <div class="spec-item"><span class="spec-k">Primary Modalities</span><span class="spec-v">Depth, IMU, mmWave, Skeleton</span></div>
+            <div class="spec-item"><span class="spec-k">Model Constraint</span><span class="spec-v">CNN / RNN / Transformer · <strong style="color:var(--text-primary)">model size ≤ 100 MB</strong> · no large pretrained backbones</span></div>
+            <div class="spec-item"><span class="spec-k">Prize Pool</span><span class="spec-v" style="color:var(--amber);font-weight:600;">USD $10,000</span></div>
+          </div>
+          <div class="score-h">Final Scoring Breakdown (for finalists)</div>
+          <div class="sc-row"><span class="sc-label">Kaggle Private LB</span><div class="sc-bg"><div class="sc-bar t" style="width:20%"></div></div><span class="sc-pct">20%</span></div>
+          <div class="sc-row"><span class="sc-label">Final On-Site Private Test</span><div class="sc-bg"><div class="sc-bar t" style="width:30%"></div></div><span class="sc-pct">30%</span></div>
+          <div class="sc-row"><span class="sc-label">Reproducibility (Stage 2)</span><div class="sc-bg"><div class="sc-bar t" style="width:10%"></div></div><span class="sc-pct">10%</span></div>
+          <div class="sc-row"><span class="sc-label">Technical Report</span><div class="sc-bg"><div class="sc-bar t" style="width:20%"></div></div><span class="sc-pct">20%</span></div>
+          <div class="sc-row"><span class="sc-label">Presentation</span><div class="sc-bg"><div class="sc-bar t" style="width:10%"></div></div><span class="sc-pct">10%</span></div>
+          <div class="sc-row"><span class="sc-label">Model Efficiency</span><div class="sc-bg"><div class="sc-bar t" style="width:10%"></div></div><span class="sc-pct">10%</span></div>
+        </div>
+      </div>
+
+      <div class="track-card">
+        <div class="track-head">
+          <div class="track-head-top">
+            <h3>Large Model Track</h3>
+            <span class="track-badge lm">VQA · HAU &amp; HARn</span>
+          </div>
+          <p>LVLMs on depth &amp; non-RGB modalities</p>
+        </div>
+        <div class="track-body">
+          <p class="tdesc">Pushes the frontier of <strong style="color:var(--text-primary)">Large Vision-Language Models</strong> on non-RGB modalities — specifically depth video.</p>
+          <p class="tdesc">Participants tackle <strong style="color:var(--text-primary)">Human Action Understanding (HAU)</strong> and <strong style="color:var(--text-primary)">Human Action Reasoning (HARn)</strong> through depth-video <strong style="color:var(--text-primary)">Visual Question Answering</strong>. There is no parameter limit, encouraging exploration of prompt design, modality alignment, and fine-tuning at scale.</p>
+          <div class="spec-list">
+            <div class="spec-item"><span class="spec-k">Task</span><span class="spec-v">VQA on depth video — 5 question types</span></div>
+            <div class="spec-item"><span class="spec-k">Cross-Subject Split</span><span class="spec-v">Train: user 1–9, 16–24 · Test: user 10–12, 25–27</span></div>
+            <div class="spec-item"><span class="spec-k">Primary Modalities</span><span class="spec-v">Depth</span></div>
+            <div class="spec-item"><span class="spec-k">Model Constraint</span><span class="spec-v">No parameter limit · LVLMs encouraged</span></div>
+            <div class="spec-item"><span class="spec-k">Prize Pool</span><span class="spec-v" style="color:var(--amber);font-weight:600;">USD $10,000</span></div>
+          </div>
+          <div class="score-h">Final Scoring Breakdown (for finalists)</div>
+          <div class="sc-row"><span class="sc-label">Kaggle Private LB</span><div class="sc-bg"><div class="sc-bar c" style="width:20%"></div></div><span class="sc-pct">20%</span></div>
+          <div class="sc-row"><span class="sc-label">Final On-Site Private Test</span><div class="sc-bg"><div class="sc-bar c" style="width:30%"></div></div><span class="sc-pct">30%</span></div>
+          <div class="sc-row"><span class="sc-label">Reproducibility (Stage 2)</span><div class="sc-bg"><div class="sc-bar c" style="width:10%"></div></div><span class="sc-pct">10%</span></div>
+          <div class="sc-row"><span class="sc-label">Technical Report</span><div class="sc-bg"><div class="sc-bar c" style="width:20%"></div></div><span class="sc-pct">20%</span></div>
+          <div class="sc-row"><span class="sc-label">Presentation</span><div class="sc-bg"><div class="sc-bar c" style="width:10%"></div></div><span class="sc-pct">10%</span></div>
+          <div class="sc-row"><span class="sc-label">Model Efficiency</span><div class="sc-bg"><div class="sc-bar c" style="width:10%"></div></div><span class="sc-pct">10%</span></div>
+        </div>
+      </div>
+    </div>
+
+    <p style="font-size:0.72rem;font-weight:600;text-transform:uppercase;letter-spacing:0.09em;color:var(--text-muted);margin-top:2.5rem;margin-bottom:0.5rem;">Three-Stage Competition · Both Tracks</p>
+    <div class="stages-intro">
+      The CUHK-X Challenge runs across <strong>three stages</strong>: a 3-month Kaggle phase, a Zoom-based selection stage to verify reproducibility and prevent cheating, and the <strong>on-site finals at UbiComp 2026 in Shanghai</strong>. Top 15 teams per track on the Kaggle private leaderboard advance to selection; top 6 then advance to finals.
+    </div>
+    <div class="stages">
+      <div class="stage">
+        <div class="stage-n">01</div>
+        <h4>Kaggle Open Competition</h4>
+        <div class="stage-period">Jun 15 – Sep 15, 2026 · 3 months</div>
+        <ul>
+          <li>Submit prediction CSVs to Kaggle</li>
+          <li>Public leaderboard for reference; <strong>private leaderboard</strong> decides ranking</li>
+          <li>Certificate awards: <strong>Excellence (Top 15%)</strong>, Distinction (Top 30%), Successful Participation</li>
+          <li><strong>Top 15 teams per track</strong> advance to Selection Stage</li>
+        </ul>
+      </div>
+      <div class="stage stage-selection">
+        <div class="stage-n">02</div>
+        <h4>Selection Stage · Zoom Verification</h4>
+        <div class="stage-period">Sep 16 – Sep 30, 2026 · 2 weeks</div>
+        <ul>
+          <li>Top 15 submit <strong>code + checkpoint + inference.sh</strong> via email/Drive</li>
+          <li>Zoom session: live inference on <strong>sample data</strong> (released at session start)</li>
+          <li>Sample data has <strong>seen + unseen subjects</strong> — accuracy gap reveals cheating</li>
+          <li>Organizers reproduce Kaggle result offline to verify weights</li>
+          <li><strong>Top 6 teams per track</strong> pass to UbiComp finals</li>
+        </ul>
+      </div>
+      <div class="stage stage-finals">
+        <div class="stage-n">03</div>
+        <h4>UbiComp Finals <span class="ubicomp-badge">UbiComp 2026</span></h4>
+        <div class="stage-period">Oct 11, 2026 · Shanghai · 1 day</div>
+        <ul>
+          <li>On-site inference on organizer's <strong>brand new private dataset</strong> (cross-subject)</li>
+          <li><strong>Mandatory:</strong> 15-min technical report presentation + Q&amp;A</li>
+          <li>Awards ceremony + <strong>USD $500 travel grant</strong> per attending finalist team</li>
+          <li>Remote participation via Zoom supported if travel is not possible</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- AWARDS -->
+<section id="awards" data-page="1">
+  <div class="inner">
+    <span class="section-tag">Prizes</span>
+    <h2 class="section-title">Awards</h2>
+    <p class="section-desc">Each track carries an independent prize pool of USD $10,000. The following prizes apply independently to both the Small Model Track and the Large Model Track.</p>
+    <div class="awards-top">
+      <div class="award-card">
+        <span class="award-medal">🥇</span>
+        <div class="award-place">1st Place × 1</div>
+        <div class="award-amount">$6,000</div>
+        <div class="award-note">Highest overall score</div>
+      </div>
+      <div class="award-card">
+        <span class="award-medal">🥈</span>
+        <div class="award-place">2nd Place × 1</div>
+        <div class="award-amount">$3,000</div>
+        <div class="award-note">Second-ranked team</div>
+      </div>
+      <div class="award-card">
+        <span class="award-medal">🥉</span>
+        <div class="award-place">3rd Place × 1</div>
+        <div class="award-amount">$1,000</div>
+        <div class="award-note">Third-ranked team</div>
+      </div>
+    </div>
+    <div class="awards-bottom">
+      <div class="award-card">
+        <span class="award-medal">📄</span>
+        <div class="award-place">Best Report Award</div>
+        <div class="award-amount" style="font-size:1rem;color:var(--text-secondary)">TBD</div>
+        <div class="award-note">Selected by review committee</div>
+      </div>
+      <div class="award-card">
+        <span class="award-medal">⭐</span>
+        <div class="award-place">Most Popular Award</div>
+        <div class="award-amount" style="font-size:1rem;color:var(--text-secondary)">TBD</div>
+        <div class="award-note">Community vote / most innovative</div>
+      </div>
+      <div class="award-card">
+        <span class="award-medal">🎓</span>
+        <div class="award-place">Best Faculty Advisor Award</div>
+        <div class="award-amount" style="font-size:1rem;color:var(--text-secondary)">TBD</div>
+        <div class="award-note">Advisor of highest-scoring student team</div>
+      </div>
+    </div>
+    <p class="per-track">$10,000 per track · $20,000 total across both tracks</p>
+
+    <!-- 5-tier award certificates -->
+    <p style="font-size:0.72rem;font-weight:600;text-transform:uppercase;letter-spacing:0.09em;color:var(--text-muted);margin-top:2.5rem;margin-bottom:0.8rem;">Certificate Awards · Both Tracks</p>
+    <p style="font-size:0.92rem;color:var(--text-secondary);margin-bottom:1.2rem;line-height:1.7;">Beyond the prize-money tiers above, every participating team is recognized through a 5-tier certificate system (per track). Tiers are nested — each team receives only their highest-qualifying award.</p>
+
+    <table class="tier-table">
+      <thead>
+        <tr>
+          <th>Tier</th>
+          <th>Award</th>
+          <th>Eligibility</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="tier-1">
+          <td>🏆</td>
+          <td><strong>Outstanding Award</strong></td>
+          <td>UbiComp Finals Top 6</td>
+        </tr>
+        <tr class="tier-2">
+          <td>🎖️</td>
+          <td><strong>Finalist Award</strong></td>
+          <td>Kaggle Private LB Top 15</td>
+        </tr>
+        <tr class="tier-3">
+          <td>🎗️</td>
+          <td><strong>Excellence Award</strong></td>
+          <td>Kaggle Private LB Top 15% (excl. Top 15)</td>
+        </tr>
+        <tr class="tier-4">
+          <td>📜</td>
+          <td><strong>Distinction Award</strong></td>
+          <td>Kaggle Private LB Top 30% (excl. above)</td>
+        </tr>
+        <tr class="tier-5">
+          <td>✨</td>
+          <td><strong>Successful Participation Award</strong></td>
+          <td>Teams with ≥ 1 valid submission</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:0.82rem;color:var(--text-muted);margin-top:0.6rem;">All certificates are issued electronically to the email address provided during team registration.</p>
+
+    <div class="travel-grants">
+      <h3>✈️ Travel Grants for UbiComp 2026 Finalists</h3>
+      <p class="travel-sub">Flat travel grant for every finalist team attending in person at UbiComp 2026 Shanghai</p>
+      <div class="travel-list" style="grid-template-columns: 1fr; max-width: 360px; margin: 0 auto;">
+        <div class="travel-item">
+          <span class="travel-medal">✈️</span>
+          <div class="travel-place">All Finalist Teams (Top 6 per track)</div>
+          <div class="travel-amount">USD $500 / team</div>
+        </div>
+      </div>
+      <p class="travel-note"><strong style="color:var(--text-secondary)">In-person attendance is strongly encouraged.</strong> Teams unable to travel may join remotely via Zoom — organizers will operate the projector and coordinate live Q&amp;A on their behalf. Remote teams remain eligible for prizes and awards, but travel grants only apply to teams attending in person.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- LEADERBOARD -->
+<section id="leaderboard" data-page="2">
+  <div class="inner">
+    <span class="section-tag">Live Rankings</span>
+    <h2 class="section-title">Leaderboard</h2>
+    <p class="section-desc">Top 20 teams per track, auto-synced from Kaggle every day at 10:00 HKT.</p>
+
+    <div class="lb-tabs">
+      <div class="lb-tab active" data-track="small">Small Model Track</div>
+      <div class="lb-tab" data-track="large">Large Model Track</div>
+    </div>
+
+    <div class="lb-meta">
+      <span class="lb-updated" id="lb-updated">Last updated: —</span>
+      <a class="lb-source-link" id="lb-source-link" href="https://www.kaggle.com/" target="_blank" rel="noopener">View full leaderboard on Kaggle →</a>
+    </div>
+
+    <div class="lb-table-wrap">
+      <table class="lb-table">
+        <thead>
+          <tr>
+            <th style="width:72px;">Rank</th>
+            <th>Team</th>
+            <th style="width:130px;">Score</th>
+            <th style="width:110px;">Submissions</th>
+            <th style="width:130px;">Last Submission</th>
+          </tr>
+        </thead>
+        <tbody id="lb-body">
+          <tr><td colspan="5" class="lb-empty">Loading…</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- TIMELINE -->
+<section id="timeline" data-page="1">
+  <div class="inner">
+    <span class="section-tag">Schedule</span>
+    <h2 class="section-title">Challenge Timeline</h2>
+    <div class="tl">
+      <div class="tl-item">
+        <div class="tl-date">May 23<br/>2026</div>
+        <div class="tl-dot done"></div>
+        <div class="tl-content">
+          <h4>Website Released</h4>
+          <p>Official CUHK-X Challenge website goes live with full timeline, track details, and dataset overview.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Jun 15<br/>2026</div>
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <h4>Competition Launch</h4>
+          <p>Both Kaggle competitions open for registration and submissions. Dataset publicly released. Promotion channels go live simultaneously.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Sep 15<br/>2026</div>
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <h4>Kaggle Leaderboard Freeze</h4>
+          <p>Public submissions close. <strong>Top 15 teams per track</strong> on the Kaggle private leaderboard are notified and required to upload code + checkpoint within 24 hours.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Sep 16–30<br/>2026</div>
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <h4>Selection Stage · Zoom Verification</h4>
+          <p>Top 15 teams attend a Zoom verification session where they run live inference on freshly released <strong>sample data</strong>. Organizers also reproduce Kaggle results offline using submitted code. Teams with accuracy gap &gt; 10% from their private LB score are disqualified.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Oct 1<br/>2026</div>
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <h4>Final Top 6 Announced</h4>
+          <p>Top 6 teams per track passing verification are officially invited to UbiComp 2026 finals. Final Technical Report due by this date.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Oct 11<br/>2026</div>
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <h4>UbiComp 2026 Finals · Shanghai</h4>
+          <p>Finalists run inference on a <strong>brand-new private dataset</strong> (cross-subject, never released). 15-min technical report presentation + Q&amp;A. Awards ceremony same day. Teams unable to travel may participate via Zoom.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- REGISTRATION -->
+<section id="registration" data-page="2">
+  <div class="inner">
+    <span class="section-tag">How to participate</span>
+    <h2 class="section-title">Registration</h2>
+    <p class="section-desc">Registration involves two steps: (1) <strong style="color:var(--text-primary)">pre-register your team</strong> with us using the form below, and (2) <strong style="color:var(--text-primary)">join the competition on Kaggle</strong>. Pre-registration is required to be eligible for prizes, organizer announcements, and finals invitations.</p>
+
+    <div class="prereg-card">
+      <div class="prereg-left">
+        <h3>Pre-register Your Team</h3>
+        <p>Submit your team info so we can keep you in the loop on competition news, finals logistics, prize coordination, and last-minute announcements. Takes about 2 minutes to fill out.</p>
+        <button type="button" class="btn-p prereg-cta" id="prereg-open">Open Registration Form →</button>
+      </div>
+      <div class="prereg-right">
+        <div class="prereg-fields-label">Fields collected</div>
+        <ul class="prereg-fields-list">
+          <li>Team Name</li>
+          <li>Contact Email</li>
+          <li>Affiliation</li>
+          <li>Country / Region</li>
+          <li>Track(s) of interest</li>
+          <li>Team Members (1–5)</li>
+          <li>Faculty Advisor</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="tag-label" style="margin-top:2rem;">Then join on Kaggle</p>
+    <div class="reg-tracks">
+      <div class="reg-track-card">
+        <span class="reg-tag sm">Small Model Track</span>
+        <h3>Lightweight HAR</h3>
+        <p>Multimodal action recognition under resource constraints. Build efficient CNN / RNN / Transformer architectures — no large pretrained backbones permitted.</p>
+        <a href="https://www.kaggle.com/" class="btn-p reg-btn">Register on Kaggle →</a>
+      </div>
+      <div class="reg-track-card">
+        <span class="reg-tag lm">Large Model Track</span>
+        <h3>VQA · HAU &amp; HARn</h3>
+        <p>Vision-language models on depth and non-RGB modalities. Tackle 6,160 VQA questions across five reasoning types — no parameter limit.</p>
+        <a href="https://www.kaggle.com/" class="btn-p reg-btn">Register on Kaggle →</a>
+      </div>
+    </div>
+
+    <p class="tag-label">Registration Steps</p>
+    <div class="reg-steps">
+      <div class="reg-step">
+        <div class="reg-step-n">01</div>
+        <h4>Create Kaggle Account</h4>
+        <p>Sign up at kaggle.com and verify your email address.</p>
+      </div>
+      <div class="reg-step">
+        <div class="reg-step-n">02</div>
+        <h4>Join Competition</h4>
+        <p>Accept the competition rules on one or both Kaggle pages.</p>
+      </div>
+      <div class="reg-step">
+        <div class="reg-step-n">03</div>
+        <h4>Form Your Team</h4>
+        <p>Solo entry or up to 5 members. Merge teams via Kaggle's UI before deadline.</p>
+      </div>
+      <div class="reg-step">
+        <div class="reg-step-n">04</div>
+        <h4>Download &amp; Submit</h4>
+        <p>Access the dataset, train your model, and submit predictions to the leaderboard.</p>
+      </div>
+    </div>
+
+    <div class="reg-info">
+      <div class="reg-info-block">
+        <h4>Eligibility</h4>
+        <ul>
+          <li>Open to students, researchers, and industry teams worldwide</li>
+          <li>Cross-institution and cross-country teams are permitted</li>
+          <li>Members of the AIoT Lab and direct collaborators are ineligible for prizes</li>
+          <li>Participants must comply with Kaggle's terms of service</li>
+        </ul>
+      </div>
+      <div class="reg-info-block">
+        <h4>Team Rules</h4>
+        <ul>
+          <li>Team size: 1–5 members</li>
+          <li>Each individual may join only one team per track</li>
+          <li>Participation in both tracks is allowed</li>
+          <li>Team mergers lock 7 days before the submission deadline</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- DATASET -->
+<section id="dataset" data-page="2">
+  <div class="inner">
+    <span class="section-tag">The data behind the challenge</span>
+    <h2 class="section-title">Dataset Introduction</h2>
+    <p class="section-desc">
+      Most large vision-language models still depend almost entirely on RGB data, while modalities such as depth, thermal imaging, IMU, and millimeter-wave radar remain severely underrepresented. The root cause is a lack of large-scale, high-quality paired multimodal datasets.
+    </p>
+    <p class="section-desc" style="margin-top:0.8rem;">
+      CUHK-X, built by the AIoT Lab at CUHK, addresses this gap with <strong style="color:var(--text-primary)">64,267 samples</strong> across seven fully synchronized modalities collected from 30 participants performing 40 daily activities across two real-world indoor environments. Annotations follow a Ground-Truth First strategy, combining LLM-generated scene descriptions with human review to ensure temporal and logical consistency. The dataset supports three progressive tasks: HAR (action classification), HAU (action understanding), and HARn (action reasoning).
+    </p>
+
+    <div class="ov-cols">
+      <div>
+        <div class="info-block">
+          <dt>Total Samples</dt>
+          <dd>64,267 fully synchronized recordings</dd>
+        </div>
+        <div class="info-block">
+          <dt>Participants</dt>
+          <dd>30 (diverse age and gender)</dd>
+        </div>
+        <div class="info-block">
+          <dt>Environments</dt>
+          <dd>2 real-world indoor settings</dd>
+        </div>
+        <div class="info-block">
+          <dt>Action Classes</dt>
+          <dd>40 daily life activities</dd>
+        </div>
+      </div>
+      <div>
+        <div class="info-block">
+          <dt>Dataset Modalities</dt>
+          <dd>RGB · Depth · Thermal · Infrared · Skeleton · IMU (×5) · mmWave</dd>
+        </div>
+        <div class="info-block">
+          <dt>Challenge Modalities</dt>
+          <dd style="color:var(--cyan);font-weight:600;">All except RGB</dd>
+        </div>
+        <div class="info-block">
+          <dt>Benchmark Tasks</dt>
+          <dd>HAR · HAU · HARn</dd>
+        </div>
+        <div class="info-block">
+          <dt>Annotation Strategy</dt>
+          <dd>Ground-Truth First · LLM + human review</dd>
+        </div>
+      </div>
+    </div>
+
+    <div class="split-card">
+      <h4>Cross-Subject Split — 30 Participants</h4>
+      <div class="split-row">
+        <div class="split-item">
+          <div class="sv">18</div>
+          <div class="sl">Training Set</div>
+          <div class="su">user 1–9 · 16–24</div>
+        </div>
+        <div class="split-item">
+          <div class="sv" style="color:var(--teal)">6</div>
+          <div class="sl">Public Test Set</div>
+          <div class="su">user 10–12 · 25–27</div>
+        </div>
+        <div class="split-item">
+          <div class="sv" style="color:var(--amber)">6</div>
+          <div class="sl">Private Test Set</div>
+          <div class="su">held out</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="dataset-actions">
+      <a href="https://openaiotlab.github.io/CUHK-X/" class="dl-btn">
+        <div class="dl-icon">📥</div>
+        <div class="dl-text">
+          <strong>Download Training Set</strong>
+          <span>user 1–9, 16–24 · 18 participants</span>
+        </div>
+      </a>
+      <a href="https://openaiotlab.github.io/CUHK-X/" class="dl-btn">
+        <div class="dl-icon">🧪</div>
+        <div class="dl-text">
+          <strong>Download Public Test Set</strong>
+          <span>user 10–12, 25–27 · 6 participants</span>
+        </div>
+      </a>
+    </div>
+
+    <p class="tag-label">Modalities — Available in Dataset</p>
+    <div class="tag-row">
+      <span class="tag tag-excluded">RGB (challenge-excluded)</span>
+      <span class="tag b">Depth</span>
+      <span class="tag b">Thermal</span>
+      <span class="tag b">Infrared</span>
+      <span class="tag b">Skeleton</span>
+      <span class="tag b">IMU ×5</span>
+      <span class="tag b">mmWave Radar</span>
+    </div>
+
+    <p class="tag-label">Benchmark Tasks</p>
+    <div class="tag-row">
+      <span class="tag t">HAR — Action Classification</span>
+      <span class="tag t">HAU — Action Understanding</span>
+      <span class="tag t">HARn — Action Reasoning</span>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- VERIFICATION & RULES -->
+<section id="verification" data-page="2">
+  <div class="inner">
+    <span class="section-tag">Anti-Cheating &amp; Reproducibility</span>
+    <h2 class="section-title">Verification &amp; Rules</h2>
+    <p class="section-desc">All Top 15 teams per track must pass a Zoom-based verification session before advancing to the UbiComp 2026 finals. The verification involves live inference on freshly released sample data, plus offline reproduction of Kaggle results by organizers.</p>
+
+    <div class="verif-cards">
+      <div class="verif-card">
+        <span class="verif-badge a">What you submit</span>
+        <h3>Submission Package</h3>
+        <p>By Sep 22, 23:59 UTC, Top 15 teams upload:</p>
+        <ul>
+          <li><code>code/</code> — full training and inference code</li>
+          <li><code>checkpoints/model.pth</code> — final model weights</li>
+          <li><code>inference.sh</code> — single entry script (data_dir → CSV)</li>
+          <li><code>README.md</code> — reproducibility artifact</li>
+          <li><code>honor_declaration.pdf</code> — signed</li>
+        </ul>
+      </div>
+      <div class="verif-card">
+        <span class="verif-badge b">What happens in Zoom</span>
+        <h3>Live Verification Session</h3>
+        <p>A 45-min recorded session per team. Sample data link released at session start. Teams have <strong>≤ 2 hours</strong> to complete inference and submit results.</p>
+        <ul>
+          <li>Sample data = seen + unseen subjects (Part A + Part B)</li>
+          <li>Committee follows your README step-by-step</li>
+          <li>Pass = ≤ 10% accuracy gap from Kaggle private LB</li>
+          <li>Failed teams replaced by next-ranked team</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 class="verif-section-h3">Track-Specific Rules</h3>
+
+    <div class="rules-block">
+      <h4 class="rules-h4">Both Tracks · Strictly Forbidden</h4>
+      <ul class="rules-list">
+        <li>Manual labeling of test samples</li>
+        <li>Using test set ground-truth labels in training (any form)</li>
+        <li>Multi-account registration or collusion between teams</li>
+      </ul>
+    </div>
+
+    <div class="rules-block">
+      <h4 class="rules-h4">Small Model Track · Additional Restrictions</h4>
+      <ul class="rules-list">
+        <li>No large pretrained backbones</li>
+        <li>No closed-source APIs or LLMs for development</li>
+        <li>No API / LLM labeling of training data</li>
+      </ul>
+    </div>
+
+    <div class="rules-block">
+      <h4 class="rules-h4 ok">Large Model Track</h4>
+      <ul class="rules-list ok">
+        <li>Any pretrained model allowed (including LVLMs)</li>
+        <li>Closed-source APIs encouraged</li>
+        <li>LLM-based pseudo-labeling of training data permitted</li>
+        <li>Prompt engineering is part of the expected toolkit</li>
+      </ul>
+    </div>
+
+    <h3 class="verif-section-h3">IP &amp; Code Usage (Kaggle Standard)</h3>
+
+    <div class="rules-block">
+      <ul class="rules-list ok">
+        <li>Participants <strong style="color:var(--text-primary)">retain full copyright</strong> on all submitted code and models</li>
+        <li>Non-finalist code is <strong style="color:var(--text-primary)">destroyed</strong> after the competition — no public release</li>
+        <li><strong style="color:var(--text-primary)">Finalist teams</strong> (Champion Award, Top 6 per track) must open-source their solution under <strong style="color:var(--text-primary)">Apache 2.0 license</strong> within 30 days of UbiComp 2026 finals — standard Kaggle Winner License practice</li>
+        <li>Finalist teams unwilling to open-source may decline their finalist status; the slot is then passed to the next-ranked team</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ORGANIZERS -->
+<section id="organizers" data-page="1">
+  <div class="inner">
+    <span class="section-tag">Organizing Committee</span>
+    <h2 class="section-title">Organizers</h2>
+    <div class="org-group">
+      <div class="org-group-title">Competition Co-Chairs</div>
+      <div class="org-grid">
+        <div class="org-card">
+          <div class="org-av"><img src="photos/Zhenyu_Yan.jpg" alt="Zhenyu Yan"/></div>
+          <div class="org-name">Prof. Zhenyu Yan</div>
+          <div class="org-affil">CUHK · AIoT Lab</div>
+        </div>
+        <div class="org-card">
+          <div class="org-av"><img src="photos/Hongkai_Chen.jpg" alt="Hongkai Chen"/></div>
+          <div class="org-name">Prof. Hongkai Chen</div>
+          <div class="org-affil">CUHK · AIoT Lab</div>
+        </div>
+        <div class="org-card">
+          <div class="org-av"><img src="photos/Siyang_Jiang.jpg" alt="Siyang Jiang" style="transform: scale(1.12) translate(6%, 3%);"/></div>
+          <div class="org-name">Siyang Jiang</div>
+          <div class="org-affil">CUHK · AIoT Lab</div>
+        </div>
+      </div>
+    </div>
+    <div class="org-group" style="margin-top:2rem;">
+      <div class="org-group-title">Competition Committee</div>
+      <div class="org-grid">
+        <div class="org-card">
+          <div class="org-av"><img src="photos/Guangyu_Chen.jpg" alt="Guangyu Chen"/></div>
+          <div class="org-name">Guangyu Chen</div>
+          <div class="org-affil">CUHK · AIoT Lab</div>
+        </div>
+        <div class="org-card">
+          <div class="org-av"><img src="photos/LieKang_Zeng.jpg" alt="Liekang Zeng" style="transform: scale(1.1) translate(2%, 5%);"/></div>
+          <div class="org-name">Liekang Zeng</div>
+          <div class="org-affil">CUHK · AIoT Lab</div>
+        </div>
+        <div class="org-card">
+          <div class="org-av"><img src="photos/Anlan_Peng.jpg" alt="Anlan Peng"/></div>
+          <div class="org-name">Anlan Peng</div>
+          <div class="org-affil">CUHK · AIoT Lab</div>
+        </div>
+        <div class="org-card">
+          <div class="org-av"><img src="photos/Mu_Yuan.jpg" alt="Mu Yuan"/></div>
+          <div class="org-name">Mu Yuan</div>
+          <div class="org-affil">CUHK · AIoT Lab</div>
+        </div>
+        <div class="org-card">
+          <div class="org-av"><img src="photos/Bufang_Yang.jpg" alt="Bufang Yang"/></div>
+          <div class="org-name">Bufang Yang</div>
+          <div class="org-affil">CUHK · AIoT Lab</div>
+        </div>
+        <div class="org-card">
+          <div class="org-av"><img src="photos/Xiang_Ji.jpg" alt="Xiang Ji"/></div>
+          <div class="org-name">Xiang Ji</div>
+          <div class="org-affil">CUHK · AIoT Lab</div>
+        </div>
+      </div>
+    </div>
+    <div class="org-group" style="margin-top:2rem;">
+      <div class="org-group-title">Steering Committee</div>
+      <div class="org-grid">
+        <div class="org-card">
+          <div class="org-av"><img src="photos/Guoliang_Xing.jpg" alt="Guoliang Xing"/></div>
+          <div class="org-name">Prof. Guoliang Xing</div>
+          <div class="org-affil">CUHK · AIoT Lab</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CONTACT -->
+<section id="contact" data-page="1">
+  <div class="inner">
+    <span class="section-tag">Get in touch</span>
+    <h2 class="section-title">Contact</h2>
+    <p class="section-desc">For technical questions or general information about the competition and dataset.</p>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h4>General Inquiries</h4>
+        <div class="contact-row"><div class="cdot"></div><a href="mailto:cuhkx.competition@gmail.com">cuhkx.competition@gmail.com</a></div>
+        <p style="font-size:0.83rem;color:var(--text-muted);margin-top:0.5rem;line-height:1.6;">Technical questions, team registration help, or anything else about the challenge.</p>
+      </div>
+      <div class="contact-card">
+        <h4>Kaggle Competitions</h4>
+        <div class="contact-row"><div class="cdot"></div><a href="https://www.kaggle.com/">Small Model Track (HAR)</a></div>
+        <div class="contact-row"><div class="cdot"></div><a href="https://www.kaggle.com/">Large Model Track (VQA)</a></div>
+      </div>
+      <div class="contact-card">
+        <h4>Dataset &amp; Code</h4>
+        <div class="contact-row"><div class="cdot"></div><a href="https://openaiotlab.github.io/CUHK-X/">openaiotlab.github.io/CUHK-X</a></div>
+        <div class="contact-row"><div class="cdot"></div><a href="https://github.com/openaiotlab/CUHK-X">github.com/openaiotlab/CUHK-X</a></div>
+      </div>
+      <div class="contact-card">
+        <h4>Affiliation</h4>
+        <div class="contact-row"><div class="cdot"></div><span style="color:var(--text-secondary)">The Chinese University of Hong Kong</span></div>
+        <div class="contact-row"><div class="cdot"></div><span style="color:var(--text-secondary)">AIoT Lab · Dept. of Information Engineering</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REGISTRATION MODAL -->
+<div class="modal-backdrop" id="reg-modal" role="dialog" aria-modal="true" aria-labelledby="reg-modal-title">
+  <div class="modal">
+    <button type="button" class="modal-close" id="reg-modal-close" aria-label="Close">×</button>
+    <h3 id="reg-modal-title">Team Pre-registration</h3>
+    <p class="modal-sub">CUHK-X Multimodal Human Activity Challenge · 2026</p>
+
+    <form id="reg-form">
+      <div class="form-row">
+        <label>Team Name<span class="req">*</span></label>
+        <input type="text" name="team_name" required maxlength="100" placeholder="e.g. Depth Wizards"/>
+      </div>
+
+      <div class="form-row">
+        <label>Contact Email<span class="req">*</span></label>
+        <input type="email" name="leader_email" required placeholder="We'll use this to reach your team"/>
+      </div>
+
+      <div class="form-row two-col">
+        <div>
+          <label>Affiliation<span class="req">*</span></label>
+          <input type="text" name="affiliation" required placeholder="University or Company" maxlength="120"/>
+        </div>
+        <div>
+          <label>Country / Region<span class="req">*</span></label>
+          <input type="text" name="country" required maxlength="60"/>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <label>Track(s) of Interest<span class="req">*</span></label>
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="track_small" value="Small"/> Small Model Track (HAR)</label>
+          <label><input type="checkbox" name="track_large" value="Large"/> Large Model Track (VQA)</label>
+        </div>
+        <div class="helper">Select at least one track. You may register for both.</div>
+      </div>
+
+      <div class="form-row">
+        <label>Team Members<span class="req">*</span></label>
+        <div id="members-list">
+          <div class="member-input">
+            <input type="text" name="member" required placeholder="Member 1 (team leader)" maxlength="80"/>
+          </div>
+        </div>
+        <button type="button" class="add-member-btn" id="add-member-btn">+ Add team member</button>
+        <div class="helper">Up to 5 members per team. The first member is treated as the team leader.</div>
+      </div>
+
+      <div class="form-row">
+        <label>Faculty Advisor <span style="color:var(--text-muted);font-weight:400;">(if student team, optional)</span></label>
+        <input type="text" name="advisor" maxlength="80"/>
+      </div>
+
+      <div class="form-row">
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="agree" required/> I agree to comply with the competition rules and Kaggle Terms of Service.<span class="req">*</span></label>
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn-p" id="reg-submit">Submit Registration</button>
+        <span class="form-status" id="reg-status"></span>
+      </div>
+    </form>
+  </div>
+</div>
+
+<footer>
+  <p>© CUHK-X Multimodal Human Activity Challenge 2026 · The Chinese University of Hong Kong — AIoT Lab</p>
+  <p style="margin-top:0.4rem;">
+    <a href="https://openaiotlab.github.io/CUHK-X/">Dataset</a> ·
+    <a href="https://github.com/openaiotlab/CUHK-X">GitHub</a> ·
+    <a href="https://www.kaggle.com/">Kaggle</a>
+  </p>
+</footer>
+
+<script>
+let LB_DATA = null;
+let CURRENT_TRACK = 'small';
+
+async function loadLeaderboard() {
+  try {
+    const res = await fetch('leaderboard.json?_=' + Date.now());
+    if (!res.ok) throw new Error('not found');
+    LB_DATA = await res.json();
+    if (LB_DATA.updated_at) {
+      const d = new Date(LB_DATA.updated_at);
+      const opts = { timeZone: 'Asia/Hong_Kong', year: 'numeric', month: 'short', day: '2-digit', hour: '2-digit', minute: '2-digit', hour12: false };
+      document.getElementById('lb-updated').textContent = 'Last updated: ' + d.toLocaleString('en-US', opts) + ' HKT';
+    }
+  } catch (e) {
+    LB_DATA = null;
+  }
+  renderLeaderboard(CURRENT_TRACK);
+}
+
+function renderLeaderboard(track) {
+  CURRENT_TRACK = track;
+  const body = document.getElementById('lb-body');
+  const sourceLink = document.getElementById('lb-source-link');
+
+  const trackData = LB_DATA && LB_DATA[track];
+  if (trackData && trackData.kaggle_url) {
+    sourceLink.href = trackData.kaggle_url;
+  }
+
+  if (!trackData || !trackData.entries || trackData.entries.length === 0) {
+    body.innerHTML = '<tr><td colspan="5" class="lb-empty"><strong>Leaderboard not yet available</strong>Competition opens Jun 15, 2026. Rankings will populate automatically once submissions begin.</td></tr>';
+    return;
+  }
+
+  body.innerHTML = trackData.entries.map((e, i) => {
+    const rank = e.rank || (i + 1);
+    let rcClass = 'n';
+    if (rank === 1) rcClass = 'g';
+    else if (rank === 2) rcClass = 's';
+    else if (rank === 3) rcClass = 'b';
+    const rowClass = rank <= 3 ? `r${rank}` : '';
+    return `<tr class="${rowClass}">
+      <td><span class="rc ${rcClass}">${rank}</span></td>
+      <td class="lb-team">${escapeHtml(e.team)}</td>
+      <td class="lb-score">${escapeHtml(String(e.score))}</td>
+      <td>${e.submissions ?? '—'}</td>
+      <td class="lb-date">${escapeHtml(e.last_submission || '—')}</td>
+    </tr>`;
+  }).join('');
+}
+
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
+}
+
+document.querySelectorAll('.lb-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.lb-tab').forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    renderLeaderboard(tab.dataset.track);
+  });
+});
+
+loadLeaderboard();
+
+// ==================== REGISTRATION FORM ====================
+// IMPORTANT: replace this URL with the Apps Script Web App URL after deployment
+const REG_ENDPOINT = 'https://script.google.com/macros/s/AKfycbzTizIX8modAv6T2L6J9Klvp7wXjk7gkU8Pxi0jlQMER0LXlwxqoSDLhh1AUpRGW7pitg/exec';
+
+const regModal = document.getElementById('reg-modal');
+const regOpen = document.getElementById('prereg-open');
+const regClose = document.getElementById('reg-modal-close');
+const regForm = document.getElementById('reg-form');
+const regSubmit = document.getElementById('reg-submit');
+const regStatus = document.getElementById('reg-status');
+
+function openRegModal() {
+  regModal.classList.add('open');
+  document.body.classList.add('modal-open');
+  regStatus.textContent = '';
+  regStatus.className = 'form-status';
+}
+function closeRegModal() {
+  regModal.classList.remove('open');
+  document.body.classList.remove('modal-open');
+}
+
+regOpen?.addEventListener('click', openRegModal);
+regClose?.addEventListener('click', closeRegModal);
+regModal?.addEventListener('click', (e) => { if (e.target === regModal) closeRegModal(); });
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && regModal.classList.contains('open')) closeRegModal(); });
+
+// Dynamic team-member inputs (max 5)
+const MAX_MEMBERS = 5;
+const membersList = document.getElementById('members-list');
+const addMemberBtn = document.getElementById('add-member-btn');
+
+function updateAddMemberBtn() {
+  const count = membersList.querySelectorAll('.member-input').length;
+  if (count >= MAX_MEMBERS) {
+    addMemberBtn.disabled = true;
+    addMemberBtn.textContent = `+ Add team member (max ${MAX_MEMBERS} reached)`;
+  } else {
+    addMemberBtn.disabled = false;
+    addMemberBtn.textContent = '+ Add team member';
+  }
+}
+
+addMemberBtn?.addEventListener('click', () => {
+  const count = membersList.querySelectorAll('.member-input').length;
+  if (count >= MAX_MEMBERS) return;
+  const div = document.createElement('div');
+  div.className = 'member-input';
+  div.innerHTML = `<input type="text" name="member" placeholder="Member ${count + 1}" maxlength="80"/>
+    <button type="button" class="remove-member-btn" aria-label="Remove member">×</button>`;
+  membersList.appendChild(div);
+  div.querySelector('.remove-member-btn').addEventListener('click', () => {
+    div.remove();
+    updateAddMemberBtn();
+  });
+  updateAddMemberBtn();
+});
+
+regForm?.addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  // Build payload
+  const fd = new FormData(regForm);
+  const tracks = [];
+  if (fd.get('track_small')) tracks.push('Small');
+  if (fd.get('track_large')) tracks.push('Large');
+  if (tracks.length === 0) {
+    regStatus.textContent = '⚠ Please select at least one track.';
+    regStatus.className = 'form-status error';
+    return;
+  }
+
+  // Collect all team member names from dynamic inputs
+  const memberInputs = regForm.querySelectorAll('input[name="member"]');
+  const members = Array.from(memberInputs).map(i => i.value.trim()).filter(v => v);
+  if (members.length === 0) {
+    regStatus.textContent = '⚠ Please add at least one team member.';
+    regStatus.className = 'form-status error';
+    return;
+  }
+
+  const payload = {
+    team_name: fd.get('team_name') || '',
+    leader_email: fd.get('leader_email') || '',
+    affiliation: fd.get('affiliation') || '',
+    country: fd.get('country') || '',
+    tracks: tracks,
+    members: members,
+    advisor: fd.get('advisor') || '',
+    submitted_at: new Date().toISOString()
+  };
+
+  regSubmit.disabled = true;
+  regStatus.textContent = 'Submitting…';
+  regStatus.className = 'form-status loading';
+
+  try {
+    if (REG_ENDPOINT.startsWith('REPLACE_')) {
+      throw new Error('Registration endpoint not yet configured. Please contact organizers.');
+    }
+    // Use text/plain to avoid CORS preflight; Apps Script reads e.postData.contents
+    const res = await fetch(REG_ENDPOINT, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify(payload)
+    });
+    // With no-cors we can't read the response, so assume success
+    regStatus.textContent = '✓ Registration submitted! Organizers will be in touch via the contact email you provided.';
+    regStatus.className = 'form-status success';
+    regForm.reset();
+    setTimeout(closeRegModal, 2500);
+  } catch (err) {
+    regStatus.textContent = '✗ ' + (err.message || 'Submission failed. Please try again or email cuhkx.competition@gmail.com.');
+    regStatus.className = 'form-status error';
+  } finally {
+    regSubmit.disabled = false;
+  }
+});
+
+// ==================== 2-PAGE NAVIGATION ====================
+// Group sections into 2 pages; clicking nav switches page + scrolls to section
+(function() {
+  // Map: section ID → which page (1 or 2)
+  // Page 1 = main info; Page 2 = Leaderboard + Verification & Rules
+  const PAGE_MAP = {
+    overview: 1, format: 1, awards: 1, timeline: 1, organizers: 1, contact: 1,
+    leaderboard: 2, news: 2, registration: 2, dataset: 2, verification: 2
+  };
+  const HOME = 'overview';
+
+  function showPageFor(sectionId) {
+    if (!sectionId || !(sectionId in PAGE_MAP)) sectionId = HOME;
+    const targetPage = PAGE_MAP[sectionId];
+
+    // Show only sections belonging to the target page
+    document.querySelectorAll('section[data-page]').forEach(el => {
+      const onThisPage = parseInt(el.getAttribute('data-page')) === targetPage;
+      el.classList.toggle('visible-page', onThisPage);
+    });
+
+    // Hide dividers between hidden sections — easier to just hide all when paged
+    document.querySelectorAll('.divider').forEach(d => {
+      d.style.display = '';   // keep dividers between visible sections
+    });
+
+    // Update nav highlight to the specific section
+    document.querySelectorAll('.nav-links a').forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + sectionId);
+    });
+
+    // Home view (overview as default) shows full hero
+    document.body.classList.toggle('home-view', sectionId === HOME);
+
+    // Reset scroll first, then scroll to target section
+    window.scrollTo({ top: 0, behavior: 'instant' });
+    if (sectionId !== HOME) {
+      setTimeout(() => {
+        const target = document.getElementById(sectionId);
+        if (target) {
+          const navOffset = 70;  // height of fixed nav + buffer
+          const y = target.getBoundingClientRect().top + window.scrollY - navOffset;
+          window.scrollTo({ top: y, behavior: 'smooth' });
+        }
+      }, 60);
+    }
+
+    // Update document title
+    const titles = {
+      overview: 'Overview', news: 'News', format: 'Challenge Format',
+      awards: 'Awards', verification: 'Rules & Verification',
+      leaderboard: 'Leaderboard', timeline: 'Timeline',
+      registration: 'Registration', dataset: 'Dataset Introduction',
+      organizers: 'Organizers', contact: 'Contact'
+    };
+    document.title = `${titles[sectionId]} · CUHK-X Multimodal Human Activity Challenge`;
+  }
+
+  function init() {
+    document.body.classList.add('page-mode');
+
+    // Intercept all hash links
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      const href = a.getAttribute('href');
+      const targetId = href.slice(1);
+      if (targetId in PAGE_MAP) {
+        a.addEventListener('click', (e) => {
+          e.preventDefault();
+          history.replaceState(null, '', '#' + targetId);
+          showPageFor(targetId);
+        });
+      }
+    });
+
+    // Logo click → home
+    const logo = document.querySelector('.nav-logo');
+    if (logo) {
+      logo.addEventListener('click', () => {
+        history.replaceState(null, '', '#' + HOME);
+        showPageFor(HOME);
+      });
+    }
+
+    // Back/forward navigation
+    window.addEventListener('hashchange', () => {
+      showPageFor(window.location.hash.slice(1));
+    });
+
+    // Initial state from URL
+    showPageFor(window.location.hash.slice(1) || HOME);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script>
+</body>
+</html>
