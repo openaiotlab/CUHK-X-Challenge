@@ -66,6 +66,8 @@
   .section-tag { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--cyan); margin-bottom: 0.5rem; display: block; }
   h2.section-title { font-size: 2.1rem; font-weight: 700; line-height: 1.2; color: var(--text-primary); margin-bottom: 1rem; }
   .section-desc { color: var(--text-secondary); max-width: 760px; font-size: 1rem; line-height: 1.8; }
+  /* Overview & Dataset intros span the full content width and justify, to align with the info grid below */
+  #overview .section-desc, #dataset .section-desc { max-width: none; text-align: justify; }
   .divider { height: 1px; background: var(--border); }
 
   /* HERO */
@@ -875,7 +877,7 @@
           <li>Affiliation</li>
           <li>Country / Region</li>
           <li>Track(s) of interest</li>
-          <li>Team Members (1–5)</li>
+          <li>Team Members (1–3)</li>
           <li>Faculty Advisor</li>
         </ul>
       </div>
@@ -912,7 +914,7 @@
       <div class="reg-step">
         <div class="reg-step-n">03</div>
         <h4>Form Your Team</h4>
-        <p>Solo entry or up to 5 members. Merge teams via Kaggle's UI before deadline.</p>
+        <p>Solo entry or up to 3 members. Merge teams via Kaggle's UI before deadline.</p>
       </div>
       <div class="reg-step">
         <div class="reg-step-n">04</div>
@@ -934,7 +936,7 @@
       <div class="reg-info-block">
         <h4>Team Rules</h4>
         <ul>
-          <li>Team size: 1–5 members</li>
+          <li>Team size: 1–3 members (faculty advisor not counted)</li>
           <li>Each individual may join only one team per track</li>
           <li>Participation in both tracks is allowed</li>
           <li>Team mergers lock 7 days before the submission deadline</li>
@@ -1287,7 +1289,7 @@
           </div>
         </div>
         <button type="button" class="add-member-btn" id="add-member-btn">+ Add team member</button>
-        <div class="helper">Up to 5 members per team. The first member is treated as the team leader.</div>
+        <div class="helper">Up to 3 members per team (faculty advisor not counted). The first member is treated as the team leader.</div>
       </div>
 
       <div class="form-row">
@@ -1411,8 +1413,8 @@ regClose?.addEventListener('click', closeRegModal);
 regModal?.addEventListener('click', (e) => { if (e.target === regModal) closeRegModal(); });
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && regModal.classList.contains('open')) closeRegModal(); });
 
-// Dynamic team-member inputs (max 5)
-const MAX_MEMBERS = 5;
+// Dynamic team-member inputs (max 3)
+const MAX_MEMBERS = 3;
 const membersList = document.getElementById('members-list');
 const addMemberBtn = document.getElementById('add-member-btn');
 
