@@ -15,6 +15,7 @@
     --navy4: #1a3050;
     --navy5: #223d63;
     --cyan: #38bdf8;
+    --accent-primary: var(--cyan);  /* alias for Rule links (LICENSE / IP clauses) — matches site accent */
     --cyan-dim: rgba(56,189,248,0.13);
     --teal: #2dd4bf;
     --teal-dim: rgba(45,212,191,0.11);
@@ -491,10 +492,10 @@
     <span class="section-tag">The Challenge</span>
     <h2 class="section-title">Competition Overview</h2>
     <p class="section-desc">
-      The CUHK-X Multimodal Human Activity Challenge is the first large-scale international competition that <strong style="color:var(--text-primary)">excludes RGB data entirely</strong> — models must learn human dynamics from <strong style="color:var(--text-primary)">depth, IMU, mmWave radar, and skeleton</strong> modalities alone. This privacy-preserving design mirrors the deployment reality of healthcare, smart home, and elderly-care systems, where visual privacy must be preserved at every stage of training, validation, and inference.
+      The CUHK-X Multimodal Human Activity Challenge is the first large-scale international competition that <strong style="color:var(--text-primary)">excludes RGB data entirely</strong> — models learn human dynamics information from <strong style="color:var(--text-primary)">depth, IMU, mmWave radar, and skeleton</strong> modalities. This privacy-preserving design mirrors the deployment reality of healthcare, smart home, and elderly-care systems, where visual privacy must be preserved at every stage of training, validation, and inference.
     </p>
     <p class="section-desc" style="margin-top:0.8rem;">
-      Hosted by the AIoT Lab at The Chinese University of Hong Kong on Kaggle across two parallel tracks, with finals held alongside <strong style="color:var(--text-primary)">UbiComp 2026 in Shanghai</strong>. The Small Model Track targets efficient, edge-deployable HAR; the Large Model Track pushes multimodal LLMs on depth-video VQA covering action understanding and reasoning. Total prize pool: <strong style="color:var(--amber)">USD $20,000</strong>.
+      Hosted by the AIoT Lab at The Chinese University of Hong Kong on Kaggle across two parallel tracks, with finals held alongside <strong style="color:var(--text-primary)">UbiComp 2026 in Shanghai</strong>. The Small Model Track targets efficient, edge-deployable HAR; the Large Model Track pushes multimodal LLMs on VQA covering action understanding and reasoning. Total prize pool: <strong style="color:var(--amber)">USD $20,000</strong>.
     </p>
 
     <div class="ov-cols">
@@ -613,11 +614,11 @@
           <p>LVLMs on depth &amp; non-RGB modalities</p>
         </div>
         <div class="track-body">
-          <p class="tdesc">Pushes the frontier of <strong style="color:var(--text-primary)">Large Vision-Language Models</strong> on non-RGB modalities — specifically depth video.</p>
-          <p class="tdesc">Participants tackle <strong style="color:var(--text-primary)">Human Action Understanding (HAU)</strong> and <strong style="color:var(--text-primary)">Human Action Reasoning (HARn)</strong> through depth-video <strong style="color:var(--text-primary)">Visual Question Answering</strong>. There is no parameter limit, encouraging exploration of prompt design, modality alignment, and fine-tuning at scale.</p>
+          <p class="tdesc">Pushes the frontier of <strong style="color:var(--text-primary)">Large Vision-Language Models</strong> on non-RGB modalities.</p>
+          <p class="tdesc">Participants tackle <strong style="color:var(--text-primary)">Human Action Understanding (HAU)</strong> and <strong style="color:var(--text-primary)">Human Action Reasoning (HARn)</strong> through privacy-preserving video <strong style="color:var(--text-primary)">Visual Question Answering</strong>. There is no parameter limit, encouraging exploration of prompt design, modality alignment, and fine-tuning at scale.</p>
           <div class="spec-list">
-            <div class="spec-item"><span class="spec-k">Task</span><span class="spec-v">VQA on depth video — 5 question types</span></div>
-            <div class="spec-item"><span class="spec-k">Cross-Subject Split</span><span class="spec-v">Train: user 1–9, 16–24 · Test: user 10–12, 25–27</span></div>
+            <div class="spec-item"><span class="spec-k">Task</span><span class="spec-v">VQA on privacy-preserving videos</span></div>
+            <div class="spec-item"><span class="spec-k">Cross-Subject Split</span><span class="spec-v">Train: user 1–9, 16–24 · Test: user 10–11, 25–26</span></div>
             <div class="spec-item"><span class="spec-k">Primary Modalities</span><span class="spec-v">Depth, Thermal, IR</span></div>
             <div class="spec-item"><span class="spec-k">Model Constraint</span><span class="spec-v">No parameter limit · LVLMs encouraged</span></div>
             <div class="spec-item"><span class="spec-k">Prize Pool</span><span class="spec-v" style="color:var(--amber);font-weight:600;">USD $10,000</span></div>
@@ -656,7 +657,7 @@
         <ul>
           <li>Top 15 submit <strong>code + checkpoint + inference.sh</strong> via email/Drive</li>
           <li>Zoom session: live inference on <strong>sample data</strong> (released at session start)</li>
-          <li>Sample data has <strong>seen + unseen subjects</strong> — accuracy gap reveals cheating</li>
+          <li>Sample data has <strong>seen + unseen subjects</strong></li>
           <li>Organizers reproduce Kaggle result offline to verify weights</li>
           <li><strong>Top 6 teams per track</strong> pass to UbiComp finals</li>
         </ul>
@@ -790,7 +791,7 @@
   <div class="inner">
     <span class="section-tag">Live Rankings</span>
     <h2 class="section-title">Leaderboard</h2>
-    <p class="section-desc">Top 20 teams per track, auto-synced from Kaggle every day at 10:00 HKT.</p>
+    <p class="section-desc">Top 10 teams per track, auto-synced from Kaggle every day at 10:00 HKT.</p>
 
     <div class="lb-tabs">
       <div class="lb-tab active" data-track="small">Small Model Track</div>
@@ -850,7 +851,7 @@
         <div class="tl-dot"></div>
         <div class="tl-content">
           <h4>Kaggle Leaderboard Freeze</h4>
-          <p>Public submissions close. <strong>Top 15 teams per track</strong> on the Kaggle private leaderboard are notified and required to upload code + checkpoint within 24 hours.</p>
+          <p>Public submissions close. <strong>Top 15 teams per track</strong> on the Kaggle private leaderboard are notified and required to upload code + checkpoint within 48 hours.</p>
         </div>
       </div>
       <div class="tl-item">
@@ -1035,12 +1036,12 @@
           <div class="su">user 1–9 · 16–24</div>
         </div>
         <div class="split-item">
-          <div class="sv" style="color:var(--teal)">6</div>
+          <div class="sv" style="color:var(--teal)">4</div>
           <div class="sl">Public Test Set</div>
-          <div class="su">user 10–12 · 25–27</div>
+          <div class="su">user 10,11,25–26</div>
         </div>
         <div class="split-item">
-          <div class="sv" style="color:var(--amber)">6</div>
+          <div class="sv" style="color:var(--amber)">8</div>
           <div class="sl">Private Test Set</div>
           <div class="su">held out</div>
         </div>
@@ -1059,7 +1060,7 @@
         <div class="dl-icon">🧪</div>
         <div class="dl-text">
           <strong>Download Public Test Set</strong>
-          <span>user 10–12, 25–27 · 6 participants</span>
+          <span>user 10,11,25,26 · 4 participants</span>
         </div>
       </a>
     </div>
