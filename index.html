@@ -82,6 +82,21 @@
   .btn-p:hover { opacity: 0.85; }
   .btn-o { border: 1px solid var(--border2); color: var(--text-secondary); font-size: 0.95rem; padding: 0.75rem 1.8rem; border-radius: 5px; transition: all 0.15s; font-weight: 500; }
   .btn-o:hover { border-color: var(--cyan); color: var(--cyan); }
+  /* Hero dropdowns (Kaggle tracks / dataset mirrors) */
+  .hero-dd { position: relative; display: inline-flex; }
+  .hero-dd-toggle { cursor: pointer; font-family: inherit; display: inline-flex; align-items: center; gap: 0.45rem; }
+  .btn-p.hero-dd-toggle { border: none; }
+  .btn-o.hero-dd-toggle { background: transparent; }
+  .hero-dd-toggle .caret { font-size: 0.65em; line-height: 1; transition: transform 0.18s; }
+  .hero-dd.open .hero-dd-toggle .caret { transform: rotate(180deg); }
+  .hero-dd-menu { position: absolute; top: calc(100% + 0.55rem); left: 50%; transform: translateX(-50%) translateY(-6px); min-width: 250px; max-width: calc(100vw - 2rem); background: var(--card-bg); border: 1px solid var(--border2); border-radius: 10px; padding: 0.4rem; box-shadow: 0 18px 44px rgba(0,0,0,0.5); display: flex; flex-direction: column; gap: 0.15rem; z-index: 60; max-height: min(72vh, 440px); overflow-y: auto; opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.15s, transform 0.15s; text-align: left; }
+  .hero-dd.open .hero-dd-menu { opacity: 1; visibility: visible; pointer-events: auto; transform: translateX(-50%) translateY(0); }
+  .hero-dd-menu a { display: flex; flex-direction: column; gap: 0.12rem; padding: 0.6rem 0.85rem; border-radius: 6px; color: var(--text-primary); font-weight: 600; font-size: 0.92rem; transition: background 0.12s, color 0.12s; }
+  .hero-dd-menu a:hover { background: var(--cyan-dim); color: var(--cyan); }
+  .hero-dd-menu .dd-sub { font-size: 0.72rem; font-weight: 500; color: var(--text-muted); letter-spacing: 0.01em; }
+  .hero-dd-menu a:hover .dd-sub { color: var(--cyan); }
+  .hero-dd-menu .dd-section { font-size: 0.66rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.09em; color: var(--text-muted); padding: 0.55rem 0.85rem 0.3rem; }
+  .hero-dd-menu .dd-section ~ .dd-section { border-top: 1px solid var(--border); margin-top: 0.25rem; }
   .hero-stats { display: grid; grid-template-columns: repeat(4,1fr); gap: 0; margin-top: 4rem; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
   .hero-stat { background: var(--card-bg); padding: 1.4rem 0.5rem; text-align: center; border-right: 1px solid var(--border); }
   .hero-stat:last-child { border-right: none; }
@@ -118,7 +133,7 @@
   .split-item .sv { font-size: 1.7rem; font-weight: 700; color: var(--cyan); }
   .split-item .sl { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem; }
   .split-item .su { font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.4rem; font-family: 'SF Mono', Menlo, monospace; }
-  .dataset-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem; }
+  .dataset-actions { display: flex; gap: 1rem; margin-top: 1.5rem; }
   .dl-btn { background: var(--card-bg); border: 1px solid var(--border2); border-radius: 8px; padding: 1.1rem 1.4rem; display: flex; align-items: center; gap: 1rem; color: var(--text-primary); transition: all 0.15s; }
   .dl-btn:hover { border-color: var(--cyan); background: var(--navy3); opacity: 1; }
   .dl-icon { font-size: 1.6rem; flex-shrink: 0; line-height: 1; }
@@ -471,8 +486,24 @@
     <h1>CUHK-X Multimodal<br/><span>Human Activity</span> Challenge</h1>
     <p class="lead">An international competition spanning lightweight efficient models and frontier multimodal LLMs on depth, IMU, mmWave radar, and skeleton modalities — built on the CUHK-X benchmark for HAR, HAU, and HARn tasks.</p>
     <div class="hero-btns">
-      <a href="https://www.kaggle.com/" class="btn-p">Join on Kaggle</a>
-      <a href="https://openaiotlab.github.io/CUHK-X/" class="btn-o">Dataset Homepage</a>
+      <div class="hero-dd">
+        <button type="button" class="btn-p hero-dd-toggle" aria-haspopup="true" aria-expanded="false">Join on Kaggle <span class="caret">▾</span></button>
+        <div class="hero-dd-menu" role="menu">
+          <a href="https://www.kaggle.com/competitions/cuhk-x-competition-small-model-track" role="menuitem" target="_blank" rel="noopener">Small Model Track<span class="dd-sub">Lightweight HAR</span></a>
+          <a href="https://www.kaggle.com/competitions/cuhk-x-competition-large-model-track" role="menuitem" target="_blank" rel="noopener">Large Model Track<span class="dd-sub">VQA · HAU &amp; HARn</span></a>
+        </div>
+      </div>
+      <div class="hero-dd">
+        <button type="button" class="btn-o hero-dd-toggle" aria-haspopup="true" aria-expanded="false">Dataset Homepage <span class="caret">▾</span></button>
+        <div class="hero-dd-menu" role="menu">
+          <div class="dd-section">Large Model Track</div>
+          <a href="https://drive.google.com/drive/folders/1USLiJKosAyA7oSuxU27d-s_lxJyKKjya?usp=sharing" role="menuitem" target="_blank" rel="noopener">Google Drive</a>
+          <a href="https://pan.baidu.com/s/1uvaN88D8oHKkaa5O_b4x5g?pwd=5855" role="menuitem" target="_blank" rel="noopener">Baidu Netdisk</a>
+          <div class="dd-section">Small Model Track</div>
+          <a href="https://drive.google.com/drive/folders/1wZOPpTFLqDKjBLJGjMdOZyuJygLHbwCZ?usp=sharing" role="menuitem" target="_blank" rel="noopener">Google Drive</a>
+          <a href="https://pan.baidu.com/s/10uVVQiWr5gXiiReXQxUkdQ?pwd=huxi" role="menuitem" target="_blank" rel="noopener">Baidu Netdisk</a>
+        </div>
+      </div>
       <a href="https://github.com/openaiotlab/CUHK-X" class="btn-o">GitHub</a>
     </div>
     <div class="hero-stats">
@@ -510,7 +541,7 @@
         </div>
         <div class="info-block">
           <dt>Duration</dt>
-          <dd>June 18 – September 15, 2026</dd>
+          <dd>June 20 – September 15, 2026</dd>
         </div>
         <div class="info-block">
           <dt>Finals Venue</dt>
@@ -547,6 +578,10 @@
     <span class="section-tag">Latest</span>
     <h2 class="section-title">News</h2>
     <div class="news-list">
+      <div class="news-item">
+        <div class="news-date">Jun 20, 2026</div>
+        <div><span class="news-tag">Launch</span><span class="news-text">The CUHK-X Multimodal Human Activity Challenge has officially launched — both the Small Model and Large Model tracks are now open on Kaggle for registration and submissions.</span></div>
+      </div>
       <div class="news-item">
         <div class="news-date">May 23, 2026</div>
         <div><span class="news-tag">Website</span><span class="news-text">Official CUHK-X Challenge website is now live, and the full CUHK-X dataset has been officially released to the public.</span></div>
@@ -642,7 +677,7 @@
       <div class="stage">
         <div class="stage-n">01</div>
         <h4>Kaggle Open Competition</h4>
-        <div class="stage-period">Jun 18 – Sep 15, 2026 · 3 months</div>
+        <div class="stage-period">Jun 20 – Sep 15, 2026 · 3 months</div>
         <ul>
           <li>Submit prediction CSVs to Kaggle</li>
           <li>Public leaderboard for reference; <strong>private leaderboard</strong> decides ranking</li>
@@ -839,7 +874,7 @@
         </div>
       </div>
       <div class="tl-item">
-        <div class="tl-date">Jun 18<br/>2026</div>
+        <div class="tl-date">Jun 20<br/>2026</div>
         <div class="tl-dot"></div>
         <div class="tl-content">
           <h4>Competition Launch</h4>
@@ -917,13 +952,13 @@
         <span class="reg-tag sm">Small Model Track</span>
         <h3>Lightweight HAR</h3>
         <p>Multimodal action recognition under resource constraints. Build efficient CNN / RNN / Transformer architectures — no large pretrained backbones permitted.</p>
-        <a href="https://www.kaggle.com/" class="btn-p reg-btn">Register on Kaggle →</a>
+        <a href="https://www.kaggle.com/competitions/cuhk-x-competition-small-model-track" class="btn-p reg-btn" target="_blank" rel="noopener">Register on Kaggle →</a>
       </div>
       <div class="reg-track-card">
         <span class="reg-tag lm">Large Model Track</span>
         <h3>VQA · HAU &amp; HARn</h3>
         <p>Vision-language models on depth and non-RGB modalities. Tackle 6,160 VQA questions across five reasoning types — no parameter limit.</p>
-        <a href="https://www.kaggle.com/" class="btn-p reg-btn">Register on Kaggle →</a>
+        <a href="https://www.kaggle.com/competitions/cuhk-x-competition-large-model-track" class="btn-p reg-btn" target="_blank" rel="noopener">Register on Kaggle →</a>
       </div>
     </div>
 
@@ -1049,18 +1084,11 @@
     </div>
 
     <div class="dataset-actions">
-      <a href="https://openaiotlab.github.io/CUHK-X/" class="dl-btn">
-        <div class="dl-icon">📥</div>
+      <a href="https://openaiotlab.github.io/CUHK-X/" class="dl-btn" target="_blank" rel="noopener">
+        <div class="dl-icon">🌐</div>
         <div class="dl-text">
-          <strong>Download Training Set</strong>
-          <span>user 1–9, 16–24 · 18 participants</span>
-        </div>
-      </a>
-      <a href="https://openaiotlab.github.io/CUHK-X/" class="dl-btn">
-        <div class="dl-icon">🧪</div>
-        <div class="dl-text">
-          <strong>Download Public Test Set</strong>
-          <span>user 10,11,25,26 · 4 participants</span>
+          <strong>CUHK-X Dataset Homepage</strong>
+          <span>Train &amp; test splits · 30 participants</span>
         </div>
       </a>
     </div>
@@ -1426,7 +1454,7 @@ function renderLeaderboard(track) {
   }
 
   if (!trackData || !trackData.entries || trackData.entries.length === 0) {
-    body.innerHTML = '<tr><td colspan="5" class="lb-empty"><strong>Leaderboard not yet available</strong>Competition opens Jun 18, 2026. Rankings will populate automatically once submissions begin.</td></tr>';
+    body.innerHTML = '<tr><td colspan="5" class="lb-empty"><strong>Leaderboard not yet available</strong>Competition opens Jun 20, 2026. Rankings will populate automatically once submissions begin.</td></tr>';
     return;
   }
 
@@ -1487,6 +1515,25 @@ regOpen?.addEventListener('click', openRegModal);
 regClose?.addEventListener('click', closeRegModal);
 regModal?.addEventListener('click', (e) => { if (e.target === regModal) closeRegModal(); });
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && regModal.classList.contains('open')) closeRegModal(); });
+
+// Hero dropdowns (Kaggle tracks / dataset mirrors)
+(() => {
+  const closeAll = () => document.querySelectorAll('.hero-dd.open').forEach(dd => {
+    dd.classList.remove('open');
+    dd.querySelector('.hero-dd-toggle')?.setAttribute('aria-expanded', 'false');
+  });
+  document.querySelectorAll('.hero-dd-toggle').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const dd = btn.closest('.hero-dd');
+      const wasOpen = dd.classList.contains('open');
+      closeAll();
+      if (!wasOpen) { dd.classList.add('open'); btn.setAttribute('aria-expanded', 'true'); }
+    });
+  });
+  document.addEventListener('click', closeAll);
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeAll(); });
+})();
 
 // Dynamic team-member inputs (max 3)
 const MAX_MEMBERS = 3;
