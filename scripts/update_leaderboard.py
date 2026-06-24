@@ -18,10 +18,18 @@ from pathlib import Path
 # === EDIT THESE WHEN KAGGLE COMPETITIONS ARE LIVE ===
 # Find the slug in the competition URL: kaggle.com/competitions/<slug>
 COMPETITION_SLUGS = {
-    "small": "cuhk-x-har-2026",   # TODO: replace with real slug
-    "large": "cuhk-x-vqa-2026",   # TODO: replace with real slug
+    "small": "cuhk-x-competition-small-model-track",
+    "large": "cuhk-x-competition-large-model-track",
 }
 TOP_N = 20
+
+# === PUBLIC leaderboard only ===
+# Kaggle's GetLeaderboard endpoint returns the PUBLIC leaderboard while a
+# competition is running, but automatically switches to the PRIVATE leaderboard
+# once it closes (the API has no public/private flag). The website must only ever
+# show PUBLIC standings, and the public board is frozen at the submission deadline
+# anyway — so we refuse to refresh past the freeze. Update this if the schedule moves.
+PUBLIC_LB_FREEZE_UTC = datetime(2026, 9, 15, 23, 59, tzinfo=timezone.utc)  # Kaggle Leaderboard Freeze
 
 OUTPUT_PATH = Path(__file__).resolve().parent.parent / "leaderboard.json"
 
@@ -53,6 +61,13 @@ def fetch_track(api, slug):
 
 
 def main():
+    # Safety: only ever publish the PUBLIC leaderboard. After the freeze the Kaggle
+    # API would start returning private scores, so stop refreshing then.
+    if datetime.now(timezone.utc) > PUBLIC_LB_FREEZE_UTC:
+        print("Past the Kaggle Leaderboard Freeze; skipping refresh to keep the final "
+              "PUBLIC standings and never publish the private leaderboard.")
+        return
+
     try:
         from kaggle.api.kaggle_api_extended import KaggleApi
     except ImportError:
