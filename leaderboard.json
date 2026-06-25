@@ -1,13 +1,216 @@
 {
-  "updated_at": "2026-06-25T03:13:35.694481Z",
+  "updated_at": "2026-06-25T03:47:19.702245Z",
   "small": {
-    "error": "HTTPError: 401 Client Error: Unauthorized for url: https://api.kaggle.com/v1/competitions.CompetitionApiService/GetLeaderboard",
-    "entries": [],
+    "entries": [
+      {
+        "rank": 1,
+        "team": "Pre-Par-e",
+        "score": "0.60199",
+        "submissions": "—",
+        "last_submission": "2026-06-25"
+      },
+      {
+        "rank": 2,
+        "team": "Jogi",
+        "score": "0.44278",
+        "submissions": "—",
+        "last_submission": "2026-06-24"
+      },
+      {
+        "rank": 3,
+        "team": "Freeman Hui",
+        "score": "0.37810",
+        "submissions": "—",
+        "last_submission": "2026-06-25"
+      },
+      {
+        "rank": 4,
+        "team": "whynotjustwin",
+        "score": "0.26865",
+        "submissions": "—",
+        "last_submission": "2026-06-21"
+      },
+      {
+        "rank": 5,
+        "team": "SCLim2022080004",
+        "score": "0.25373",
+        "submissions": "—",
+        "last_submission": "2026-06-23"
+      },
+      {
+        "rank": 6,
+        "team": "Abdulsamad",
+        "score": "0.21890",
+        "submissions": "—",
+        "last_submission": "2026-06-22"
+      },
+      {
+        "rank": 7,
+        "team": "Anh Tuan Ha",
+        "score": "0.19900",
+        "submissions": "—",
+        "last_submission": "2026-06-23"
+      },
+      {
+        "rank": 8,
+        "team": "Danielle Lesin",
+        "score": "0.17412",
+        "submissions": "—",
+        "last_submission": "2026-06-24"
+      },
+      {
+        "rank": 9,
+        "team": "Surya milenial",
+        "score": "0.10945",
+        "submissions": "—",
+        "last_submission": "2026-06-23"
+      },
+      {
+        "rank": 10,
+        "team": "CuteClaw",
+        "score": "0.05970",
+        "submissions": "—",
+        "last_submission": "2026-06-24"
+      },
+      {
+        "rank": 11,
+        "team": "Mathurin Ache",
+        "score": "0.03980",
+        "submissions": "—",
+        "last_submission": "2026-06-23"
+      },
+      {
+        "rank": 12,
+        "team": "GeniusYY",
+        "score": "0.03482",
+        "submissions": "—",
+        "last_submission": "2026-06-22"
+      },
+      {
+        "rank": 13,
+        "team": "yali251",
+        "score": "0.03482",
+        "submissions": "—",
+        "last_submission": "2026-06-22"
+      },
+      {
+        "rank": 14,
+        "team": "Himanshu Dhiman",
+        "score": "0.02985",
+        "submissions": "—",
+        "last_submission": "2026-06-20"
+      },
+      {
+        "rank": 15,
+        "team": "StephenNedumpally",
+        "score": "0.01990",
+        "submissions": "—",
+        "last_submission": "2026-06-21"
+      },
+      {
+        "rank": 16,
+        "team": "Akhilesh godugu",
+        "score": "0.01990",
+        "submissions": "—",
+        "last_submission": "2026-06-22"
+      },
+      {
+        "rank": 17,
+        "team": "Jeki Wan Taufik",
+        "score": "0.01492",
+        "submissions": "—",
+        "last_submission": "2026-06-21"
+      }
+    ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-small-model-track/leaderboard"
   },
   "large": {
-    "error": "HTTPError: 401 Client Error: Unauthorized for url: https://api.kaggle.com/v1/competitions.CompetitionApiService/GetLeaderboard",
-    "entries": [],
+    "entries": [
+      {
+        "rank": 1,
+        "team": "JothanJyu",
+        "score": "0.64619",
+        "submissions": "—",
+        "last_submission": "2026-06-22"
+      },
+      {
+        "rank": 2,
+        "team": "Danielle Lesin",
+        "score": "0.61695",
+        "submissions": "—",
+        "last_submission": "2026-06-24"
+      },
+      {
+        "rank": 3,
+        "team": "Pre-Par-e",
+        "score": "0.61111",
+        "submissions": "—",
+        "last_submission": "2026-06-24"
+      },
+      {
+        "rank": 4,
+        "team": "SCLim2022080004",
+        "score": "0.59064",
+        "submissions": "—",
+        "last_submission": "2026-06-23"
+      },
+      {
+        "rank": 5,
+        "team": "Faisal Alshahrani",
+        "score": "0.55263",
+        "submissions": "—",
+        "last_submission": "2026-06-24"
+      },
+      {
+        "rank": 6,
+        "team": "Signal Weavers",
+        "score": "0.52046",
+        "submissions": "—",
+        "last_submission": "2026-06-25"
+      },
+      {
+        "rank": 7,
+        "team": "Enrique.J.Chan",
+        "score": "0.48830",
+        "submissions": "—",
+        "last_submission": "2026-06-24"
+      },
+      {
+        "rank": 8,
+        "team": "Jason Karpeles",
+        "score": "0.47660",
+        "submissions": "—",
+        "last_submission": "2026-06-23"
+      },
+      {
+        "rank": 9,
+        "team": "GeniusYY",
+        "score": "0.32748",
+        "submissions": "—",
+        "last_submission": "2026-06-23"
+      },
+      {
+        "rank": 10,
+        "team": "yali251",
+        "score": "0.23391",
+        "submissions": "—",
+        "last_submission": "2026-06-22"
+      },
+      {
+        "rank": 11,
+        "team": "Arkat Khassanov",
+        "score": "0.23391",
+        "submissions": "—",
+        "last_submission": "2026-06-24"
+      },
+      {
+        "rank": 12,
+        "team": "Akhilesh godugu",
+        "score": "0.16959",
+        "submissions": "—",
+        "last_submission": "2026-06-22"
+      }
+    ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-large-model-track/leaderboard"
   }
 }
