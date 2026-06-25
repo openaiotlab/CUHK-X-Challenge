@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-05T06:36:50.269352Z",
+  "updated_at": "2026-06-25T02:07:47.416399Z",
   "small": {
     "error": "HTTPError: 401 Client Error: Unauthorized for url: https://api.kaggle.com/v1/competitions.CompetitionApiService/GetLeaderboard",
     "entries": [],
