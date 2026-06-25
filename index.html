@@ -847,12 +847,11 @@
             <th style="width:72px;">Rank</th>
             <th>Team</th>
             <th style="width:130px;">Score</th>
-            <th style="width:110px;">Submissions</th>
             <th style="width:130px;">Last Submission</th>
           </tr>
         </thead>
         <tbody id="lb-body">
-          <tr><td colspan="5" class="lb-empty">Loading…</td></tr>
+          <tr><td colspan="4" class="lb-empty">Loading…</td></tr>
         </tbody>
       </table>
     </div>
@@ -1456,7 +1455,7 @@ function renderLeaderboard(track) {
   }
 
   if (!trackData || !trackData.entries || trackData.entries.length === 0) {
-    body.innerHTML = '<tr><td colspan="5" class="lb-empty"><strong>Leaderboard not yet available</strong>Competition opens Jun 20, 2026. Rankings will populate automatically once submissions begin.</td></tr>';
+    body.innerHTML = '<tr><td colspan="4" class="lb-empty"><strong>Leaderboard not yet available</strong>Competition opens Jun 20, 2026. Rankings will populate automatically once submissions begin.</td></tr>';
     return;
   }
 
@@ -1471,7 +1470,6 @@ function renderLeaderboard(track) {
       <td><span class="rc ${rcClass}">${rank}</span></td>
       <td class="lb-team">${escapeHtml(e.team)}</td>
       <td class="lb-score">${escapeHtml(String(e.score))}</td>
-      <td>${e.submissions ?? '—'}</td>
       <td class="lb-date">${escapeHtml(e.last_submission || '—')}</td>
     </tr>`;
   }).join('');
