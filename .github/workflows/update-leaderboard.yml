@@ -1,12 +1,9 @@
 name: Update Leaderboard
 
 on:
-  # Daily schedule disabled until Kaggle secrets (KAGGLE_USERNAME / KAGGLE_KEY)
-  # and the real competition slugs in scripts/update_leaderboard.py are set.
-  # To re-enable, uncomment the two lines below.
-  # schedule:
-  #   # 02:00 UTC = 10:00 HKT (UTC+8) every day
-  #   - cron: '0 2 * * *'
+  schedule:
+    # 02:00 UTC = 10:00 HKT (UTC+8) every day
+    - cron: '0 2 * * *'
   # Allow manual trigger from the Actions tab
   workflow_dispatch:
 
@@ -36,21 +33,6 @@ jobs:
           mkdir -p ~/.kaggle
           printf '{"username":"%s","key":"%s"}\n' "$KAGGLE_USERNAME" "$KAGGLE_KEY" > ~/.kaggle/kaggle.json
           chmod 600 ~/.kaggle/kaggle.json
-
-      # TEMPORARY diagnostic — prints only lengths, never the secret values.
-      # Remove once the Kaggle credentials are confirmed working.
-      - name: Debug — are the Kaggle secrets present?
-        env:
-          KAGGLE_USERNAME: ${{ secrets.KAGGLE_USERNAME }}
-          KAGGLE_KEY: ${{ secrets.KAGGLE_KEY }}
-        run: |
-          echo "KAGGLE_USERNAME length: ${#KAGGLE_USERNAME}"
-          echo "KAGGLE_KEY length: ${#KAGGLE_KEY}  (a valid Kaggle key is 32 chars)"
-          if [ -z "$KAGGLE_USERNAME" ] || [ -z "$KAGGLE_KEY" ]; then
-            echo "==> EMPTY: a secret is missing -> the secret NAME does not match KAGGLE_USERNAME / KAGGLE_KEY."
-          else
-            echo "==> Both present. If auth still 401s, the VALUE is wrong (swapped, spaces/newline, or token regenerated)."
-          fi
 
       - name: Fetch leaderboard
         run: python scripts/update_leaderboard.py
