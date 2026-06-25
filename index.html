@@ -828,7 +828,7 @@
   <div class="inner">
     <span class="section-tag">Live Rankings</span>
     <h2 class="section-title">Leaderboard</h2>
-    <p class="section-desc">Top 10 teams per track, auto-synced from Kaggle every day at 10:00 HKT.</p>
+    <p class="section-desc">Top 6 teams per track, auto-synced from Kaggle every day at 10:00 HKT.</p>
 
     <div class="lb-tabs">
       <div class="lb-tab active" data-track="small">Small Model Track</div>
@@ -1460,7 +1460,7 @@ function renderLeaderboard(track) {
     return;
   }
 
-  body.innerHTML = trackData.entries.map((e, i) => {
+  body.innerHTML = trackData.entries.slice(0, 6).map((e, i) => {
     const rank = e.rank || (i + 1);
     let rcClass = 'n';
     if (rank === 1) rcClass = 'g';

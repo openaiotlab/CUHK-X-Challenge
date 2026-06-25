@@ -34,7 +34,7 @@ COMPETITION_SLUGS = {
     "small": "cuhk-x-competition-small-model-track",
     "large": "cuhk-x-competition-large-model-track",
 }
-TOP_N = 20
+TOP_N = 6
 
 # Hard backstop — never refresh past the published Leaderboard Freeze, even if
 # the live deadline check below fails. Update this if the schedule changes.
