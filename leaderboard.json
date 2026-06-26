@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-26T03:02:01.659397Z",
+  "updated_at": "2026-06-26T11:01:15.450476Z",
   "small": {
     "entries": [
       {
@@ -7,42 +7,42 @@
         "team": "Pre-Par-e",
         "score": "0.60199",
         "submissions": "—",
-        "last_submission": "2026-06-25"
+        "last_submission": "2026-06-26"
       },
       {
         "rank": 2,
+        "team": "whynotjustwin",
+        "score": "0.58706",
+        "submissions": "—",
+        "last_submission": "2026-06-26"
+      },
+      {
+        "rank": 3,
+        "team": "Blue",
+        "score": "0.56716",
+        "submissions": "—",
+        "last_submission": "2026-06-26"
+      },
+      {
+        "rank": 4,
         "team": "Arthurs Torres24",
         "score": "0.49253",
         "submissions": "—",
         "last_submission": "2026-06-25"
       },
       {
-        "rank": 3,
+        "rank": 5,
         "team": "Jogi",
         "score": "0.44278",
-        "submissions": "—",
-        "last_submission": "2026-06-25"
-      },
-      {
-        "rank": 4,
-        "team": "Freeman Hui",
-        "score": "0.38805",
         "submissions": "—",
         "last_submission": "2026-06-26"
       },
       {
-        "rank": 5,
-        "team": "whynotjustwin",
-        "score": "0.26865",
-        "submissions": "—",
-        "last_submission": "2026-06-21"
-      },
-      {
         "rank": 6,
-        "team": "SCLim2022080004",
-        "score": "0.25373",
+        "team": "Freeman Hui",
+        "score": "0.38805",
         "submissions": "—",
-        "last_submission": "2026-06-23"
+        "last_submission": "2026-06-26"
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-small-model-track/leaderboard"
@@ -79,17 +79,17 @@
       },
       {
         "rank": 5,
+        "team": "Signal Weavers",
+        "score": "0.57894",
+        "submissions": "—",
+        "last_submission": "2026-06-26"
+      },
+      {
+        "rank": 6,
         "team": "Faisal Alshahrani",
         "score": "0.55263",
         "submissions": "—",
         "last_submission": "2026-06-24"
-      },
-      {
-        "rank": 6,
-        "team": "Signal Weavers",
-        "score": "0.54678",
-        "submissions": "—",
-        "last_submission": "2026-06-25"
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-large-model-track/leaderboard"
