@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-25T03:47:19.702245Z",
+  "updated_at": "2026-06-26T03:02:01.659397Z",
   "small": {
     "entries": [
       {
@@ -11,115 +11,38 @@
       },
       {
         "rank": 2,
-        "team": "Jogi",
-        "score": "0.44278",
+        "team": "Arthurs Torres24",
+        "score": "0.49253",
         "submissions": "—",
-        "last_submission": "2026-06-24"
+        "last_submission": "2026-06-25"
       },
       {
         "rank": 3,
-        "team": "Freeman Hui",
-        "score": "0.37810",
+        "team": "Jogi",
+        "score": "0.44278",
         "submissions": "—",
         "last_submission": "2026-06-25"
       },
       {
         "rank": 4,
+        "team": "Freeman Hui",
+        "score": "0.38805",
+        "submissions": "—",
+        "last_submission": "2026-06-26"
+      },
+      {
+        "rank": 5,
         "team": "whynotjustwin",
         "score": "0.26865",
         "submissions": "—",
         "last_submission": "2026-06-21"
       },
       {
-        "rank": 5,
+        "rank": 6,
         "team": "SCLim2022080004",
         "score": "0.25373",
         "submissions": "—",
         "last_submission": "2026-06-23"
-      },
-      {
-        "rank": 6,
-        "team": "Abdulsamad",
-        "score": "0.21890",
-        "submissions": "—",
-        "last_submission": "2026-06-22"
-      },
-      {
-        "rank": 7,
-        "team": "Anh Tuan Ha",
-        "score": "0.19900",
-        "submissions": "—",
-        "last_submission": "2026-06-23"
-      },
-      {
-        "rank": 8,
-        "team": "Danielle Lesin",
-        "score": "0.17412",
-        "submissions": "—",
-        "last_submission": "2026-06-24"
-      },
-      {
-        "rank": 9,
-        "team": "Surya milenial",
-        "score": "0.10945",
-        "submissions": "—",
-        "last_submission": "2026-06-23"
-      },
-      {
-        "rank": 10,
-        "team": "CuteClaw",
-        "score": "0.05970",
-        "submissions": "—",
-        "last_submission": "2026-06-24"
-      },
-      {
-        "rank": 11,
-        "team": "Mathurin Ache",
-        "score": "0.03980",
-        "submissions": "—",
-        "last_submission": "2026-06-23"
-      },
-      {
-        "rank": 12,
-        "team": "GeniusYY",
-        "score": "0.03482",
-        "submissions": "—",
-        "last_submission": "2026-06-22"
-      },
-      {
-        "rank": 13,
-        "team": "yali251",
-        "score": "0.03482",
-        "submissions": "—",
-        "last_submission": "2026-06-22"
-      },
-      {
-        "rank": 14,
-        "team": "Himanshu Dhiman",
-        "score": "0.02985",
-        "submissions": "—",
-        "last_submission": "2026-06-20"
-      },
-      {
-        "rank": 15,
-        "team": "StephenNedumpally",
-        "score": "0.01990",
-        "submissions": "—",
-        "last_submission": "2026-06-21"
-      },
-      {
-        "rank": 16,
-        "team": "Akhilesh godugu",
-        "score": "0.01990",
-        "submissions": "—",
-        "last_submission": "2026-06-22"
-      },
-      {
-        "rank": 17,
-        "team": "Jeki Wan Taufik",
-        "score": "0.01492",
-        "submissions": "—",
-        "last_submission": "2026-06-21"
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-small-model-track/leaderboard"
@@ -136,9 +59,9 @@
       {
         "rank": 2,
         "team": "Danielle Lesin",
-        "score": "0.61695",
+        "score": "0.63742",
         "submissions": "—",
-        "last_submission": "2026-06-24"
+        "last_submission": "2026-06-25"
       },
       {
         "rank": 3,
@@ -164,51 +87,9 @@
       {
         "rank": 6,
         "team": "Signal Weavers",
-        "score": "0.52046",
+        "score": "0.54678",
         "submissions": "—",
         "last_submission": "2026-06-25"
-      },
-      {
-        "rank": 7,
-        "team": "Enrique.J.Chan",
-        "score": "0.48830",
-        "submissions": "—",
-        "last_submission": "2026-06-24"
-      },
-      {
-        "rank": 8,
-        "team": "Jason Karpeles",
-        "score": "0.47660",
-        "submissions": "—",
-        "last_submission": "2026-06-23"
-      },
-      {
-        "rank": 9,
-        "team": "GeniusYY",
-        "score": "0.32748",
-        "submissions": "—",
-        "last_submission": "2026-06-23"
-      },
-      {
-        "rank": 10,
-        "team": "yali251",
-        "score": "0.23391",
-        "submissions": "—",
-        "last_submission": "2026-06-22"
-      },
-      {
-        "rank": 11,
-        "team": "Arkat Khassanov",
-        "score": "0.23391",
-        "submissions": "—",
-        "last_submission": "2026-06-24"
-      },
-      {
-        "rank": 12,
-        "team": "Akhilesh godugu",
-        "score": "0.16959",
-        "submissions": "—",
-        "last_submission": "2026-06-22"
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-large-model-track/leaderboard"
