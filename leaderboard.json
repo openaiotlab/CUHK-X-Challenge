@@ -1,46 +1,46 @@
 {
-  "updated_at": "2026-06-26T11:01:15.450476Z",
+  "updated_at": "2026-06-27T03:01:24.987387Z",
   "small": {
     "entries": [
       {
         "rank": 1,
-        "team": "Pre-Par-e",
-        "score": "0.60199",
+        "team": "Danielle Lesin",
+        "score": "1.00000",
         "submissions": "—",
         "last_submission": "2026-06-26"
       },
       {
         "rank": 2,
+        "team": "Pre-Par-e",
+        "score": "0.64676",
+        "submissions": "—",
+        "last_submission": "2026-06-27"
+      },
+      {
+        "rank": 3,
+        "team": "Arthurs Torres24",
+        "score": "0.59701",
+        "submissions": "—",
+        "last_submission": "2026-06-26"
+      },
+      {
+        "rank": 4,
         "team": "whynotjustwin",
         "score": "0.58706",
         "submissions": "—",
         "last_submission": "2026-06-26"
       },
       {
-        "rank": 3,
+        "rank": 5,
         "team": "Blue",
         "score": "0.56716",
         "submissions": "—",
         "last_submission": "2026-06-26"
       },
       {
-        "rank": 4,
-        "team": "Arthurs Torres24",
-        "score": "0.49253",
-        "submissions": "—",
-        "last_submission": "2026-06-25"
-      },
-      {
-        "rank": 5,
+        "rank": 6,
         "team": "Jogi",
         "score": "0.44278",
-        "submissions": "—",
-        "last_submission": "2026-06-26"
-      },
-      {
-        "rank": 6,
-        "team": "Freeman Hui",
-        "score": "0.38805",
         "submissions": "—",
         "last_submission": "2026-06-26"
       }
@@ -59,9 +59,9 @@
       {
         "rank": 2,
         "team": "Danielle Lesin",
-        "score": "0.63742",
+        "score": "0.64035",
         "submissions": "—",
-        "last_submission": "2026-06-25"
+        "last_submission": "2026-06-26"
       },
       {
         "rank": 3,
