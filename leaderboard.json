@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-27T03:01:24.987387Z",
+  "updated_at": "2026-06-28T03:02:33.141136Z",
   "small": {
     "entries": [
       {
@@ -7,21 +7,21 @@
         "team": "Danielle Lesin",
         "score": "1.00000",
         "submissions": "—",
-        "last_submission": "2026-06-26"
+        "last_submission": "2026-06-27"
       },
       {
         "rank": 2,
         "team": "Pre-Par-e",
-        "score": "0.64676",
+        "score": "0.68656",
         "submissions": "—",
-        "last_submission": "2026-06-27"
+        "last_submission": "2026-06-28"
       },
       {
         "rank": 3,
         "team": "Arthurs Torres24",
         "score": "0.59701",
         "submissions": "—",
-        "last_submission": "2026-06-26"
+        "last_submission": "2026-06-27"
       },
       {
         "rank": 4,
@@ -35,14 +35,14 @@
         "team": "Blue",
         "score": "0.56716",
         "submissions": "—",
-        "last_submission": "2026-06-26"
+        "last_submission": "2026-06-27"
       },
       {
         "rank": 6,
-        "team": "Jogi",
-        "score": "0.44278",
+        "team": "Mathurin Ache",
+        "score": "0.53233",
         "submissions": "—",
-        "last_submission": "2026-06-26"
+        "last_submission": "2026-06-27"
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-small-model-track/leaderboard"
@@ -61,7 +61,7 @@
         "team": "Danielle Lesin",
         "score": "0.64035",
         "submissions": "—",
-        "last_submission": "2026-06-26"
+        "last_submission": "2026-06-27"
       },
       {
         "rank": 3,
@@ -89,7 +89,7 @@
         "team": "Faisal Alshahrani",
         "score": "0.55263",
         "submissions": "—",
-        "last_submission": "2026-06-24"
+        "last_submission": "2026-06-27"
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-large-model-track/leaderboard"
