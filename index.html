@@ -1492,6 +1492,9 @@ loadLeaderboard();
 // ==================== REGISTRATION FORM ====================
 // IMPORTANT: replace this URL with the Apps Script Web App URL after deployment
 const REG_ENDPOINT = 'https://script.google.com/macros/s/AKfycbzTizIX8modAv6T2L6J9Klvp7wXjk7gkU8Pxi0jlQMER0LXlwxqoSDLhh1AUpRGW7pitg/exec';
+// Hong Kong relay (Tencent SCF) — reachable from mainland China where Google is blocked.
+// It forwards the same payload to the Apps Script above, so entries land in the SAME sheet.
+const REG_RELAY = 'https://1448216525-1thwxjsvcn.ap-hongkong.tencentscf.com';
 
 const regModal = document.getElementById('reg-modal');
 const regOpen = document.getElementById('prereg-open');
@@ -1621,8 +1624,23 @@ regForm?.addEventListener('submit', async (e) => {
     regForm.reset();
     setTimeout(closeRegModal, 2500);
   } catch (err) {
-    regStatus.textContent = '✗ ' + (err.message || 'Submission failed. Please try again or email cuhkx.competition@gmail.com.');
-    regStatus.className = 'form-status error';
+    // Google was unreachable (e.g. mainland China blocks Google). Fall back to the
+    // Hong Kong relay, which forwards to the SAME Google Sheet — no re-filling needed.
+    try {
+      const relayRes = await fetch(REG_RELAY, {
+        method: 'POST',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify(payload)
+      });
+      if (!relayRes.ok) throw new Error('relay HTTP ' + relayRes.status);
+      regStatus.textContent = '✓ Registration submitted! Organizers will be in touch via the contact email you provided.';
+      regStatus.className = 'form-status success';
+      regForm.reset();
+      setTimeout(closeRegModal, 2500);
+    } catch (err2) {
+      regStatus.textContent = '✗ Submission failed — your network may be blocking it. Please retry on another network or a VPN, or email us at cuhkx.competition@gmail.com.';
+      regStatus.className = 'form-status error';
+    }
   } finally {
     regSubmit.disabled = false;
   }
