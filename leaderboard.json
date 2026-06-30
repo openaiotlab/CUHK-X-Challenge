@@ -1,27 +1,27 @@
 {
-  "updated_at": "2026-06-29T03:02:54.386921Z",
+  "updated_at": "2026-06-30T03:02:13.507384Z",
   "small": {
     "entries": [
       {
         "rank": 1,
         "team": "Danielle Lesin",
-        "score": "1.00000",
+        "score": "0.71641",
         "submissions": "—",
-        "last_submission": "2026-06-28"
+        "last_submission": "2026-06-29"
       },
       {
         "rank": 2,
         "team": "Pre-Par-e",
-        "score": "0.70149",
+        "score": "0.71144",
         "submissions": "—",
-        "last_submission": "2026-06-29"
+        "last_submission": "2026-06-30"
       },
       {
         "rank": 3,
         "team": "Arthurs Torres24",
         "score": "0.63184",
         "submissions": "—",
-        "last_submission": "2026-06-28"
+        "last_submission": "2026-06-29"
       },
       {
         "rank": 4,
@@ -35,7 +35,7 @@
         "team": "Blue",
         "score": "0.56716",
         "submissions": "—",
-        "last_submission": "2026-06-28"
+        "last_submission": "2026-06-29"
       },
       {
         "rank": 6,
@@ -51,45 +51,45 @@
     "entries": [
       {
         "rank": 1,
-        "team": "Danielle Lesin",
-        "score": "0.65204",
+        "team": "Signal Weavers",
+        "score": "0.86842",
         "submissions": "—",
         "last_submission": "2026-06-29"
       },
       {
         "rank": 2,
         "team": "JothanJyu",
-        "score": "0.64619",
+        "score": "0.66666",
         "submissions": "—",
-        "last_submission": "2026-06-22"
+        "last_submission": "2026-06-29"
       },
       {
         "rank": 3,
+        "team": "Danielle Lesin",
+        "score": "0.65497",
+        "submissions": "—",
+        "last_submission": "2026-06-30"
+      },
+      {
+        "rank": 4,
         "team": "Pre-Par-e",
         "score": "0.61111",
         "submissions": "—",
         "last_submission": "2026-06-24"
       },
       {
-        "rank": 4,
+        "rank": 5,
+        "team": "KineX",
+        "score": "0.59941",
+        "submissions": "—",
+        "last_submission": "2026-06-29"
+      },
+      {
+        "rank": 6,
         "team": "SCLim2022080004",
         "score": "0.59064",
         "submissions": "—",
         "last_submission": "2026-06-23"
-      },
-      {
-        "rank": 5,
-        "team": "Signal Weavers",
-        "score": "0.57894",
-        "submissions": "—",
-        "last_submission": "2026-06-26"
-      },
-      {
-        "rank": 6,
-        "team": "Faisal Alshahrani",
-        "score": "0.55263",
-        "submissions": "—",
-        "last_submission": "2026-06-27"
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-large-model-track/leaderboard"
