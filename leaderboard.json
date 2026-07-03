@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-02T03:01:28.739543Z",
+  "updated_at": "2026-07-03T03:00:48.315183Z",
   "small": {
     "entries": [
       {
@@ -21,28 +21,28 @@
         "team": "Arthurs Torres24",
         "score": "0.70149",
         "submissions": "—",
-        "last_submission": "2026-07-02"
+        "last_submission": "2026-07-03"
       },
       {
         "rank": 4,
+        "team": "z shuyang",
+        "score": "0.59203",
+        "submissions": "—",
+        "last_submission": "2026-07-03"
+      },
+      {
+        "rank": 5,
         "team": "whynotjustwin",
         "score": "0.58706",
         "submissions": "—",
         "last_submission": "2026-06-26"
       },
       {
-        "rank": 5,
+        "rank": 6,
         "team": "Blue",
         "score": "0.56716",
         "submissions": "—",
         "last_submission": "2026-07-01"
-      },
-      {
-        "rank": 6,
-        "team": "z shuyang",
-        "score": "0.56218",
-        "submissions": "—",
-        "last_submission": "2026-07-02"
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-small-model-track/leaderboard"
@@ -59,23 +59,23 @@
       {
         "rank": 2,
         "team": "KineX",
-        "score": "0.71052",
+        "score": "0.76315",
         "submissions": "—",
-        "last_submission": "2026-07-01"
+        "last_submission": "2026-07-02"
       },
       {
         "rank": 3,
-        "team": "Blue",
-        "score": "0.68128",
+        "team": "JothanJyu",
+        "score": "0.69590",
         "submissions": "—",
         "last_submission": "2026-07-02"
       },
       {
         "rank": 4,
-        "team": "JothanJyu",
-        "score": "0.66666",
+        "team": "Blue",
+        "score": "0.68128",
         "submissions": "—",
-        "last_submission": "2026-06-29"
+        "last_submission": "2026-07-02"
       },
       {
         "rank": 5,
@@ -86,10 +86,10 @@
       },
       {
         "rank": 6,
-        "team": "Pre-Par-e",
-        "score": "0.61111",
+        "team": "GeniusYY",
+        "score": "0.61695",
         "submissions": "—",
-        "last_submission": "2026-07-01"
+        "last_submission": "2026-07-02"
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-large-model-track/leaderboard"
