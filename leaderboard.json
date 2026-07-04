@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-07-03T03:00:48.315183Z",
+  "updated_at": "2026-07-04T03:00:38.497850Z",
   "small": {
     "entries": [
       {
         "rank": 1,
         "team": "Pre-Par-e",
-        "score": "0.73631",
+        "score": "0.74129",
         "submissions": "—",
-        "last_submission": "2026-07-02"
+        "last_submission": "2026-07-03"
       },
       {
         "rank": 2,
@@ -21,12 +21,12 @@
         "team": "Arthurs Torres24",
         "score": "0.70149",
         "submissions": "—",
-        "last_submission": "2026-07-03"
+        "last_submission": "2026-07-04"
       },
       {
         "rank": 4,
         "team": "z shuyang",
-        "score": "0.59203",
+        "score": "0.59701",
         "submissions": "—",
         "last_submission": "2026-07-03"
       },
@@ -39,10 +39,10 @@
       },
       {
         "rank": 6,
-        "team": "Blue",
-        "score": "0.56716",
+        "team": "Jogi",
+        "score": "0.58208",
         "submissions": "—",
-        "last_submission": "2026-07-01"
+        "last_submission": "2026-07-03"
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-small-model-track/leaderboard"
@@ -61,7 +61,7 @@
         "team": "KineX",
         "score": "0.76315",
         "submissions": "—",
-        "last_submission": "2026-07-02"
+        "last_submission": "2026-07-03"
       },
       {
         "rank": 3,
@@ -80,16 +80,16 @@
       {
         "rank": 5,
         "team": "Danielle Lesin",
-        "score": "0.65789",
+        "score": "0.66374",
         "submissions": "—",
-        "last_submission": "2026-06-30"
+        "last_submission": "2026-07-04"
       },
       {
         "rank": 6,
-        "team": "GeniusYY",
-        "score": "0.61695",
+        "team": "Park kun woo",
+        "score": "0.63157",
         "submissions": "—",
-        "last_submission": "2026-07-02"
+        "last_submission": "2026-07-03"
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-large-model-track/leaderboard"
