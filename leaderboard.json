@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-04T03:00:38.497850Z",
+  "updated_at": "2026-07-05T03:01:23.205555Z",
   "small": {
     "entries": [
       {
@@ -19,16 +19,16 @@
       {
         "rank": 3,
         "team": "Arthurs Torres24",
-        "score": "0.70149",
+        "score": "0.71144",
         "submissions": "—",
-        "last_submission": "2026-07-04"
+        "last_submission": "2026-07-05"
       },
       {
         "rank": 4,
         "team": "z shuyang",
-        "score": "0.59701",
+        "score": "0.60696",
         "submissions": "—",
-        "last_submission": "2026-07-03"
+        "last_submission": "2026-07-04"
       },
       {
         "rank": 5,
@@ -42,7 +42,7 @@
         "team": "Jogi",
         "score": "0.58208",
         "submissions": "—",
-        "last_submission": "2026-07-03"
+        "last_submission": "2026-07-04"
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-small-model-track/leaderboard"
@@ -61,7 +61,7 @@
         "team": "KineX",
         "score": "0.76315",
         "submissions": "—",
-        "last_submission": "2026-07-03"
+        "last_submission": "2026-07-04"
       },
       {
         "rank": 3,
@@ -75,21 +75,21 @@
         "team": "Blue",
         "score": "0.68128",
         "submissions": "—",
-        "last_submission": "2026-07-02"
+        "last_submission": "2026-07-04"
       },
       {
         "rank": 5,
         "team": "Danielle Lesin",
-        "score": "0.66374",
+        "score": "0.66959",
         "submissions": "—",
         "last_submission": "2026-07-04"
       },
       {
         "rank": 6,
         "team": "Park kun woo",
-        "score": "0.63157",
+        "score": "0.64912",
         "submissions": "—",
-        "last_submission": "2026-07-03"
+        "last_submission": "2026-07-04"
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-large-model-track/leaderboard"
