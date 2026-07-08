@@ -1626,9 +1626,10 @@ regForm?.addEventListener('submit', async (e) => {
 
     if (relayRes.ok && data.ok === true) {
       // Confirmed: the row was written to the Google Sheet.
+      // Keep the submitted values on screen (do NOT reset the form) so the
+      // team can review what they sent.
       regStatus.textContent = SUCCESS_MSG;
       regStatus.className = 'form-status success';
-      regForm.reset();
     } else {
       // Reached the server, but the sheet write was NOT confirmed.
       regStatus.textContent = '✗ We received your request but could not save it to our records.' + MANUAL;
