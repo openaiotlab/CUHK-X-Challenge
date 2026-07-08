@@ -1607,40 +1607,47 @@ regForm?.addEventListener('submit', async (e) => {
   regStatus.textContent = 'Submitting…';
   regStatus.className = 'form-status loading';
 
+  const CONTACT = 'cuhkx.competition@gmail.com';
+  const SUCCESS_MSG = '✓ Registration confirmed — your team has been saved to our records. Organizers will be in touch via the contact email you provided.';
+  // Reason first, then this shared line directing the team to email us.
+  const MANUAL = ' Please email us at ' + CONTACT + ' and we will register your team manually.';
+
   try {
-    if (REG_ENDPOINT.startsWith('REPLACE_')) {
-      throw new Error('Registration endpoint not yet configured. Please contact organizers.');
-    }
-    // Use text/plain to avoid CORS preflight; Apps Script reads e.postData.contents
-    const res = await fetch(REG_ENDPOINT, {
+    // Submit via the Hong Kong relay. It forwards to the Google Apps Script,
+    // reads the REAL result, and returns { ok: true } ONLY after the row is
+    // actually written to the sheet — so success here is genuinely confirmed.
+    // The relay is reachable both worldwide and from mainland China.
+    const relayRes = await fetch(REG_RELAY, {
       method: 'POST',
-      mode: 'no-cors',
       headers: { 'Content-Type': 'text/plain;charset=utf-8' },
       body: JSON.stringify(payload)
     });
-    // With no-cors we can't read the response, so assume success
-    regStatus.textContent = '✓ Registration submitted! Organizers will be in touch via the contact email you provided.';
-    regStatus.className = 'form-status success';
-    regForm.reset();
-    setTimeout(closeRegModal, 2500);
+    const data = await relayRes.json().catch(() => ({}));
+
+    if (relayRes.ok && data.ok === true) {
+      // Confirmed: the row was written to the Google Sheet.
+      regStatus.textContent = SUCCESS_MSG;
+      regStatus.className = 'form-status success';
+      regForm.reset();
+    } else {
+      // Reached the server, but the sheet write was NOT confirmed.
+      regStatus.textContent = '✗ We received your request but could not save it to our records.' + MANUAL;
+      regStatus.className = 'form-status error';
+    }
   } catch (err) {
-    // Google was unreachable (e.g. mainland China blocks Google). Fall back to the
-    // Hong Kong relay, which forwards to the SAME Google Sheet — no re-filling needed.
+    // The relay was unreachable. Best-effort: also post directly to Google so
+    // the data may still arrive — but we cannot confirm, so show a failure
+    // message and let the team email us for a manual registration.
     try {
-      const relayRes = await fetch(REG_RELAY, {
+      await fetch(REG_ENDPOINT, {
         method: 'POST',
+        mode: 'no-cors',
         headers: { 'Content-Type': 'text/plain;charset=utf-8' },
         body: JSON.stringify(payload)
       });
-      if (!relayRes.ok) throw new Error('relay HTTP ' + relayRes.status);
-      regStatus.textContent = '✓ Registration submitted! Organizers will be in touch via the contact email you provided.';
-      regStatus.className = 'form-status success';
-      regForm.reset();
-      setTimeout(closeRegModal, 2500);
-    } catch (err2) {
-      regStatus.textContent = '✗ Submission failed — your network may be blocking it. Please retry on another network or a VPN, or email us at cuhkx.competition@gmail.com.';
-      regStatus.className = 'form-status error';
-    }
+    } catch (err2) { /* ignore — nothing more we can do from the browser */ }
+    regStatus.textContent = '✗ Submission failed — your network may be blocking it. Try another network or a VPN.' + MANUAL;
+    regStatus.className = 'form-status error';
   } finally {
     regSubmit.disabled = false;
   }
