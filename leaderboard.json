@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-07-09T03:01:23.254773Z",
+  "updated_at": "2026-07-10T03:01:11.975858Z",
   "small": {
     "entries": [
       {
         "rank": 1,
         "team": "Pre-Par-e",
-        "score": "0.75124",
+        "score": "0.75621",
         "submissions": "—",
-        "last_submission": "2026-07-08"
+        "last_submission": "2026-07-09"
       },
       {
         "rank": 2,
@@ -21,28 +21,28 @@
         "team": "Arthurs Torres24",
         "score": "0.71144",
         "submissions": "—",
-        "last_submission": "2026-07-08"
+        "last_submission": "2026-07-09"
       },
       {
         "rank": 4,
-        "team": "z shuyang",
-        "score": "0.62189",
+        "team": "ahmetkrgztr",
+        "score": "0.69154",
         "submissions": "—",
-        "last_submission": "2026-07-08"
+        "last_submission": "2026-07-09"
       },
       {
         "rank": 5,
-        "team": "Phaedrus",
-        "score": "0.62189",
+        "team": "z shuyang",
+        "score": "0.63184",
         "submissions": "—",
-        "last_submission": "2026-07-08"
+        "last_submission": "2026-07-09"
       },
       {
         "rank": 6,
-        "team": "Pollux",
-        "score": "0.60199",
+        "team": "Phaedrus",
+        "score": "0.62189",
         "submissions": "—",
-        "last_submission": "2026-07-05"
+        "last_submission": "2026-07-09"
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-small-model-track/leaderboard"
@@ -61,14 +61,14 @@
         "team": "KineX",
         "score": "0.79239",
         "submissions": "—",
-        "last_submission": "2026-07-08"
+        "last_submission": "2026-07-09"
       },
       {
         "rank": 3,
         "team": "Danielle Lesin",
-        "score": "0.70760",
+        "score": "0.71345",
         "submissions": "—",
-        "last_submission": "2026-07-09"
+        "last_submission": "2026-07-10"
       },
       {
         "rank": 4,
