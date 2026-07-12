@@ -43,10 +43,12 @@ PUBLIC_LB_FREEZE_UTC = datetime(2026, 9, 15, 23, 59, tzinfo=timezone.utc)
 OUTPUT_PATH = Path(__file__).resolve().parent.parent / "leaderboard.json"
 
 
-def competition_deadline(api, slug):
-    """Real submission deadline (aware UTC) for `slug`, or None if it can't be
-    confirmed. Used only to TIGHTEN the freeze (catch an early close); when it
-    returns None we fall back to the PUBLIC_LB_FREEZE_UTC backstop."""
+def competition_info(api, slug):
+    """Kaggle competition metadata for `slug`: {'deadline': aware-UTC or None,
+    'team_count': int or None}. `deadline` TIGHTENS the freeze (catch an early
+    close) — when None we fall back to PUBLIC_LB_FREEZE_UTC. `team_count` is the
+    number of teams, shown under the leaderboard."""
+    info = {"deadline": None, "team_count": None}
     try:
         resp = api.competitions_list(search=slug)
         comps = resp if isinstance(resp, list) else (getattr(resp, "competitions", None) or [])
@@ -54,12 +56,19 @@ def competition_deadline(api, slug):
             ref = str(getattr(c, "ref", "")).rstrip("/")
             if ref.split("/")[-1] == slug:
                 dl = getattr(c, "deadline", None)
-                if not isinstance(dl, datetime):
-                    return None
-                return dl if dl.tzinfo else dl.replace(tzinfo=timezone.utc)
+                if isinstance(dl, datetime):
+                    info["deadline"] = dl if dl.tzinfo else dl.replace(tzinfo=timezone.utc)
+                tc = getattr(c, "teamCount", None)
+                if tc is None:
+                    tc = getattr(c, "team_count", None)
+                try:
+                    info["team_count"] = int(tc) if tc is not None else None
+                except (TypeError, ValueError):
+                    info["team_count"] = None
+                break
     except Exception as e:
-        print(f"  ! deadline lookup failed for {slug}: {type(e).__name__}: {e}")
-    return None
+        print(f"  ! info lookup failed for {slug}: {type(e).__name__}: {e}")
+    return info
 
 
 def fetch_track(api, slug):
@@ -120,7 +129,9 @@ def main():
 
     for track, slug in COMPETITION_SLUGS.items():
         kaggle_url = f"https://www.kaggle.com/competitions/{slug}/leaderboard"
-        deadline = competition_deadline(api, slug)
+        info = competition_info(api, slug)
+        deadline = info["deadline"]
+        team_count = info["team_count"]
         # Layer 2 — only skip when we can POSITIVELY confirm the deadline has passed.
         if deadline is not None and now >= deadline:
             print(f"Skipping '{track}' ({slug}) — competition closed {deadline.isoformat()}; "
@@ -129,6 +140,7 @@ def main():
             prev = prev if isinstance(prev, dict) else {}
             tracks_out[track] = {
                 "entries": prev.get("entries", []),
+                "team_count": team_count if team_count is not None else prev.get("team_count"),
                 "kaggle_url": kaggle_url,
                 "frozen": True,
                 "note": "Not refreshed — competition closed (public-only safeguard).",
@@ -138,11 +150,12 @@ def main():
         print(f"Fetching '{track}' ({slug})…")
         track_data = fetch_track(api, slug)
         track_data["kaggle_url"] = kaggle_url
+        track_data["team_count"] = team_count
         any_fetched = True
         if "error" in track_data:
             print(f"  ! {track_data['error']}")
         else:
-            print(f"  ✓ {len(track_data['entries'])} entries")
+            print(f"  ✓ {len(track_data['entries'])} entries · {team_count} teams")
         tracks_out[track] = track_data
 
     # Advance the timestamp only when something was actually fetched, so a fully

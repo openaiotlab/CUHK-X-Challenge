@@ -284,6 +284,8 @@
   .lb-table .lb-team { font-weight: 600; }
   .lb-table .lb-score { font-family: 'SF Mono', Menlo, monospace; font-weight: 600; color: var(--cyan); }
   .lb-table .lb-date { color: var(--text-muted); font-size: 0.83rem; }
+  .lb-teamcount { margin-top: 0.85rem; font-size: 0.85rem; color: var(--text-secondary); }
+  .lb-teamcount strong { color: var(--cyan); font-weight: 700; }
   .lb-empty { padding: 2.5rem 1rem; text-align: center; color: var(--text-muted); font-size: 0.9rem; line-height: 1.7; }
   .lb-empty strong { display: block; color: var(--text-secondary); font-size: 1rem; margin-bottom: 0.4rem; }
   .rc { display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px; border-radius: 50%; font-size: 0.78rem; font-weight: 700; }
@@ -855,6 +857,7 @@
         </tbody>
       </table>
     </div>
+    <p class="lb-teamcount" id="lb-teamcount"></p>
   </div>
 </section>
 
@@ -1452,6 +1455,15 @@ function renderLeaderboard(track) {
   const trackData = LB_DATA && LB_DATA[track];
   if (trackData && trackData.kaggle_url) {
     sourceLink.href = trackData.kaggle_url;
+  }
+
+  const teamCountEl = document.getElementById('lb-teamcount');
+  if (teamCountEl) {
+    const tc = trackData && (trackData.team_count ?? trackData.teamCount);
+    const label = track === 'small' ? 'Small Model Track' : 'Large Model Track';
+    teamCountEl.innerHTML = (typeof tc === 'number' && tc >= 0)
+      ? `<strong>${tc}</strong> teams competing in the ${label}`
+      : '';
   }
 
   if (!trackData || !trackData.entries || trackData.entries.length === 0) {

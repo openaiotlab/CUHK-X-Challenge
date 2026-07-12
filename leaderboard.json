@@ -45,6 +45,7 @@
         "last_submission": "2026-07-12"
       }
     ],
+    "team_count": 91,
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-small-model-track/leaderboard"
   },
   "large": {
@@ -92,6 +93,7 @@
         "last_submission": "2026-07-04"
       }
     ],
+    "team_count": 81,
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-large-model-track/leaderboard"
   }
 }
