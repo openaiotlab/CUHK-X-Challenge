@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-11T02:59:52.898827Z",
+  "updated_at": "2026-07-12T03:00:18.254194Z",
   "small": {
     "entries": [
       {
@@ -32,17 +32,17 @@
       },
       {
         "rank": 5,
-        "team": "Phaedrus",
-        "score": "0.64676",
+        "team": "z shuyang",
+        "score": "0.66169",
         "submissions": "—",
-        "last_submission": "2026-07-10"
+        "last_submission": "2026-07-12"
       },
       {
         "rank": 6,
-        "team": "z shuyang",
-        "score": "0.64179",
+        "team": "Phaedrus",
+        "score": "0.66169",
         "submissions": "—",
-        "last_submission": "2026-07-11"
+        "last_submission": "2026-07-12"
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-small-model-track/leaderboard"
