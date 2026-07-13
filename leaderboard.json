@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-12T03:00:18.254194Z",
+  "updated_at": "2026-07-13T03:00:29.641104Z",
   "small": {
     "entries": [
       {
@@ -32,21 +32,21 @@
       },
       {
         "rank": 5,
-        "team": "z shuyang",
-        "score": "0.66169",
+        "team": "houqiiii",
+        "score": "0.70149",
         "submissions": "—",
-        "last_submission": "2026-07-12"
+        "last_submission": "2026-07-13"
       },
       {
         "rank": 6,
-        "team": "Phaedrus",
+        "team": "z shuyang",
         "score": "0.66169",
         "submissions": "—",
-        "last_submission": "2026-07-12"
+        "last_submission": "2026-07-13"
       }
     ],
-    "team_count": 91,
-    "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-small-model-track/leaderboard"
+    "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-small-model-track/leaderboard",
+    "team_count": 96
   },
   "large": {
     "entries": [
@@ -80,20 +80,20 @@
       },
       {
         "rank": 5,
+        "team": "xianggkl",
+        "score": "0.68421",
+        "submissions": "—",
+        "last_submission": "2026-07-12"
+      },
+      {
+        "rank": 6,
         "team": "Blue",
         "score": "0.68128",
         "submissions": "—",
         "last_submission": "2026-07-04"
-      },
-      {
-        "rank": 6,
-        "team": "Park kun woo",
-        "score": "0.64912",
-        "submissions": "—",
-        "last_submission": "2026-07-04"
       }
     ],
-    "team_count": 81,
-    "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-large-model-track/leaderboard"
+    "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-large-model-track/leaderboard",
+    "team_count": 85
   }
 }
