@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-15T02:59:21.411403Z",
+  "updated_at": "2026-07-16T02:59:53.072772Z",
   "small": {
     "entries": [
       {
@@ -28,7 +28,7 @@
         "team": "ahmetkrgztr",
         "score": "0.73134",
         "submissions": "—",
-        "last_submission": "2026-07-14"
+        "last_submission": "2026-07-16"
       },
       {
         "rank": 5,
@@ -42,11 +42,11 @@
         "team": "z shuyang",
         "score": "0.71641",
         "submissions": "—",
-        "last_submission": "2026-07-14"
+        "last_submission": "2026-07-15"
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-small-model-track/leaderboard",
-    "team_count": 108
+    "team_count": 110
   },
   "large": {
     "entries": [
@@ -66,31 +66,31 @@
       },
       {
         "rank": 3,
+        "team": "Team StarFire",
+        "score": "0.79239",
+        "submissions": "—",
+        "last_submission": "2026-07-15"
+      },
+      {
+        "rank": 4,
         "team": "xianggkl",
         "score": "0.72514",
         "submissions": "—",
         "last_submission": "2026-07-14"
       },
       {
-        "rank": 4,
+        "rank": 5,
         "team": "Danielle Lesin",
         "score": "0.71345",
         "submissions": "—",
         "last_submission": "2026-07-10"
       },
       {
-        "rank": 5,
-        "team": "Team StarFire",
-        "score": "0.70760",
-        "submissions": "—",
-        "last_submission": "2026-07-14"
-      },
-      {
         "rank": 6,
         "team": "JothanJyu",
         "score": "0.69590",
         "submissions": "—",
-        "last_submission": "2026-07-08"
+        "last_submission": "2026-07-15"
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-large-model-track/leaderboard",
