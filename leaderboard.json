@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-16T02:59:53.072772Z",
+  "updated_at": "2026-07-17T03:00:04.657328Z",
   "small": {
     "entries": [
       {
@@ -42,11 +42,11 @@
         "team": "z shuyang",
         "score": "0.71641",
         "submissions": "—",
-        "last_submission": "2026-07-15"
+        "last_submission": "2026-07-16"
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-small-model-track/leaderboard",
-    "team_count": 110
+    "team_count": 112
   },
   "large": {
     "entries": [
@@ -69,14 +69,14 @@
         "team": "Team StarFire",
         "score": "0.79239",
         "submissions": "—",
-        "last_submission": "2026-07-15"
+        "last_submission": "2026-07-16"
       },
       {
         "rank": 4,
         "team": "xianggkl",
-        "score": "0.72514",
+        "score": "0.74561",
         "submissions": "—",
-        "last_submission": "2026-07-14"
+        "last_submission": "2026-07-16"
       },
       {
         "rank": 5,
