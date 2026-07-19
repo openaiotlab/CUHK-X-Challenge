@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-18T02:59:33.103496Z",
+  "updated_at": "2026-07-19T03:00:24.733011Z",
   "small": {
     "entries": [
       {
@@ -14,7 +14,7 @@
         "team": "Pre-Par-e",
         "score": "0.76119",
         "submissions": "—",
-        "last_submission": "2026-07-14"
+        "last_submission": "2026-07-18"
       },
       {
         "rank": 3,
@@ -32,17 +32,17 @@
       },
       {
         "rank": 5,
+        "team": "Jacobo Martin",
+        "score": "0.73134",
+        "submissions": "—",
+        "last_submission": "2026-07-18"
+      },
+      {
+        "rank": 6,
         "team": "Danielle Lesin",
         "score": "0.71641",
         "submissions": "—",
         "last_submission": "2026-07-06"
-      },
-      {
-        "rank": 6,
-        "team": "z shuyang",
-        "score": "0.71641",
-        "submissions": "—",
-        "last_submission": "2026-07-16"
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-small-model-track/leaderboard",
@@ -74,26 +74,26 @@
       {
         "rank": 4,
         "team": "xianggkl",
-        "score": "0.74561",
+        "score": "0.75730",
         "submissions": "—",
-        "last_submission": "2026-07-16"
+        "last_submission": "2026-07-18"
       },
       {
         "rank": 5,
+        "team": "GeniusYY",
+        "score": "0.72807",
+        "submissions": "—",
+        "last_submission": "2026-07-18"
+      },
+      {
+        "rank": 6,
         "team": "Danielle Lesin",
         "score": "0.71345",
         "submissions": "—",
         "last_submission": "2026-07-10"
-      },
-      {
-        "rank": 6,
-        "team": "GeniusYY",
-        "score": "0.71345",
-        "submissions": "—",
-        "last_submission": "2026-07-18"
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-large-model-track/leaderboard",
-    "team_count": 92
+    "team_count": 93
   }
 }
