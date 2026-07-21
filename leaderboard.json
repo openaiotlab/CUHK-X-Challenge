@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-20T03:44:57.242995Z",
+  "updated_at": "2026-07-21T03:00:05.934015Z",
   "small": {
     "entries": [
       {
@@ -35,7 +35,7 @@
         "team": "ahmetkrgztr",
         "score": "0.73134",
         "submissions": "—",
-        "last_submission": "2026-07-17"
+        "last_submission": "2026-07-20"
       },
       {
         "rank": 6,
@@ -46,7 +46,7 @@
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-small-model-track/leaderboard",
-    "team_count": 114
+    "team_count": 118
   },
   "large": {
     "entries": [
@@ -76,7 +76,7 @@
         "team": "xianggkl",
         "score": "0.76315",
         "submissions": "—",
-        "last_submission": "2026-07-19"
+        "last_submission": "2026-07-20"
       },
       {
         "rank": 5,
