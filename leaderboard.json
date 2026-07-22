@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-21T03:00:05.934015Z",
+  "updated_at": "2026-07-22T03:00:02.576390Z",
   "small": {
     "entries": [
       {
@@ -21,7 +21,7 @@
         "team": "Jacobo Martin",
         "score": "0.75124",
         "submissions": "—",
-        "last_submission": "2026-07-19"
+        "last_submission": "2026-07-21"
       },
       {
         "rank": 4,
@@ -35,7 +35,7 @@
         "team": "ahmetkrgztr",
         "score": "0.73134",
         "submissions": "—",
-        "last_submission": "2026-07-20"
+        "last_submission": "2026-07-21"
       },
       {
         "rank": 6,
@@ -46,7 +46,7 @@
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-small-model-track/leaderboard",
-    "team_count": 118
+    "team_count": 123
   },
   "large": {
     "entries": [
@@ -94,6 +94,6 @@
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-large-model-track/leaderboard",
-    "team_count": 93
+    "team_count": 94
   }
 }
