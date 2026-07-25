@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-24T02:59:58.010733Z",
+  "updated_at": "2026-07-25T02:59:43.236683Z",
   "small": {
     "entries": [
       {
@@ -7,7 +7,7 @@
         "team": "Jacobo Martin",
         "score": "0.83582",
         "submissions": "—",
-        "last_submission": "2026-07-23"
+        "last_submission": "2026-07-24"
       },
       {
         "rank": 2,
@@ -21,7 +21,7 @@
         "team": "Pre-Par-e",
         "score": "0.76119",
         "submissions": "—",
-        "last_submission": "2026-07-18"
+        "last_submission": "2026-07-24"
       },
       {
         "rank": 4,
@@ -33,20 +33,20 @@
       {
         "rank": 5,
         "team": "houqiiii",
-        "score": "0.74129",
+        "score": "0.75124",
         "submissions": "—",
-        "last_submission": "2026-07-23"
+        "last_submission": "2026-07-24"
       },
       {
         "rank": 6,
         "team": "ahmetkrgztr",
         "score": "0.73134",
         "submissions": "—",
-        "last_submission": "2026-07-21"
+        "last_submission": "2026-07-24"
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-small-model-track/leaderboard",
-    "team_count": 128
+    "team_count": 130
   },
   "large": {
     "entries": [
@@ -76,24 +76,24 @@
         "team": "xianggkl",
         "score": "0.76315",
         "submissions": "—",
-        "last_submission": "2026-07-22"
+        "last_submission": "2026-07-24"
       },
       {
         "rank": 5,
         "team": "GeniusYY",
-        "score": "0.72807",
+        "score": "0.74561",
         "submissions": "—",
-        "last_submission": "2026-07-18"
+        "last_submission": "2026-07-25"
       },
       {
         "rank": 6,
-        "team": "Danielle Lesin",
-        "score": "0.71345",
+        "team": "Fususu",
+        "score": "0.72807",
         "submissions": "—",
-        "last_submission": "2026-07-10"
+        "last_submission": "2026-07-25"
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-large-model-track/leaderboard",
-    "team_count": 97
+    "team_count": 98
   }
 }
