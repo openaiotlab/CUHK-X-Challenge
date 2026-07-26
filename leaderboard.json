@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-25T02:59:43.236683Z",
+  "updated_at": "2026-07-26T03:00:05.014228Z",
   "small": {
     "entries": [
       {
@@ -7,7 +7,7 @@
         "team": "Jacobo Martin",
         "score": "0.83582",
         "submissions": "—",
-        "last_submission": "2026-07-24"
+        "last_submission": "2026-07-25"
       },
       {
         "rank": 2,
@@ -42,11 +42,11 @@
         "team": "ahmetkrgztr",
         "score": "0.73134",
         "submissions": "—",
-        "last_submission": "2026-07-24"
+        "last_submission": "2026-07-25"
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-small-model-track/leaderboard",
-    "team_count": 130
+    "team_count": 132
   },
   "large": {
     "entries": [
@@ -73,27 +73,27 @@
       },
       {
         "rank": 4,
+        "team": "Fususu",
+        "score": "0.77192",
+        "submissions": "—",
+        "last_submission": "2026-07-26"
+      },
+      {
+        "rank": 5,
         "team": "xianggkl",
         "score": "0.76315",
         "submissions": "—",
         "last_submission": "2026-07-24"
       },
       {
-        "rank": 5,
+        "rank": 6,
         "team": "GeniusYY",
         "score": "0.74561",
-        "submissions": "—",
-        "last_submission": "2026-07-25"
-      },
-      {
-        "rank": 6,
-        "team": "Fususu",
-        "score": "0.72807",
         "submissions": "—",
         "last_submission": "2026-07-25"
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-large-model-track/leaderboard",
-    "team_count": 98
+    "team_count": 99
   }
 }
