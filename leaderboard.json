@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-26T03:00:05.014228Z",
+  "updated_at": "2026-07-27T03:00:35.143937Z",
   "small": {
     "entries": [
       {
@@ -7,7 +7,7 @@
         "team": "Jacobo Martin",
         "score": "0.83582",
         "submissions": "—",
-        "last_submission": "2026-07-25"
+        "last_submission": "2026-07-26"
       },
       {
         "rank": 2,
@@ -46,51 +46,51 @@
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-small-model-track/leaderboard",
-    "team_count": 132
+    "team_count": 135
   },
   "large": {
     "entries": [
       {
         "rank": 1,
+        "team": "AICL",
+        "score": "0.88888",
+        "submissions": "—",
+        "last_submission": "2026-07-26"
+      },
+      {
+        "rank": 2,
         "team": "Signal Weavers",
         "score": "0.86842",
         "submissions": "—",
         "last_submission": "2026-07-06"
       },
       {
-        "rank": 2,
+        "rank": 3,
         "team": "Team StarFire",
         "score": "0.79532",
         "submissions": "—",
-        "last_submission": "2026-07-19"
+        "last_submission": "2026-07-26"
       },
       {
-        "rank": 3,
+        "rank": 4,
         "team": "KineX",
         "score": "0.79239",
         "submissions": "—",
         "last_submission": "2026-07-14"
       },
       {
-        "rank": 4,
-        "team": "Fususu",
-        "score": "0.77192",
+        "rank": 5,
+        "team": "BRR1154",
+        "score": "0.77485",
         "submissions": "—",
         "last_submission": "2026-07-26"
       },
       {
-        "rank": 5,
-        "team": "xianggkl",
-        "score": "0.76315",
-        "submissions": "—",
-        "last_submission": "2026-07-24"
-      },
-      {
         "rank": 6,
-        "team": "GeniusYY",
-        "score": "0.74561",
+        "team": "Muthuraman Raman 7",
+        "score": "0.77485",
         "submissions": "—",
-        "last_submission": "2026-07-25"
+        "last_submission": "2026-07-26"
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-large-model-track/leaderboard",
