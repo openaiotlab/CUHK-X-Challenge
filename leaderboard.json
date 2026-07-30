@@ -1,34 +1,34 @@
 {
-  "updated_at": "2026-07-29T02:59:57.677146Z",
+  "updated_at": "2026-07-30T02:59:26.978656Z",
   "small": {
     "entries": [
       {
         "rank": 1,
         "team": "Jacobo Martin",
-        "score": "0.83582",
-        "submissions": "—",
-        "last_submission": "2026-07-28"
-      },
-      {
-        "rank": 2,
-        "team": "Pre-Par-e",
-        "score": "0.77611",
+        "score": "0.89552",
         "submissions": "—",
         "last_submission": "2026-07-29"
       },
       {
+        "rank": 2,
+        "team": "Pre-Par-e",
+        "score": "0.79601",
+        "submissions": "—",
+        "last_submission": "2026-07-30"
+      },
+      {
         "rank": 3,
+        "team": "Bull",
+        "score": "0.79104",
+        "submissions": "—",
+        "last_submission": "2026-07-29"
+      },
+      {
+        "rank": 4,
         "team": "Arthurs Torres24",
         "score": "0.76616",
         "submissions": "—",
         "last_submission": "2026-07-15"
-      },
-      {
-        "rank": 4,
-        "team": "Bull",
-        "score": "0.76616",
-        "submissions": "—",
-        "last_submission": "2026-07-28"
       },
       {
         "rank": 5,
@@ -42,20 +42,20 @@
         "team": "houqiiii",
         "score": "0.75124",
         "submissions": "—",
-        "last_submission": "2026-07-24"
+        "last_submission": "2026-07-29"
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-small-model-track/leaderboard",
-    "team_count": 142
+    "team_count": 144
   },
   "large": {
     "entries": [
       {
         "rank": 1,
         "team": "AICL",
-        "score": "0.90935",
+        "score": "0.91812",
         "submissions": "—",
-        "last_submission": "2026-07-28"
+        "last_submission": "2026-07-29"
       },
       {
         "rank": 2,
@@ -94,6 +94,6 @@
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-large-model-track/leaderboard",
-    "team_count": 102
+    "team_count": 103
   }
 }
