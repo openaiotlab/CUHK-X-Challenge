@@ -1,41 +1,41 @@
 {
-  "updated_at": "2026-07-30T02:59:26.978656Z",
+  "updated_at": "2026-07-31T03:00:20.076637Z",
   "small": {
     "entries": [
       {
         "rank": 1,
         "team": "Jacobo Martin",
-        "score": "0.89552",
+        "score": "0.90049",
         "submissions": "—",
-        "last_submission": "2026-07-29"
+        "last_submission": "2026-07-30"
       },
       {
         "rank": 2,
+        "team": "Bull",
+        "score": "0.80099",
+        "submissions": "—",
+        "last_submission": "2026-07-30"
+      },
+      {
+        "rank": 3,
         "team": "Pre-Par-e",
         "score": "0.79601",
         "submissions": "—",
         "last_submission": "2026-07-30"
       },
       {
-        "rank": 3,
-        "team": "Bull",
-        "score": "0.79104",
+        "rank": 4,
+        "team": "z shuyang",
+        "score": "0.77611",
         "submissions": "—",
-        "last_submission": "2026-07-29"
+        "last_submission": "2026-07-31"
       },
       {
-        "rank": 4,
+        "rank": 5,
         "team": "Arthurs Torres24",
         "score": "0.76616",
         "submissions": "—",
         "last_submission": "2026-07-15"
-      },
-      {
-        "rank": 5,
-        "team": "z shuyang",
-        "score": "0.75124",
-        "submissions": "—",
-        "last_submission": "2026-07-23"
       },
       {
         "rank": 6,
@@ -46,7 +46,7 @@
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-small-model-track/leaderboard",
-    "team_count": 144
+    "team_count": 148
   },
   "large": {
     "entries": [
@@ -67,9 +67,9 @@
       {
         "rank": 3,
         "team": "Team StarFire",
-        "score": "0.79532",
+        "score": "0.83625",
         "submissions": "—",
-        "last_submission": "2026-07-26"
+        "last_submission": "2026-07-30"
       },
       {
         "rank": 4,
@@ -81,19 +81,19 @@
       {
         "rank": 5,
         "team": "BRR1154",
-        "score": "0.77485",
+        "score": "0.78947",
         "submissions": "—",
-        "last_submission": "2026-07-26"
+        "last_submission": "2026-07-30"
       },
       {
         "rank": 6,
         "team": "Muthuraman Raman 7",
-        "score": "0.77485",
+        "score": "0.78654",
         "submissions": "—",
-        "last_submission": "2026-07-28"
+        "last_submission": "2026-07-30"
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-large-model-track/leaderboard",
-    "team_count": 103
+    "team_count": 106
   }
 }
