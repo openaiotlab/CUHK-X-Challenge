@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-07-31T03:00:20.076637Z",
+  "updated_at": "2026-08-01T03:00:12.976974Z",
   "small": {
     "entries": [
       {
         "rank": 1,
         "team": "Jacobo Martin",
-        "score": "0.90049",
+        "score": "0.91044",
         "submissions": "—",
-        "last_submission": "2026-07-30"
+        "last_submission": "2026-08-01"
       },
       {
         "rank": 2,
@@ -21,7 +21,7 @@
         "team": "Pre-Par-e",
         "score": "0.79601",
         "submissions": "—",
-        "last_submission": "2026-07-30"
+        "last_submission": "2026-07-31"
       },
       {
         "rank": 4,
@@ -42,11 +42,11 @@
         "team": "houqiiii",
         "score": "0.75124",
         "submissions": "—",
-        "last_submission": "2026-07-29"
+        "last_submission": "2026-07-31"
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-small-model-track/leaderboard",
-    "team_count": 148
+    "team_count": 152
   },
   "large": {
     "entries": [
@@ -94,6 +94,6 @@
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-large-model-track/leaderboard",
-    "team_count": 106
+    "team_count": 108
   }
 }
