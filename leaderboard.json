@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-01T03:00:12.976974Z",
+  "updated_at": "2026-08-02T03:00:08.631498Z",
   "small": {
     "entries": [
       {
@@ -46,16 +46,16 @@
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-small-model-track/leaderboard",
-    "team_count": 152
+    "team_count": 153
   },
   "large": {
     "entries": [
       {
         "rank": 1,
         "team": "AICL",
-        "score": "0.91812",
+        "score": "0.92105",
         "submissions": "—",
-        "last_submission": "2026-07-29"
+        "last_submission": "2026-08-01"
       },
       {
         "rank": 2,
@@ -88,12 +88,12 @@
       {
         "rank": 6,
         "team": "Muthuraman Raman 7",
-        "score": "0.78654",
+        "score": "0.78947",
         "submissions": "—",
-        "last_submission": "2026-07-30"
+        "last_submission": "2026-08-01"
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-large-model-track/leaderboard",
-    "team_count": 108
+    "team_count": 109
   }
 }
