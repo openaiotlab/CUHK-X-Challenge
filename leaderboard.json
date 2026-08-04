@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-03T03:00:24.760340Z",
+  "updated_at": "2026-08-04T02:59:42.337065Z",
   "small": {
     "entries": [
       {
@@ -7,7 +7,7 @@
         "team": "Jacobo Martin",
         "score": "0.91044",
         "submissions": "—",
-        "last_submission": "2026-08-01"
+        "last_submission": "2026-08-03"
       },
       {
         "rank": 2,
@@ -21,7 +21,7 @@
         "team": "Pre-Par-e",
         "score": "0.79601",
         "submissions": "—",
-        "last_submission": "2026-07-31"
+        "last_submission": "2026-08-03"
       },
       {
         "rank": 4,
@@ -32,44 +32,44 @@
       },
       {
         "rank": 5,
+        "team": "Ivarick",
+        "score": "0.77114",
+        "submissions": "—",
+        "last_submission": "2026-08-04"
+      },
+      {
+        "rank": 6,
         "team": "Arthurs Torres24",
         "score": "0.76616",
         "submissions": "—",
         "last_submission": "2026-07-15"
-      },
-      {
-        "rank": 6,
-        "team": "Arunava Maulik",
-        "score": "0.76616",
-        "submissions": "—",
-        "last_submission": "2026-08-02"
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-small-model-track/leaderboard",
-    "team_count": 154
+    "team_count": 157
   },
   "large": {
     "entries": [
       {
         "rank": 1,
         "team": "AICL",
-        "score": "0.92982",
+        "score": "0.93274",
+        "submissions": "—",
+        "last_submission": "2026-08-04"
+      },
+      {
+        "rank": 2,
+        "team": "Jacobo Martin",
+        "score": "0.87719",
         "submissions": "—",
         "last_submission": "2026-08-03"
       },
       {
-        "rank": 2,
+        "rank": 3,
         "team": "Signal Weavers",
         "score": "0.86842",
         "submissions": "—",
         "last_submission": "2026-07-06"
-      },
-      {
-        "rank": 3,
-        "team": "Jacobo Martin",
-        "score": "0.83918",
-        "submissions": "—",
-        "last_submission": "2026-08-02"
       },
       {
         "rank": 4,
