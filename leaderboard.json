@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-04T02:59:42.337065Z",
+  "updated_at": "2026-08-05T02:59:20.653912Z",
   "small": {
     "entries": [
       {
@@ -7,7 +7,7 @@
         "team": "Jacobo Martin",
         "score": "0.91044",
         "submissions": "—",
-        "last_submission": "2026-08-03"
+        "last_submission": "2026-08-04"
       },
       {
         "rank": 2,
@@ -26,27 +26,27 @@
       {
         "rank": 4,
         "team": "z shuyang",
-        "score": "0.77611",
+        "score": "0.78606",
         "submissions": "—",
-        "last_submission": "2026-07-31"
+        "last_submission": "2026-08-04"
       },
       {
         "rank": 5,
-        "team": "Ivarick",
-        "score": "0.77114",
+        "team": "Cuda out of memory",
+        "score": "0.78109",
         "submissions": "—",
         "last_submission": "2026-08-04"
       },
       {
         "rank": 6,
-        "team": "Arthurs Torres24",
-        "score": "0.76616",
+        "team": "Ivarick",
+        "score": "0.77114",
         "submissions": "—",
-        "last_submission": "2026-07-15"
+        "last_submission": "2026-08-04"
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-small-model-track/leaderboard",
-    "team_count": 157
+    "team_count": 159
   },
   "large": {
     "entries": [
@@ -62,7 +62,7 @@
         "team": "Jacobo Martin",
         "score": "0.87719",
         "submissions": "—",
-        "last_submission": "2026-08-03"
+        "last_submission": "2026-08-04"
       },
       {
         "rank": 3,
