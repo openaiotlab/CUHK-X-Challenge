@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-06T02:59:41.348404Z",
+  "updated_at": "2026-08-07T02:59:04.831359Z",
   "small": {
     "entries": [
       {
@@ -18,22 +18,22 @@
       },
       {
         "rank": 3,
+        "team": "Cuda out of memory",
+        "score": "0.80099",
+        "submissions": "—",
+        "last_submission": "2026-08-06"
+      },
+      {
+        "rank": 4,
         "team": "Pre-Par-e",
         "score": "0.79601",
         "submissions": "—",
         "last_submission": "2026-08-03"
       },
       {
-        "rank": 4,
+        "rank": 5,
         "team": "z shuyang",
         "score": "0.78606",
-        "submissions": "—",
-        "last_submission": "2026-08-04"
-      },
-      {
-        "rank": 5,
-        "team": "Cuda out of memory",
-        "score": "0.78109",
         "submissions": "—",
         "last_submission": "2026-08-04"
       },
@@ -53,16 +53,16 @@
       {
         "rank": 1,
         "team": "AICL",
-        "score": "0.93274",
+        "score": "0.93567",
         "submissions": "—",
-        "last_submission": "2026-08-05"
+        "last_submission": "2026-08-06"
       },
       {
         "rank": 2,
         "team": "Jacobo Martin",
         "score": "0.87719",
         "submissions": "—",
-        "last_submission": "2026-08-04"
+        "last_submission": "2026-08-06"
       },
       {
         "rank": 3,
@@ -74,16 +74,16 @@
       {
         "rank": 4,
         "team": "Team StarFire",
-        "score": "0.83625",
+        "score": "0.86842",
         "submissions": "—",
-        "last_submission": "2026-07-30"
+        "last_submission": "2026-08-06"
       },
       {
         "rank": 5,
         "team": "KineX",
         "score": "0.79239",
         "submissions": "—",
-        "last_submission": "2026-07-14"
+        "last_submission": "2026-08-06"
       },
       {
         "rank": 6,
@@ -94,6 +94,6 @@
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-large-model-track/leaderboard",
-    "team_count": 112
+    "team_count": 115
   }
 }
