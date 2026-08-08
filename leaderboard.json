@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-07T02:59:04.831359Z",
+  "updated_at": "2026-08-08T02:36:31.460582Z",
   "small": {
     "entries": [
       {
@@ -11,10 +11,10 @@
       },
       {
         "rank": 2,
-        "team": "Bull",
+        "team": "Bull & Ivarick",
         "score": "0.80099",
         "submissions": "—",
-        "last_submission": "2026-07-30"
+        "last_submission": "2026-08-07"
       },
       {
         "rank": 3,
@@ -35,18 +35,18 @@
         "team": "z shuyang",
         "score": "0.78606",
         "submissions": "—",
-        "last_submission": "2026-08-04"
+        "last_submission": "2026-08-07"
       },
       {
         "rank": 6,
         "team": "houqiiii",
-        "score": "0.77611",
+        "score": "0.78606",
         "submissions": "—",
-        "last_submission": "2026-08-05"
+        "last_submission": "2026-08-07"
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-small-model-track/leaderboard",
-    "team_count": 163
+    "team_count": 165
   },
   "large": {
     "entries": [
@@ -55,14 +55,14 @@
         "team": "AICL",
         "score": "0.93567",
         "submissions": "—",
-        "last_submission": "2026-08-06"
+        "last_submission": "2026-08-07"
       },
       {
         "rank": 2,
         "team": "Jacobo Martin",
-        "score": "0.87719",
+        "score": "0.88304",
         "submissions": "—",
-        "last_submission": "2026-08-06"
+        "last_submission": "2026-08-07"
       },
       {
         "rank": 3,
@@ -80,20 +80,20 @@
       },
       {
         "rank": 5,
-        "team": "KineX",
-        "score": "0.79239",
+        "team": "Bull",
+        "score": "0.84210",
         "submissions": "—",
-        "last_submission": "2026-08-06"
+        "last_submission": "2026-08-08"
       },
       {
         "rank": 6,
-        "team": "BRR1154",
-        "score": "0.78947",
+        "team": "KineX",
+        "score": "0.79239",
         "submissions": "—",
-        "last_submission": "2026-07-30"
+        "last_submission": "2026-08-07"
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-large-model-track/leaderboard",
-    "team_count": 115
+    "team_count": 117
   }
 }
