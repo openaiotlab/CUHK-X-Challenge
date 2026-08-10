@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-09T02:40:08.235429Z",
+  "updated_at": "2026-08-10T02:43:46.873390Z",
   "small": {
     "entries": [
       {
@@ -12,7 +12,7 @@
       {
         "rank": 2,
         "team": "houqiiii",
-        "score": "0.86567",
+        "score": "0.87064",
         "submissions": "—",
         "last_submission": "2026-08-09"
       },
@@ -21,7 +21,7 @@
         "team": "Bull & Ivarick",
         "score": "0.80099",
         "submissions": "—",
-        "last_submission": "2026-08-08"
+        "last_submission": "2026-08-09"
       },
       {
         "rank": 4,
@@ -40,13 +40,13 @@
       {
         "rank": 6,
         "team": "z shuyang",
-        "score": "0.78606",
+        "score": "0.79104",
         "submissions": "—",
-        "last_submission": "2026-08-08"
+        "last_submission": "2026-08-09"
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-small-model-track/leaderboard",
-    "team_count": 167
+    "team_count": 171
   },
   "large": {
     "entries": [
@@ -55,45 +55,45 @@
         "team": "AICL",
         "score": "0.93567",
         "submissions": "—",
-        "last_submission": "2026-08-08"
+        "last_submission": "2026-08-09"
       },
       {
         "rank": 2,
         "team": "Bull & Ivarick",
-        "score": "0.90058",
+        "score": "0.92690",
+        "submissions": "—",
+        "last_submission": "2026-08-10"
+      },
+      {
+        "rank": 3,
+        "team": "Starry_cbz",
+        "score": "0.88888",
+        "submissions": "—",
+        "last_submission": "2026-08-10"
+      },
+      {
+        "rank": 4,
+        "team": "Jacobo Martin",
+        "score": "0.88596",
         "submissions": "—",
         "last_submission": "2026-08-09"
       },
       {
-        "rank": 3,
-        "team": "Jacobo Martin",
-        "score": "0.88596",
+        "rank": 5,
+        "team": "Team StarFire",
+        "score": "0.87719",
         "submissions": "—",
-        "last_submission": "2026-08-08"
+        "last_submission": "2026-08-09"
       },
       {
-        "rank": 4,
+        "rank": 6,
         "team": "Signal Weavers",
         "score": "0.86842",
         "submissions": "—",
         "last_submission": "2026-07-06"
-      },
-      {
-        "rank": 5,
-        "team": "Team StarFire",
-        "score": "0.86842",
-        "submissions": "—",
-        "last_submission": "2026-08-06"
-      },
-      {
-        "rank": 6,
-        "team": "xianggkl",
-        "score": "0.81286",
-        "submissions": "—",
-        "last_submission": "2026-08-08"
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-large-model-track/leaderboard",
-    "team_count": 119
+    "team_count": 120
   }
 }
