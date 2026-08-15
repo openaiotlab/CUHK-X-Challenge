@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-14T02:50:46.175061Z",
+  "updated_at": "2026-08-15T02:20:52.446626Z",
   "small": {
     "entries": [
       {
@@ -32,30 +32,30 @@
       },
       {
         "rank": 5,
-        "team": "Diogenes's cask",
-        "score": "0.81592",
+        "team": "z shuyang",
+        "score": "0.82587",
         "submissions": "—",
-        "last_submission": "2026-08-13"
+        "last_submission": "2026-08-14"
       },
       {
         "rank": 6,
-        "team": "Arthurs Torres24",
-        "score": "0.80597",
+        "team": "daulettoibazar",
+        "score": "0.82587",
         "submissions": "—",
-        "last_submission": "2026-08-13"
+        "last_submission": "2026-08-15"
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-small-model-track/leaderboard",
-    "team_count": 193
+    "team_count": 198
   },
   "large": {
     "entries": [
       {
         "rank": 1,
         "team": "Bull & Ivarick",
-        "score": "0.96198",
+        "score": "0.96783",
         "submissions": "—",
-        "last_submission": "2026-08-14"
+        "last_submission": "2026-08-15"
       },
       {
         "rank": 2,
@@ -81,9 +81,9 @@
       {
         "rank": 5,
         "team": "Haaallland",
-        "score": "0.89473",
+        "score": "0.90058",
         "submissions": "—",
-        "last_submission": "2026-08-13"
+        "last_submission": "2026-08-14"
       },
       {
         "rank": 6,
@@ -94,6 +94,6 @@
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-large-model-track/leaderboard",
-    "team_count": 130
+    "team_count": null
   }
 }
