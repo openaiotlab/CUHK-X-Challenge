@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-15T02:20:52.446626Z",
+  "updated_at": "2026-08-16T02:26:16.451503Z",
   "small": {
     "entries": [
       {
@@ -18,35 +18,35 @@
       },
       {
         "rank": 3,
+        "team": "yangzhouzju",
+        "score": "0.89552",
+        "submissions": "—",
+        "last_submission": "2026-08-16"
+      },
+      {
+        "rank": 4,
+        "team": "z shuyang",
+        "score": "0.88557",
+        "submissions": "—",
+        "last_submission": "2026-08-15"
+      },
+      {
+        "rank": 5,
         "team": "砸锅卖铁去比赛",
         "score": "0.84079",
         "submissions": "—",
         "last_submission": "2026-08-12"
       },
       {
-        "rank": 4,
+        "rank": 6,
         "team": "sjtu-zzh",
         "score": "0.83084",
         "submissions": "—",
         "last_submission": "2026-08-12"
-      },
-      {
-        "rank": 5,
-        "team": "z shuyang",
-        "score": "0.82587",
-        "submissions": "—",
-        "last_submission": "2026-08-14"
-      },
-      {
-        "rank": 6,
-        "team": "daulettoibazar",
-        "score": "0.82587",
-        "submissions": "—",
-        "last_submission": "2026-08-15"
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-small-model-track/leaderboard",
-    "team_count": 198
+    "team_count": 200
   },
   "large": {
     "entries": [
@@ -83,17 +83,17 @@
         "team": "Haaallland",
         "score": "0.90058",
         "submissions": "—",
-        "last_submission": "2026-08-14"
+        "last_submission": "2026-08-15"
       },
       {
         "rank": 6,
-        "team": "Team StarFire",
-        "score": "0.88596",
+        "team": "taxadullr",
+        "score": "0.89181",
         "submissions": "—",
-        "last_submission": "2026-08-11"
+        "last_submission": "2026-08-15"
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-large-model-track/leaderboard",
-    "team_count": null
+    "team_count": 134
   }
 }
