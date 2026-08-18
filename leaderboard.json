@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-17T02:25:36.911033Z",
+  "updated_at": "2026-08-18T02:22:26.291851Z",
   "small": {
     "entries": [
       {
@@ -18,14 +18,14 @@
       },
       {
         "rank": 3,
-        "team": "yangzhouzju",
-        "score": "0.89552",
+        "team": "sjtu-zzh",
+        "score": "0.90049",
         "submissions": "—",
-        "last_submission": "2026-08-16"
+        "last_submission": "2026-08-17"
       },
       {
         "rank": 4,
-        "team": "sjtu-zzh",
+        "team": "yangzhouzju",
         "score": "0.89552",
         "submissions": "—",
         "last_submission": "2026-08-16"
@@ -39,14 +39,14 @@
       },
       {
         "rank": 6,
-        "team": "砸锅卖铁去比赛",
-        "score": "0.85572",
+        "team": "Cuda out of memory",
+        "score": "0.86567",
         "submissions": "—",
-        "last_submission": "2026-08-16"
+        "last_submission": "2026-08-17"
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-small-model-track/leaderboard",
-    "team_count": 204
+    "team_count": 208
   },
   "large": {
     "entries": [
@@ -62,7 +62,7 @@
         "team": "AICL",
         "score": "0.93859",
         "submissions": "—",
-        "last_submission": "2026-08-16"
+        "last_submission": "2026-08-18"
       },
       {
         "rank": 3,
@@ -83,14 +83,14 @@
         "team": "Haaallland",
         "score": "0.90058",
         "submissions": "—",
-        "last_submission": "2026-08-16"
+        "last_submission": "2026-08-17"
       },
       {
         "rank": 6,
         "team": "Tiramisu",
         "score": "0.90058",
         "submissions": "—",
-        "last_submission": "2026-08-16"
+        "last_submission": "2026-08-17"
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-large-model-track/leaderboard",
