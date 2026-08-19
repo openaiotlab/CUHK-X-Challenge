@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-18T02:22:26.291851Z",
+  "updated_at": "2026-08-19T02:24:23.523467Z",
   "small": {
     "entries": [
       {
@@ -21,14 +21,14 @@
         "team": "sjtu-zzh",
         "score": "0.90049",
         "submissions": "—",
-        "last_submission": "2026-08-17"
+        "last_submission": "2026-08-18"
       },
       {
         "rank": 4,
         "team": "yangzhouzju",
         "score": "0.89552",
         "submissions": "—",
-        "last_submission": "2026-08-16"
+        "last_submission": "2026-08-18"
       },
       {
         "rank": 5,
@@ -46,7 +46,7 @@
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-small-model-track/leaderboard",
-    "team_count": 208
+    "team_count": 214
   },
   "large": {
     "entries": [
@@ -67,9 +67,9 @@
       {
         "rank": 3,
         "team": "Jacobo Martin",
-        "score": "0.93274",
+        "score": "0.93567",
         "submissions": "—",
-        "last_submission": "2026-08-13"
+        "last_submission": "2026-08-18"
       },
       {
         "rank": 4,
@@ -94,6 +94,6 @@
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-large-model-track/leaderboard",
-    "team_count": 136
+    "team_count": 137
   }
 }
