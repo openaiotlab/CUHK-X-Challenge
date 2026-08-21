@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-20T02:23:35.191979Z",
+  "updated_at": "2026-08-21T02:27:37.006882Z",
   "small": {
     "entries": [
       {
@@ -18,24 +18,24 @@
       },
       {
         "rank": 3,
+        "team": "z shuyang",
+        "score": "0.91044",
+        "submissions": "—",
+        "last_submission": "2026-08-21"
+      },
+      {
+        "rank": 4,
         "team": "sjtu-zzh",
         "score": "0.90049",
         "submissions": "—",
         "last_submission": "2026-08-18"
       },
       {
-        "rank": 4,
+        "rank": 5,
         "team": "yangzhouzju",
         "score": "0.89552",
         "submissions": "—",
-        "last_submission": "2026-08-18"
-      },
-      {
-        "rank": 5,
-        "team": "z shuyang",
-        "score": "0.88557",
-        "submissions": "—",
-        "last_submission": "2026-08-19"
+        "last_submission": "2026-08-20"
       },
       {
         "rank": 6,
@@ -46,7 +46,7 @@
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-small-model-track/leaderboard",
-    "team_count": 221
+    "team_count": 222
   },
   "large": {
     "entries": [
@@ -90,10 +90,10 @@
         "team": "Tiramisu",
         "score": "0.90058",
         "submissions": "—",
-        "last_submission": "2026-08-19"
+        "last_submission": "2026-08-20"
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-large-model-track/leaderboard",
-    "team_count": 138
+    "team_count": 140
   }
 }
