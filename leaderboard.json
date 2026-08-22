@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-08-21T02:27:37.006882Z",
+  "updated_at": "2026-08-22T02:21:56.422950Z",
   "small": {
     "entries": [
       {
         "rank": 1,
-        "team": "houqiiii",
+        "team": "USTC Sea Star Nebula",
         "score": "0.98009",
         "submissions": "—",
-        "last_submission": "2026-08-13"
+        "last_submission": "2026-08-21"
       },
       {
         "rank": 2,
@@ -46,7 +46,7 @@
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-small-model-track/leaderboard",
-    "team_count": 222
+    "team_count": 224
   },
   "large": {
     "entries": [
@@ -94,6 +94,6 @@
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-large-model-track/leaderboard",
-    "team_count": 140
+    "team_count": 144
   }
 }
