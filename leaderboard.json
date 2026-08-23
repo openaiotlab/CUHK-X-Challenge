@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-22T02:21:56.422950Z",
+  "updated_at": "2026-08-23T02:27:28.973257Z",
   "small": {
     "entries": [
       {
@@ -7,46 +7,46 @@
         "team": "USTC Sea Star Nebula",
         "score": "0.98009",
         "submissions": "—",
-        "last_submission": "2026-08-21"
+        "last_submission": "2026-08-22"
       },
       {
         "rank": 2,
+        "team": "Danielle Lesin",
+        "score": "0.97014",
+        "submissions": "—",
+        "last_submission": "2026-08-23"
+      },
+      {
+        "rank": 3,
+        "team": "YE Mao1023",
+        "score": "0.92039",
+        "submissions": "—",
+        "last_submission": "2026-08-23"
+      },
+      {
+        "rank": 4,
         "team": "Jacobo Martin",
         "score": "0.91542",
         "submissions": "—",
         "last_submission": "2026-08-12"
       },
       {
-        "rank": 3,
+        "rank": 5,
         "team": "z shuyang",
         "score": "0.91044",
         "submissions": "—",
         "last_submission": "2026-08-21"
       },
       {
-        "rank": 4,
+        "rank": 6,
         "team": "sjtu-zzh",
         "score": "0.90049",
         "submissions": "—",
         "last_submission": "2026-08-18"
-      },
-      {
-        "rank": 5,
-        "team": "yangzhouzju",
-        "score": "0.89552",
-        "submissions": "—",
-        "last_submission": "2026-08-20"
-      },
-      {
-        "rank": 6,
-        "team": "Cuda out of memory",
-        "score": "0.86567",
-        "submissions": "—",
-        "last_submission": "2026-08-17"
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-small-model-track/leaderboard",
-    "team_count": 224
+    "team_count": 227
   },
   "large": {
     "entries": [
@@ -90,10 +90,10 @@
         "team": "Tiramisu",
         "score": "0.90058",
         "submissions": "—",
-        "last_submission": "2026-08-20"
+        "last_submission": "2026-08-22"
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-large-model-track/leaderboard",
-    "team_count": 144
+    "team_count": 147
   }
 }
