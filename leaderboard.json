@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-23T02:27:28.973257Z",
+  "updated_at": "2026-08-24T02:27:02.011797Z",
   "small": {
     "entries": [
       {
@@ -12,14 +12,14 @@
       {
         "rank": 2,
         "team": "Danielle Lesin",
-        "score": "0.97014",
+        "score": "0.97512",
         "submissions": "—",
         "last_submission": "2026-08-23"
       },
       {
         "rank": 3,
         "team": "YE Mao1023",
-        "score": "0.92039",
+        "score": "0.97512",
         "submissions": "—",
         "last_submission": "2026-08-23"
       },
@@ -46,7 +46,7 @@
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-small-model-track/leaderboard",
-    "team_count": 227
+    "team_count": 228
   },
   "large": {
     "entries": [
