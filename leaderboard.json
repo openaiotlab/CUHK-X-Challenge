@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-24T02:27:02.011797Z",
+  "updated_at": "2026-08-25T02:23:56.903701Z",
   "small": {
     "entries": [
       {
@@ -7,14 +7,14 @@
         "team": "USTC Sea Star Nebula",
         "score": "0.98009",
         "submissions": "—",
-        "last_submission": "2026-08-22"
+        "last_submission": "2026-08-24"
       },
       {
         "rank": 2,
         "team": "Danielle Lesin",
-        "score": "0.97512",
+        "score": "0.98009",
         "submissions": "—",
-        "last_submission": "2026-08-23"
+        "last_submission": "2026-08-24"
       },
       {
         "rank": 3,
@@ -42,11 +42,11 @@
         "team": "sjtu-zzh",
         "score": "0.90049",
         "submissions": "—",
-        "last_submission": "2026-08-18"
+        "last_submission": "2026-08-24"
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-small-model-track/leaderboard",
-    "team_count": 228
+    "team_count": 235
   },
   "large": {
     "entries": [
@@ -62,7 +62,7 @@
         "team": "AICL",
         "score": "0.93859",
         "submissions": "—",
-        "last_submission": "2026-08-18"
+        "last_submission": "2026-08-24"
       },
       {
         "rank": 3,
@@ -90,10 +90,10 @@
         "team": "Tiramisu",
         "score": "0.90058",
         "submissions": "—",
-        "last_submission": "2026-08-22"
+        "last_submission": "2026-08-24"
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-large-model-track/leaderboard",
-    "team_count": 147
+    "team_count": 151
   }
 }
