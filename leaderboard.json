@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-25T02:23:56.903701Z",
+  "updated_at": "2026-08-26T02:28:28.791386Z",
   "small": {
     "entries": [
       {
@@ -21,7 +21,7 @@
         "team": "YE Mao1023",
         "score": "0.97512",
         "submissions": "—",
-        "last_submission": "2026-08-23"
+        "last_submission": "2026-08-25"
       },
       {
         "rank": 4,
@@ -42,11 +42,11 @@
         "team": "sjtu-zzh",
         "score": "0.90049",
         "submissions": "—",
-        "last_submission": "2026-08-24"
+        "last_submission": "2026-08-26"
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-small-model-track/leaderboard",
-    "team_count": 235
+    "team_count": 245
   },
   "large": {
     "entries": [
@@ -62,7 +62,7 @@
         "team": "AICL",
         "score": "0.93859",
         "submissions": "—",
-        "last_submission": "2026-08-24"
+        "last_submission": "2026-08-25"
       },
       {
         "rank": 3,
@@ -94,6 +94,6 @@
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-large-model-track/leaderboard",
-    "team_count": 151
+    "team_count": 156
   }
 }
