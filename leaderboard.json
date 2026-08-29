@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-28T04:34:44.161856Z",
+  "updated_at": "2026-08-29T02:03:43.989391Z",
   "small": {
     "entries": [
       {
@@ -21,7 +21,7 @@
         "team": "YE Mao1023",
         "score": "0.97512",
         "submissions": "—",
-        "last_submission": "2026-08-28"
+        "last_submission": "2026-08-29"
       },
       {
         "rank": 4,
@@ -35,18 +35,18 @@
         "team": "z shuyang",
         "score": "0.91044",
         "submissions": "—",
-        "last_submission": "2026-08-21"
+        "last_submission": "2026-08-28"
       },
       {
         "rank": 6,
         "team": "砸锅卖铁去比赛",
         "score": "0.91044",
         "submissions": "—",
-        "last_submission": "2026-08-27"
+        "last_submission": "2026-08-28"
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-small-model-track/leaderboard",
-    "team_count": 252
+    "team_count": 256
   },
   "large": {
     "entries": [
@@ -59,24 +59,24 @@
       },
       {
         "rank": 2,
+        "team": "Salty Taro",
+        "score": "0.94152",
+        "submissions": "—",
+        "last_submission": "2026-08-28"
+      },
+      {
+        "rank": 3,
         "team": "AICL",
         "score": "0.93859",
         "submissions": "—",
         "last_submission": "2026-08-25"
       },
       {
-        "rank": 3,
+        "rank": 4,
         "team": "Jacobo Martin",
         "score": "0.93567",
         "submissions": "—",
         "last_submission": "2026-08-18"
-      },
-      {
-        "rank": 4,
-        "team": "Salty Taro",
-        "score": "0.92105",
-        "submissions": "—",
-        "last_submission": "2026-08-27"
       },
       {
         "rank": 5,
