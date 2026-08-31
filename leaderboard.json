@@ -1,17 +1,17 @@
 {
-  "updated_at": "2026-08-30T02:04:12.016042Z",
+  "updated_at": "2026-08-31T02:05:04.712577Z",
   "small": {
     "entries": [
       {
         "rank": 1,
-        "team": "USTC Sea Star Nebula",
-        "score": "0.98009",
+        "team": "Danielle Lesin",
+        "score": "0.98507",
         "submissions": "—",
-        "last_submission": "2026-08-24"
+        "last_submission": "2026-08-30"
       },
       {
         "rank": 2,
-        "team": "Danielle Lesin",
+        "team": "USTC Sea Star Nebula",
         "score": "0.98009",
         "submissions": "—",
         "last_submission": "2026-08-24"
@@ -26,9 +26,9 @@
       {
         "rank": 4,
         "team": "z shuyang",
-        "score": "0.92039",
+        "score": "0.93532",
         "submissions": "—",
-        "last_submission": "2026-08-29"
+        "last_submission": "2026-08-30"
       },
       {
         "rank": 5,
@@ -42,11 +42,11 @@
         "team": "砸锅卖铁去比赛",
         "score": "0.91542",
         "submissions": "—",
-        "last_submission": "2026-08-29"
+        "last_submission": "2026-08-30"
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-small-model-track/leaderboard",
-    "team_count": 259
+    "team_count": 265
   },
   "large": {
     "entries": [
@@ -62,14 +62,14 @@
         "team": "Salty Taro",
         "score": "0.94152",
         "submissions": "—",
-        "last_submission": "2026-08-28"
+        "last_submission": "2026-08-30"
       },
       {
         "rank": 3,
         "team": "AICL",
         "score": "0.93859",
         "submissions": "—",
-        "last_submission": "2026-08-25"
+        "last_submission": "2026-08-30"
       },
       {
         "rank": 4,
@@ -94,6 +94,6 @@
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-large-model-track/leaderboard",
-    "team_count": 159
+    "team_count": null
   }
 }
