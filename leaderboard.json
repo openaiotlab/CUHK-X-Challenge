@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-31T02:05:04.712577Z",
+  "updated_at": "2026-09-01T02:06:44.192413Z",
   "small": {
     "entries": [
       {
@@ -32,21 +32,21 @@
       },
       {
         "rank": 5,
+        "team": "Shuning Zhang",
+        "score": "0.92039",
+        "submissions": "—",
+        "last_submission": "2026-09-01"
+      },
+      {
+        "rank": 6,
         "team": "Jacobo Martin",
         "score": "0.91542",
         "submissions": "—",
         "last_submission": "2026-08-12"
-      },
-      {
-        "rank": 6,
-        "team": "砸锅卖铁去比赛",
-        "score": "0.91542",
-        "submissions": "—",
-        "last_submission": "2026-08-30"
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-small-model-track/leaderboard",
-    "team_count": 265
+    "team_count": 269
   },
   "large": {
     "entries": [
@@ -67,9 +67,9 @@
       {
         "rank": 3,
         "team": "AICL",
-        "score": "0.93859",
+        "score": "0.94152",
         "submissions": "—",
-        "last_submission": "2026-08-30"
+        "last_submission": "2026-09-01"
       },
       {
         "rank": 4,
@@ -94,6 +94,6 @@
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-large-model-track/leaderboard",
-    "team_count": null
+    "team_count": 162
   }
 }
