@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-01T02:06:44.192413Z",
+  "updated_at": "2026-09-02T02:14:41.927074Z",
   "small": {
     "entries": [
       {
@@ -14,7 +14,7 @@
         "team": "USTC Sea Star Nebula",
         "score": "0.98009",
         "submissions": "—",
-        "last_submission": "2026-08-24"
+        "last_submission": "2026-09-01"
       },
       {
         "rank": 3,
@@ -25,17 +25,17 @@
       },
       {
         "rank": 4,
+        "team": "Shuning Zhang",
+        "score": "0.95522",
+        "submissions": "—",
+        "last_submission": "2026-09-02"
+      },
+      {
+        "rank": 5,
         "team": "z shuyang",
         "score": "0.93532",
         "submissions": "—",
         "last_submission": "2026-08-30"
-      },
-      {
-        "rank": 5,
-        "team": "Shuning Zhang",
-        "score": "0.92039",
-        "submissions": "—",
-        "last_submission": "2026-09-01"
       },
       {
         "rank": 6,
@@ -46,7 +46,7 @@
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-small-model-track/leaderboard",
-    "team_count": 269
+    "team_count": 274
   },
   "large": {
     "entries": [
@@ -59,41 +59,41 @@
       },
       {
         "rank": 2,
-        "team": "Salty Taro",
-        "score": "0.94152",
+        "team": "Danielle Lesin",
+        "score": "0.94736",
         "submissions": "—",
-        "last_submission": "2026-08-30"
+        "last_submission": "2026-09-01"
       },
       {
         "rank": 3,
+        "team": "Salty Taro",
+        "score": "0.94736",
+        "submissions": "—",
+        "last_submission": "2026-09-01"
+      },
+      {
+        "rank": 4,
         "team": "AICL",
         "score": "0.94152",
         "submissions": "—",
         "last_submission": "2026-09-01"
       },
       {
-        "rank": 4,
+        "rank": 5,
         "team": "Jacobo Martin",
         "score": "0.93567",
         "submissions": "—",
         "last_submission": "2026-08-18"
       },
       {
-        "rank": 5,
+        "rank": 6,
         "team": "Starry_cbz",
         "score": "0.90350",
         "submissions": "—",
         "last_submission": "2026-08-11"
-      },
-      {
-        "rank": 6,
-        "team": "Haaallland",
-        "score": "0.90058",
-        "submissions": "—",
-        "last_submission": "2026-08-17"
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-large-model-track/leaderboard",
-    "team_count": 162
+    "team_count": 163
   }
 }
