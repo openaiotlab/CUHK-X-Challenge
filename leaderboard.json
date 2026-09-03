@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-02T02:14:41.927074Z",
+  "updated_at": "2026-09-03T02:10:04.339296Z",
   "small": {
     "entries": [
       {
@@ -46,7 +46,7 @@
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-small-model-track/leaderboard",
-    "team_count": 274
+    "team_count": 279
   },
   "large": {
     "entries": [
@@ -60,9 +60,9 @@
       {
         "rank": 2,
         "team": "Danielle Lesin",
-        "score": "0.94736",
+        "score": "0.96491",
         "submissions": "—",
-        "last_submission": "2026-09-01"
+        "last_submission": "2026-09-03"
       },
       {
         "rank": 3,
@@ -94,6 +94,6 @@
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-large-model-track/leaderboard",
-    "team_count": 163
+    "team_count": 164
   }
 }
