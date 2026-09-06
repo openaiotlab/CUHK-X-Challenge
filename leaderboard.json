@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-09-05T02:04:47.514673Z",
+  "updated_at": "2026-09-06T02:04:17.839698Z",
   "small": {
     "entries": [
       {
         "rank": 1,
-        "team": "Danielle Lesin",
+        "team": "Knight of Favonius",
         "score": "0.98507",
         "submissions": "—",
         "last_submission": "2026-08-30"
@@ -21,7 +21,7 @@
         "team": "YE Mao1023",
         "score": "0.97512",
         "submissions": "—",
-        "last_submission": "2026-09-04"
+        "last_submission": "2026-09-05"
       },
       {
         "rank": 4,
@@ -35,7 +35,7 @@
         "team": "z shuyang",
         "score": "0.93532",
         "submissions": "—",
-        "last_submission": "2026-08-30"
+        "last_submission": "2026-09-05"
       },
       {
         "rank": 6,
@@ -46,37 +46,37 @@
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-small-model-track/leaderboard",
-    "team_count": 286
+    "team_count": 290
   },
   "large": {
     "entries": [
       {
         "rank": 1,
-        "team": "Bull & Ivarick",
-        "score": "0.97368",
+        "team": "Knight of Favonius",
+        "score": "0.97660",
         "submissions": "—",
         "last_submission": "2026-09-05"
       },
       {
         "rank": 2,
-        "team": "Danielle Lesin",
-        "score": "0.97076",
+        "team": "Bull & Ivarick",
+        "score": "0.97368",
         "submissions": "—",
-        "last_submission": "2026-09-04"
+        "last_submission": "2026-09-06"
       },
       {
         "rank": 3,
-        "team": "Salty Taro",
-        "score": "0.94736",
+        "team": "Fluxx",
+        "score": "0.95614",
         "submissions": "—",
-        "last_submission": "2026-09-01"
+        "last_submission": "2026-09-05"
       },
       {
         "rank": 4,
-        "team": "Fluxx",
-        "score": "0.94736",
+        "team": "Salty Taro",
+        "score": "0.95321",
         "submissions": "—",
-        "last_submission": "2026-09-04"
+        "last_submission": "2026-09-06"
       },
       {
         "rank": 5,
@@ -94,6 +94,6 @@
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-large-model-track/leaderboard",
-    "team_count": 172
+    "team_count": 174
   }
 }
