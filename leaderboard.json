@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-06T02:04:17.839698Z",
+  "updated_at": "2026-09-07T02:05:29.460404Z",
   "small": {
     "entries": [
       {
@@ -35,7 +35,7 @@
         "team": "z shuyang",
         "score": "0.93532",
         "submissions": "—",
-        "last_submission": "2026-09-05"
+        "last_submission": "2026-09-07"
       },
       {
         "rank": 6,
@@ -46,7 +46,7 @@
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-small-model-track/leaderboard",
-    "team_count": 290
+    "team_count": 298
   },
   "large": {
     "entries": [
@@ -60,16 +60,16 @@
       {
         "rank": 2,
         "team": "Bull & Ivarick",
-        "score": "0.97368",
+        "score": "0.97660",
         "submissions": "—",
-        "last_submission": "2026-09-06"
+        "last_submission": "2026-09-07"
       },
       {
         "rank": 3,
         "team": "Fluxx",
-        "score": "0.95614",
+        "score": "0.96198",
         "submissions": "—",
-        "last_submission": "2026-09-05"
+        "last_submission": "2026-09-07"
       },
       {
         "rank": 4,
@@ -83,7 +83,7 @@
         "team": "AICL",
         "score": "0.94152",
         "submissions": "—",
-        "last_submission": "2026-09-04"
+        "last_submission": "2026-09-06"
       },
       {
         "rank": 6,
@@ -94,6 +94,6 @@
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-large-model-track/leaderboard",
-    "team_count": 174
+    "team_count": 177
   }
 }
