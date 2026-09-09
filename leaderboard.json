@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-08T02:04:22.032206Z",
+  "updated_at": "2026-09-09T02:04:25.110715Z",
   "small": {
     "entries": [
       {
@@ -33,9 +33,9 @@
       {
         "rank": 5,
         "team": "z shuyang",
-        "score": "0.93532",
+        "score": "0.94029",
         "submissions": "—",
-        "last_submission": "2026-09-08"
+        "last_submission": "2026-09-09"
       },
       {
         "rank": 6,
@@ -46,30 +46,30 @@
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-small-model-track/leaderboard",
-    "team_count": 303
+    "team_count": 305
   },
   "large": {
     "entries": [
       {
         "rank": 1,
+        "team": "Bull & Ivarick",
+        "score": "0.98245",
+        "submissions": "—",
+        "last_submission": "2026-09-09"
+      },
+      {
+        "rank": 2,
         "team": "Knight of Favonius",
         "score": "0.97660",
         "submissions": "—",
         "last_submission": "2026-09-05"
       },
       {
-        "rank": 2,
-        "team": "Bull & Ivarick",
-        "score": "0.97660",
-        "submissions": "—",
-        "last_submission": "2026-09-08"
-      },
-      {
         "rank": 3,
         "team": "Fluxx",
-        "score": "0.96491",
+        "score": "0.97076",
         "submissions": "—",
-        "last_submission": "2026-09-08"
+        "last_submission": "2026-09-09"
       },
       {
         "rank": 4,
@@ -94,6 +94,6 @@
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-large-model-track/leaderboard",
-    "team_count": 182
+    "team_count": 185
   }
 }
