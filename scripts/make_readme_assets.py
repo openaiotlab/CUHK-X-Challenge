@@ -34,6 +34,10 @@ TEAL = (45, 212, 191)
 TEXT = (226, 234, 245)
 TEXT_2 = (143, 170, 200)
 TEXT_3 = (77, 107, 138)
+# CUHK brand marks, sampled from the CUHK-X lockup. The brand purple only
+# reaches 1.8:1 against this navy, so the wordmark uses a tint of the same hue.
+CUHK_GOLD = (234, 170, 0)          # #EAAA00
+CUHK_PURPLE_TINT = (168, 123, 227)  # tint of #582C83, ~4.7:1 on the banner
 
 FONT = "/System/Library/Fonts/HelveticaNeue.ttc"
 IDX = {"bold": 1, "medium": 10, "regular": 0, "light": 7, "thin": 12}
@@ -43,15 +47,23 @@ def font(weight: str, size: int) -> ImageFont.FreeTypeFont:
     return ImageFont.truetype(FONT, size, index=IDX[weight])
 
 
-def tracked(draw, xy, text, f, fill, tracking=0, anchor_center=False):
-    """Draw text with manual letter-spacing; returns the advance width."""
-    width = sum(draw.textlength(c, font=f) + tracking for c in text) - tracking
+def tracked(draw, xy, runs, f, fill=None, tracking=0, anchor_center=False):
+    """Draw text with manual letter-spacing; returns the advance width.
+
+    `runs` is either a string drawn in `fill`, or a list of (text, colour)
+    pairs drawn end to end — used to colour the CUHK-X wordmark.
+    """
+    if isinstance(runs, str):
+        runs = [(runs, fill)]
+    width = sum(draw.textlength(c, font=f) + tracking
+                for text, _ in runs for c in text) - tracking
     x, y = xy
     if anchor_center:
         x -= width / 2
-    for c in text:
-        draw.text((x, y), c, font=f, fill=fill)
-        x += draw.textlength(c, font=f) + tracking
+    for text, colour in runs:
+        for c in text:
+            draw.text((x, y), c, font=f, fill=colour)
+            x += draw.textlength(c, font=f) + tracking
     return width
 
 
@@ -122,9 +134,11 @@ def banner() -> None:
     tracked(d, (cx, 150), "CUHK · AIoT LAB    ×    UbiComp 2026 · SHANGHAI",
             font("medium", 34), CYAN, tracking=7.5, anchor_center=True)
 
-    # wordmark
-    tracked(d, (cx, 232), "CUHK-X CHALLENGE",
-            font("bold", 152), TEXT, tracking=2, anchor_center=True)
+    # wordmark — CUHK-X in the brand purple/gold, CHALLENGE in plain white
+    tracked(d, (cx, 232), [("CUHK-", CUHK_PURPLE_TINT),
+                           ("X", CUHK_GOLD),
+                           (" CHALLENGE", TEXT)],
+            font("bold", 152), tracking=2, anchor_center=True)
 
     # subtitle
     tracked(d, (cx, 424), "Multimodal Human Activity Challenge",
