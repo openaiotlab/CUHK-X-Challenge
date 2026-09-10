@@ -217,3 +217,7 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 relay_function.js
+
+# Generated locally by scripts/make_sweep_video.py — regenerate, do not commit
+assets/spectral-sweep.mp4
+assets/spectral-sweep.jpg
