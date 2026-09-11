@@ -77,7 +77,7 @@ Both tracks share the same **cross-subject** split — train on users 1–9 & 16
 | Component | Weight |
 |---|---|
 | Kaggle private leaderboard | 20% |
-| Final on-site private test | 30% |
+| Organizer-run private-data evaluation | 30% |
 | Reproducibility (selection stage) | 10% |
 | Technical report | 20% |
 | Presentation | 10% |
@@ -87,34 +87,37 @@ Both tracks share the same **cross-subject** split — train on users 1–9 & 16
 
 ## 🗓️ Timeline
 
-The challenge runs in **three stages**: a three-month Kaggle phase, a Zoom-based verification stage, and the on-site finals at UbiComp 2026.
+The challenge runs in **three stages**: a three-month Kaggle phase, a committee-run verification and private-data evaluation stage, and the Grand Finals at UbiComp 2026.
 
 | Date | Milestone | |
 |---|---|---|
 | **May 23, 2026** | Website released | Full timeline, track details, dataset overview |
 | **Jun 20, 2026** | 🟢 **Competition launch** | Both Kaggle tracks open; dataset publicly released |
-| **Sep 15, 2026** | 🔒 **Leaderboard freeze** | Submissions close. **Top 15 per track** upload code + checkpoint within 48 h |
-| **Sep 16–30, 2026** | 🎥 Selection stage | Zoom verification: live inference on freshly released sample data, plus offline reproduction of Kaggle results |
-| **Oct 1, 2026** | 🎖️ Final Top 6 announced | Verified teams invited to the finals; technical report due |
-| **Oct 11, 2026** | 🏆 **UbiComp 2026 finals** | On-site inference on a brand-new private set · 15-min report + Q&A · awards ceremony |
+| **Sep 15, 2026** | 🔒 **Leaderboard freeze** | Submissions close. **Top 15 per track** are notified and invited to the verification and evaluation stage |
+| **Sep 18, 2026** | 📦 **Verification package due** | Top 15 per track submit code, weights, README, and honor declaration by 23:59 UTC+8 |
+| **Sep 16–30, 2026** | 🔎 Verification & evaluation | Committee-run code/reproducibility verification and private-data evaluation in a controlled environment |
+| **Oct 1, 2026** | 🎖️ Final Top 6 announced | Verified teams invited to the Grand Finals; technical report due 23:59 UTC+8 |
+| **Oct 12, 2026** | 🏆 **Grand Finals · UbiComp 2026 Shanghai** | Finalist presentations (5 + 5 min Q&A) · awards ceremonies · no on-site private-test inference |
 
 <details>
 <summary><b>Stage 2 — what verification actually involves</b></summary>
 
-A 45-minute recorded Zoom session per team. The sample-data link is released at the start of the session; teams have **≤ 2 hours** to finish inference and submit results.
+The Organizing Committee runs each submitted solution in a controlled environment, following your `README.md` step by step — reproducibility is graded.
 
-- Sample data contains **seen *and* unseen subjects** (Part A + Part B).
-- The committee follows your `README.md` step by step — reproducibility is graded.
-- **Pass = accuracy gap ≤ 10%** from your Kaggle private-LB score. Teams beyond that gap are disqualified and replaced by the next-ranked team.
+- The committee verifies code execution, reproducibility, and consistency with your Kaggle leaderboard result.
+- The organizer-run **private-data evaluation** on organizer-controlled private data is the 30% private-test component of final scoring.
+- If environment or execution issues arise, the committee contacts the team privately for clarification or a closed verification session.
+- Teams that cannot be verified may be replaced by reserve teams according to private-leaderboard order.
 
-Submission package, due Sep 22 23:59 UTC:
+Submission package, due Sep 18 23:59 UTC+8:
 
 ```
-code/                  full training and inference code
-checkpoints/model.pth  final model weights
-inference.sh           single entry script: data_dir → predictions CSV
-README.md              reproducibility artifact
-honor_declaration.pdf  signed
+code/                    full training and inference code
+checkpoints/model.pth    final model weights
+inference.sh             single entry script: data_dir → predictions CSV
+README.md                reproducibility artifact
+final_submission.csv     your final Kaggle submission
+honor_declaration.pdf    signed
 ```
 
 </details>

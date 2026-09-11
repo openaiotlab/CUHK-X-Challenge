@@ -550,7 +550,7 @@
         </div>
         <div class="info-block">
           <dt>Finals Venue</dt>
-          <dd>UbiComp 2026 · Shanghai · Oct 11, 2026</dd>
+          <dd>UbiComp 2026 · Shanghai · Oct 12, 2026</dd>
         </div>
       </div>
       <div>
@@ -641,8 +641,8 @@
           </div>
           <div class="score-h">Final Scoring Breakdown (for finalists)</div>
           <div class="sc-row"><span class="sc-label">Kaggle Private LB</span><div class="sc-bg"><div class="sc-bar t" style="width:20%"></div></div><span class="sc-pct">20%</span></div>
-          <div class="sc-row"><span class="sc-label">Final On-Site Private Test</span><div class="sc-bg"><div class="sc-bar t" style="width:30%"></div></div><span class="sc-pct">30%</span></div>
-          <div class="sc-row"><span class="sc-label">Reproducibility (Stage 2)</span><div class="sc-bg"><div class="sc-bar t" style="width:10%"></div></div><span class="sc-pct">10%</span></div>
+          <div class="sc-row"><span class="sc-label">Organizer-Run Private-Data Evaluation</span><div class="sc-bg"><div class="sc-bar t" style="width:30%"></div></div><span class="sc-pct">30%</span></div>
+          <div class="sc-row"><span class="sc-label">Reproducibility (Selection Stage)</span><div class="sc-bg"><div class="sc-bar t" style="width:10%"></div></div><span class="sc-pct">10%</span></div>
           <div class="sc-row"><span class="sc-label">Technical Report</span><div class="sc-bg"><div class="sc-bar t" style="width:20%"></div></div><span class="sc-pct">20%</span></div>
           <div class="sc-row"><span class="sc-label">Presentation</span><div class="sc-bg"><div class="sc-bar t" style="width:10%"></div></div><span class="sc-pct">10%</span></div>
           <div class="sc-row"><span class="sc-label">Model Efficiency</span><div class="sc-bg"><div class="sc-bar t" style="width:10%"></div></div><span class="sc-pct">10%</span></div>
@@ -669,8 +669,8 @@
           </div>
           <div class="score-h">Final Scoring Breakdown (for finalists)</div>
           <div class="sc-row"><span class="sc-label">Kaggle Private LB</span><div class="sc-bg"><div class="sc-bar c" style="width:20%"></div></div><span class="sc-pct">20%</span></div>
-          <div class="sc-row"><span class="sc-label">Final On-Site Private Test</span><div class="sc-bg"><div class="sc-bar c" style="width:30%"></div></div><span class="sc-pct">30%</span></div>
-          <div class="sc-row"><span class="sc-label">Reproducibility (Stage 2)</span><div class="sc-bg"><div class="sc-bar c" style="width:10%"></div></div><span class="sc-pct">10%</span></div>
+          <div class="sc-row"><span class="sc-label">Organizer-Run Private-Data Evaluation</span><div class="sc-bg"><div class="sc-bar c" style="width:30%"></div></div><span class="sc-pct">30%</span></div>
+          <div class="sc-row"><span class="sc-label">Reproducibility (Selection Stage)</span><div class="sc-bg"><div class="sc-bar c" style="width:10%"></div></div><span class="sc-pct">10%</span></div>
           <div class="sc-row"><span class="sc-label">Technical Report</span><div class="sc-bg"><div class="sc-bar c" style="width:20%"></div></div><span class="sc-pct">20%</span></div>
           <div class="sc-row"><span class="sc-label">Presentation</span><div class="sc-bg"><div class="sc-bar c" style="width:10%"></div></div><span class="sc-pct">10%</span></div>
           <div class="sc-row"><span class="sc-label">Model Efficiency</span><div class="sc-bg"><div class="sc-bar c" style="width:10%"></div></div><span class="sc-pct">10%</span></div>
@@ -680,7 +680,7 @@
 
     <p style="font-size:0.72rem;font-weight:600;text-transform:uppercase;letter-spacing:0.09em;color:var(--text-muted);margin-top:2.5rem;margin-bottom:0.5rem;">Three-Stage Competition · Both Tracks</p>
     <div class="stages-intro">
-      The CUHK-X Challenge runs across <strong>three stages</strong>: a 3-month Kaggle phase, a Zoom-based selection stage to verify reproducibility and prevent cheating, and the <strong>on-site finals at UbiComp 2026 in Shanghai</strong>. Top 15 teams per track on the Kaggle private leaderboard advance to selection; top 6 then advance to finals.
+      The CUHK-X Challenge runs across <strong>three stages</strong>: a 3-month Kaggle phase, a committee-run verification and private-data evaluation stage, and the <strong>Grand Finals at UbiComp 2026 in Shanghai</strong>. Top 15 teams per track on the Kaggle private leaderboard advance to verification; top 6 then advance to the Grand Finals.
     </div>
     <div class="stages">
       <div class="stage">
@@ -691,28 +691,27 @@
           <li>Submit prediction CSVs to Kaggle</li>
           <li>Public leaderboard for reference; <strong>private leaderboard</strong> decides ranking</li>
           <li>Certificate awards: <strong>Excellence (Top 15%)</strong>, Distinction (Top 30%), Successful Participation</li>
-          <li><strong>Top 15 teams per track</strong> advance to Selection Stage</li>
+          <li><strong>Top 15 teams per track</strong> advance to Verification &amp; Evaluation</li>
         </ul>
       </div>
       <div class="stage stage-selection">
         <div class="stage-n">02</div>
-        <h4>Selection Stage · Zoom Verification</h4>
+        <h4>Verification &amp; Evaluation</h4>
         <div class="stage-period">Sep 16 – Sep 30, 2026 · 2 weeks</div>
         <ul>
-          <li>Top 15 submit <strong>code + checkpoint + inference.sh</strong> via email/Drive</li>
-          <li>Zoom session: live inference on <strong>sample data</strong> (released at session start)</li>
-          <li>Sample data has <strong>seen + unseen subjects</strong></li>
-          <li>Organizers reproduce Kaggle result offline to verify weights</li>
-          <li><strong>Top 6 teams per track</strong> pass to UbiComp finals</li>
+          <li>Top 15 submit the <strong>verification package</strong> (code, weights, inference script, README, final submission, signed honor declaration) by <strong>Sep 18, 23:59 UTC+8</strong></li>
+          <li>Organizing Committee runs submitted solutions in a <strong>controlled environment</strong></li>
+          <li>Organizer-run <strong>private-data evaluation</strong> on organizer-controlled private data (30% of final scoring)</li>
+          <li><strong>Top 6 teams per track</strong> advance to the Grand Finals</li>
         </ul>
       </div>
       <div class="stage stage-finals">
         <div class="stage-n">03</div>
-        <h4>UbiComp Finals <span class="ubicomp-badge">UbiComp 2026</span></h4>
-        <div class="stage-period">Oct 11, 2026 · Shanghai · 1 day</div>
+        <h4>Grand Finals <span class="ubicomp-badge">UbiComp 2026</span></h4>
+        <div class="stage-period">Oct 12, 2026 · Shanghai · 1 day</div>
         <ul>
-          <li>On-site inference on organizer's <strong>brand new private dataset</strong> (cross-subject)</li>
-          <li><strong>Mandatory:</strong> 15-min technical report presentation + Q&amp;A</li>
+          <li><strong>No on-site private-test inference</strong> — the private-data evaluation is completed before the finals</li>
+          <li><strong>Finalist presentations:</strong> 5 minutes + 5 minutes Q&amp;A per team, in English</li>
           <li>Awards ceremony + <strong>USD $500 travel grant</strong> per attending finalist team</li>
           <li>Remote participation via Zoom supported if travel is not possible</li>
         </ul>
@@ -760,7 +759,7 @@
         <span class="award-medal">⭐</span>
         <div class="award-place">Most Popular Award</div>
         <div class="award-amount" style="font-size:1rem;color:var(--text-secondary)">TBD</div>
-        <div class="award-note">Community vote / most innovative</div>
+        <div class="award-note">Online community vote · Oct 1 – Oct 10, 2026 (closes 24:00 UTC+8)</div>
       </div>
       <div class="award-card">
         <span class="award-medal">🎓</span>
@@ -895,15 +894,23 @@
         <div class="tl-dot"></div>
         <div class="tl-content">
           <h4>Kaggle Leaderboard Freeze</h4>
-          <p>Public submissions close. <strong>Top 15 teams per track</strong> on the Kaggle private leaderboard are notified and required to upload code + checkpoint within 48 hours.</p>
+          <p>Public submissions close. <strong>Top 15 teams per track</strong> on the Kaggle private leaderboard are notified and invited to the verification and evaluation stage.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Sep 18<br/>2026</div>
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <h4>Verification Package Due</h4>
+          <p>Top 15 teams per track submit their verification package by <strong>23:59 UTC+8</strong>.</p>
         </div>
       </div>
       <div class="tl-item">
         <div class="tl-date">Sep 16–30<br/>2026</div>
         <div class="tl-dot"></div>
         <div class="tl-content">
-          <h4>Selection Stage · Zoom Verification</h4>
-          <p>Top 15 teams attend a Zoom verification session where they run live inference on freshly released <strong>sample data</strong>. Organizers also reproduce Kaggle results offline using submitted code. Teams with accuracy gap &gt; 10% from their private LB score are disqualified.</p>
+          <h4>Verification &amp; Evaluation</h4>
+          <p>The Organizing Committee runs submitted solutions in a <strong>controlled environment</strong> to verify code execution, reproducibility, and consistency with leaderboard results. The organizer-run private-data evaluation also takes place during this period.</p>
         </div>
       </div>
       <div class="tl-item">
@@ -911,15 +918,15 @@
         <div class="tl-dot"></div>
         <div class="tl-content">
           <h4>Final Top 6 Announced</h4>
-          <p>Top 6 teams per track passing verification are officially invited to UbiComp 2026 finals. Final Technical Report due by this date.</p>
+          <p>Top 6 teams per track passing verification are officially invited to the Grand Finals. Final technical report due at <strong>23:59 UTC+8</strong> on October 1.</p>
         </div>
       </div>
       <div class="tl-item">
-        <div class="tl-date">Oct 11<br/>2026</div>
+        <div class="tl-date">Oct 12<br/>2026</div>
         <div class="tl-dot"></div>
         <div class="tl-content">
-          <h4>UbiComp 2026 Finals · Shanghai</h4>
-          <p>Finalists run inference on a <strong>brand-new private dataset</strong> (cross-subject, never released). 15-min technical report presentation + Q&amp;A. Awards ceremony same day. Teams unable to travel may participate via Zoom.</p>
+          <h4>Grand Finals · Shanghai</h4>
+          <p>Finalist presentations (5 minutes + 5 minutes Q&amp;A per team, in English) and the awards ceremonies. No additional on-site private-test inference. Teams unable to travel may participate via Zoom.</p>
         </div>
       </div>
     </div>
@@ -1129,30 +1136,31 @@
   <div class="inner">
     <span class="section-tag">Anti-Cheating &amp; Reproducibility</span>
     <h2 class="section-title">Verification &amp; Rules</h2>
-    <p class="section-desc">All Top 15 teams per track must pass a Zoom-based verification session before advancing to the UbiComp 2026 finals. The verification involves live inference on freshly released sample data, plus offline reproduction of Kaggle results by organizers.</p>
+    <p class="section-desc">The Top 15 teams per track on the Kaggle private leaderboard submit a verification package, which the Organizing Committee runs in a controlled environment to verify code execution, reproducibility, and consistency with each team's leaderboard result. The organizer-run private-data evaluation also takes place during this period.</p>
 
     <div class="verif-cards">
       <div class="verif-card">
         <span class="verif-badge a">What you submit</span>
         <h3>Submission Package</h3>
-        <p>By Sep 22, 23:59 UTC, Top 15 teams upload:</p>
+        <p>By Sep 18, 2026, 23:59 UTC+8, Top 15 teams upload:</p>
         <ul>
           <li><code>code/</code> — full training and inference code</li>
           <li><code>checkpoints/model.pth</code> — final model weights</li>
           <li><code>inference.sh</code> — single entry script (data_dir → CSV)</li>
           <li><code>README.md</code> — reproducibility artifact</li>
+          <li><code>final_submission.csv</code> — final Kaggle submission</li>
           <li><code>honor_declaration.pdf</code> — signed</li>
         </ul>
       </div>
       <div class="verif-card">
-        <span class="verif-badge b">What happens in Zoom</span>
-        <h3>Live Verification Session</h3>
-        <p>A 45-min recorded session per team. Sample data link released at session start. Teams have <strong>≤ 2 hours</strong> to complete inference and submit results.</p>
+        <span class="verif-badge b">How verification runs</span>
+        <h3>Controlled-Environment Verification</h3>
+        <p>The committee installs the environment following your README and runs your submitted solution in a <strong>controlled environment</strong>.</p>
         <ul>
-          <li>Sample data = seen + unseen subjects (Part A + Part B)</li>
           <li>Committee follows your README step-by-step</li>
-          <li>Pass = ≤ 10% accuracy gap from Kaggle private LB</li>
-          <li>Failed teams replaced by next-ranked team</li>
+          <li>Organizer-run private-data evaluation on organizer-controlled private data (30% of final scoring)</li>
+          <li>Issues → committee contacts the team privately for clarification or a closed verification session</li>
+          <li>Teams that cannot be verified may be replaced by reserve teams</li>
         </ul>
       </div>
     </div>
