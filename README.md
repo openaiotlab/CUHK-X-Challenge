@@ -96,7 +96,7 @@ The challenge runs in **three stages**: a three-month Kaggle phase, a committee-
 | **Sep 15, 2026** | 🔒 **Leaderboard freeze** | Submissions close. **Top 15 per track** are notified and invited to the verification and evaluation stage |
 | **Sep 18, 2026** | 📦 **Verification package due** | Top 15 per track submit code, weights, README, and S:59 UTC |
 | **Sep 16–30, 2026** | 🔎 Verification & evaluation | Committee-run code/reproducibility verification and private-data evaluation in a controlled environment |
-| **Oct 1, 2026** | 🎖️ Final Top 6 announced | Verified teams invited to the Grand Finals; technical report due 23:59 UTC+8 |
+| **Oct 1, 2026** | 🎖️ Final Top 6 announced | Verified teams invited to the Grand Finals; technical report due 23:59 UTC |
 | **Oct 12, 2026** | 🏆 **Grand Finals · UbiComp 2026 Shanghai** | Finalist presentations (5 + 5 min Q&A) · awards ceremonies · no on-site private-test inference |
 
 <details>
@@ -149,7 +149,7 @@ Beyond the prize tiers, every participating team is recognised through a **five-
 
 ## 📊 Leaderboard
 
-The [official site](https://openaiotlab.github.io/CUHK-X-Challenge/#leaderboard) shows the **top 6 teams per track**, auto-synced from Kaggle every day at **10:00 HKT** by [`.github/workflows/update-leaderboard.yml`](.github/workflows/update-leaderboard.yml) into [`leaderboard.json`](leaderboard.json).
+The [official site](https://openaiotlab.github.io/CUHK-X-Challenge/#leaderboard) shows the **top 6 teams per track**, auto-synced from Kaggle every day at **02:00 UTC** by [`.github/workflows/update-leaderboard.yml`](.github/workflows/update-leaderboard.yml) into [`leaderboard.json`](leaderboard.json).
 
 The public leaderboard is for reference only — **the private leaderboard decides the final ranking.**
 
@@ -211,7 +211,7 @@ This repository hosts the challenge website (GitHub Pages) and its supporting sc
 | [`scripts/make_ip_pdf.py`](scripts/make_ip_pdf.py) | Generates the bilingual IP clauses PDF |
 | [`scripts/make_readme_assets.py`](scripts/make_readme_assets.py) | Renders the banner and organizer portraits used above |
 | [`photos/`](photos/) | Full-resolution organizer portraits |
-| [`.github/workflows/`](.github/workflows/) | Daily leaderboard sync — 02:00 UTC / 10:00 HKT, plus manual dispatch |
+| [`.github/workflows/`](.github/workflows/) | Daily leaderboard sync — 02:00 UTC, plus manual dispatch |
 
 The leaderboard workflow requires the `KAGGLE_USERNAME` and `KAGGLE_KEY` repository secrets.
 

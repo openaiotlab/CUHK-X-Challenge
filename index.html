@@ -759,7 +759,7 @@
         <span class="award-medal">⭐</span>
         <div class="award-place">Most Popular Award</div>
         <div class="award-amount" style="font-size:1rem;color:var(--text-secondary)">TBD</div>
-        <div class="award-note">Online community vote · Oct 1 – Oct 10, 2026 (closes 24:00 UTC+8)</div>
+        <div class="award-note">Online community vote · Oct 1 – Oct 10, 2026 (closes 23:59 UTC)</div>
       </div>
       <div class="award-card">
         <span class="award-medal">🎓</span>
@@ -834,7 +834,7 @@
   <div class="inner">
     <span class="section-tag">Live Rankings</span>
     <h2 class="section-title">Leaderboard</h2>
-    <p class="section-desc">Top 6 teams per track, auto-synced from Kaggle every day at 10:00 HKT.</p>
+    <p class="section-desc">Top 6 teams per track, auto-synced from Kaggle every day at 02:00 UTC.</p>
 
     <div class="lb-tabs">
       <div class="lb-tab active" data-track="small">Small Model Track</div>
@@ -918,7 +918,7 @@
         <div class="tl-dot"></div>
         <div class="tl-content">
           <h4>Final Top 6 Announced</h4>
-          <p>Top 6 teams per track passing verification are officially invited to the Grand Finals. Final technical report due at <strong>23:59 UTC+8</strong> on October 1.</p>
+          <p>Top 6 teams per track passing verification are officially invited to the Grand Finals. Final technical report due at <strong>23:59 UTC</strong> on October 1.</p>
         </div>
       </div>
       <div class="tl-item">
@@ -1461,8 +1461,8 @@ async function loadLeaderboard() {
     LB_DATA = await res.json();
     if (LB_DATA.updated_at) {
       const d = new Date(LB_DATA.updated_at);
-      const opts = { timeZone: 'Asia/Hong_Kong', year: 'numeric', month: 'short', day: '2-digit', hour: '2-digit', minute: '2-digit', hour12: false };
-      document.getElementById('lb-updated').textContent = 'Last updated: ' + d.toLocaleString('en-US', opts) + ' HKT';
+      const opts = { timeZone: 'UTC', year: 'numeric', month: 'short', day: '2-digit', hour: '2-digit', minute: '2-digit', hour12: false };
+      document.getElementById('lb-updated').textContent = 'Last updated: ' + d.toLocaleString('en-US', opts) + ' UTC';
     }
   } catch (e) {
     LB_DATA = null;
