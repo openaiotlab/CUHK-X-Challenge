@@ -94,7 +94,7 @@ The challenge runs in **three stages**: a three-month Kaggle phase, a committee-
 | **May 23, 2026** | Website released | Full timeline, track details, dataset overview |
 | **Jun 20, 2026** | 🟢 **Competition launch** | Both Kaggle tracks open; dataset publicly released |
 | **Sep 15, 2026** | 🔒 **Leaderboard freeze** | Submissions close. **Top 15 per track** are notified and invited to the verification and evaluation stage |
-| **Sep 18, 2026** | 📦 **Verification package due** | Top 15 per track submit code, weights, README, and honor declaration by 23:59 UTC+8 |
+| **Sep 18, 2026** | 📦 **Verification package due** | Top 15 per track submit code, weights, README, and S:59 UTC |
 | **Sep 16–30, 2026** | 🔎 Verification & evaluation | Committee-run code/reproducibility verification and private-data evaluation in a controlled environment |
 | **Oct 1, 2026** | 🎖️ Final Top 6 announced | Verified teams invited to the Grand Finals; technical report due 23:59 UTC+8 |
 | **Oct 12, 2026** | 🏆 **Grand Finals · UbiComp 2026 Shanghai** | Finalist presentations (5 + 5 min Q&A) · awards ceremonies · no on-site private-test inference |
@@ -109,7 +109,7 @@ The Organizing Committee runs each submitted solution in a controlled environmen
 - If environment or execution issues arise, the committee contacts the team privately for clarification or a closed verification session.
 - Teams that cannot be verified may be replaced by reserve teams according to private-leaderboard order.
 
-Submission package, due Sep 18 23:59 UTC+8:
+Submission package, due Sep 18 23:59 UTC:
 
 ```
 code/                    full training and inference code
