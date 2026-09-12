@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-11T02:04:22.324717Z",
+  "updated_at": "2026-09-12T02:04:19.166792Z",
   "small": {
     "entries": [
       {
@@ -39,14 +39,14 @@
       },
       {
         "rank": 6,
-        "team": "Jacobo Martin",
-        "score": "0.91542",
+        "team": "Lazyshu",
+        "score": "0.92039",
         "submissions": "—",
-        "last_submission": "2026-08-12"
+        "last_submission": "2026-09-12"
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-small-model-track/leaderboard",
-    "team_count": 309
+    "team_count": 314
   },
   "large": {
     "entries": [
@@ -55,21 +55,21 @@
         "team": "Bull & Ivarick",
         "score": "0.98538",
         "submissions": "—",
-        "last_submission": "2026-09-11"
+        "last_submission": "2026-09-12"
       },
       {
         "rank": 2,
         "team": "Knight of Favonius",
         "score": "0.97660",
         "submissions": "—",
-        "last_submission": "2026-09-05"
+        "last_submission": "2026-09-11"
       },
       {
         "rank": 3,
         "team": "Fluxx",
         "score": "0.97076",
         "submissions": "—",
-        "last_submission": "2026-09-10"
+        "last_submission": "2026-09-11"
       },
       {
         "rank": 4,
@@ -88,12 +88,12 @@
       {
         "rank": 6,
         "team": "zoro9292",
-        "score": "0.94152",
+        "score": "0.94444",
         "submissions": "—",
         "last_submission": "2026-09-11"
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-large-model-track/leaderboard",
-    "team_count": 195
+    "team_count": 198
   }
 }
