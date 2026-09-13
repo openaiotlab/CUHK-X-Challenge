@@ -96,16 +96,16 @@ The challenge runs in **three stages**: a three-month Kaggle phase, a committee-
 | **Sep 15, 2026** | 🔒 **Leaderboard freeze** | Submissions close. **Top 15 per track** are notified and invited to the verification and evaluation stage |
 | **Sep 18, 2026** | 📦 **Verification package due** | Top 15 per track submit code, weights, README, and S:59 UTC |
 | **Sep 16–30, 2026** | 🔎 Verification & evaluation | Committee-run code/reproducibility verification and private-data evaluation in a controlled environment |
-| **Oct 1, 2026** | 🎖️ Final Top 6 announced | Verified teams invited to the Grand Finals; technical report due 23:59 UTC |
-| **Oct 12, 2026** | 🏆 **Grand Finals · UbiComp 2026 Shanghai** | Finalist presentations (5 + 5 min Q&A) · awards ceremonies · no on-site private-test inference |
+| **Oct 1, 2026** | 🎖️ Final Top 6 announced | Verified teams invited to the Grand Finals; technical reports from the final Top 20 teams due 23:59 UTC |
+| **Oct 12, 2026** | 🏆 **Grand Finals · UbiComp 2026 Shanghai** | Finalist presentations (5 + 5 min Q&A) · awards ceremonies · **no on-site private-test inference** |
 
 <details>
 <summary><b>Stage 2 — what verification actually involves</b></summary>
 
-The Organizing Committee runs each submitted solution in a controlled environment, following your `README.md` step by step — reproducibility is graded.
+**The Organizing Committee runs each submitted solution** in a controlled environment, following the submitted setup instructions — reproducibility is graded.
 
 - The committee verifies code execution, reproducibility, and consistency with your Kaggle leaderboard result.
-- The organizer-run **private-data evaluation** on organizer-controlled private data is the 30% private-test component of final scoring.
+- **Private-data evaluation:** every team is scored on the same fresh private data with the same official metric — the 30% private-test component of final scoring.
 - If environment or execution issues arise, the committee contacts the team privately for clarification or a closed verification session.
 - Teams that cannot be verified may be replaced by reserve teams according to private-leaderboard order.
 
@@ -131,7 +131,7 @@ Each track carries an independent USD $10,000 pool — the prizes below apply to
 | 🥇 | 1st Place | **$6,000** |
 | 🥈 | 2nd Place | **$3,000** |
 | 🥉 | 3rd Place | **$1,000** |
-| 📄 | Best Report Award | Selected by review committee |
+| 📄 | Best Report Award | Open to the final Top 20 teams · selected by review committee |
 | ⭐ | Most Popular Award | Community vote / most innovative |
 | 🎓 | Best Faculty Advisor Award | Advisor of the highest-scoring student team |
 
