@@ -105,7 +105,7 @@ The challenge runs in **three stages**: a three-month Kaggle phase, a committee-
 **The Organizing Committee runs each submitted solution** in a controlled environment, following the submitted setup instructions — reproducibility is graded.
 
 - The committee verifies code execution, reproducibility, and consistency with your Kaggle leaderboard result.
-- **Private-data evaluation:** every team is scored on the same fresh private data with the same official metric — the 30% private-test component of final scoring.
+- **Committee-run private-data evaluation:** every team is scored on the same fresh private data with the same official metric — the 30% private-test component of final scoring.
 - If environment or execution issues arise, the committee contacts the team privately for clarification or a closed verification session.
 - Teams that cannot be verified may be replaced by reserve teams according to private-leaderboard order.
 
