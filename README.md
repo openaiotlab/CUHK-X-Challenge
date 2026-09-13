@@ -133,7 +133,7 @@ Each track carries an independent USD $10,000 pool — the prizes below apply to
 | 🥉 | 3rd Place | **$1,000** |
 | 📄 | Best Report Award | Open to formally invited top-ranked teams · selected by review committee |
 | ⭐ | Most Popular Award | Community vote / most innovative |
-| 🎓 | Best Faculty Advisor Award | Advisor of the highest-scoring student team |
+| 🎓 | Best Faculty Advisor Award | Selected by the competition committee in recognition of outstanding mentorship, considering factors such as team performance and overall contribution to the challenge. |
 
 Beyond the prize tiers, every participating team is recognised through a **five-tier certificate system** per track. Tiers are nested — each team receives only its highest-qualifying award.
 
