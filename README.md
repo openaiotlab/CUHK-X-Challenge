@@ -94,15 +94,15 @@ The challenge runs in **three stages**: a three-month Kaggle phase, a committee-
 | **May 23, 2026** | Website released | Full timeline, track details, dataset overview |
 | **Jun 20, 2026** | 🟢 **Competition launch** | Both Kaggle tracks open; dataset publicly released |
 | **Sep 15, 2026** | 🔒 **Leaderboard freeze** | Submissions close. **Top 15 per track** are notified and invited to the verification and evaluation stage |
-| **Sep 18, 2026** | 📦 **Verification package due** | Top 15 per track submit code, weights, README, and S:59 UTC |
-| **Sep 16–30, 2026** | 🔎 Verification & evaluation | Committee-run code/reproducibility verification and private-data evaluation in a controlled environment |
-| **Oct 1, 2026** | 🎖️ Final Top 6 announced | Verified teams invited to the Grand Finals; technical reports from the final Top 20 teams due 23:59 UTC |
+| **Sep 18, 2026** | 📦 **Verification package due** | Top 15 per track submit code, weights, README, and related materials by 23:59 UTC |
+| **Sep 19–30, 2026** | 🔎 Verification & evaluation | Committee reproduces submitted solutions and conducts the private-data evaluation |
+| **Oct 1, 2026** | 🎖️ Final Top 6 announced | Verified teams invited to the Grand Finals; technical reports from formally invited teams due 23:59 UTC |
 | **Oct 12, 2026** | 🏆 **Grand Finals · UbiComp 2026 Shanghai** | Finalist presentations (5 + 5 min Q&A) · awards ceremonies · **no on-site private-test inference** |
 
 <details>
 <summary><b>Stage 2 — what verification actually involves</b></summary>
 
-**The Organizing Committee runs each submitted solution** in a controlled environment, following the submitted setup instructions — reproducibility is graded.
+The Organizing Committee follows each team's `README.md` and uses the submitted code, model artifacts, and configuration to reproduce the submitted solution and conduct the private-data evaluation.
 
 - The committee verifies code execution, reproducibility, and consistency with your Kaggle leaderboard result.
 - **Committee-run private-data evaluation:** every team is scored on the same fresh private data with the same official metric — the 30% private-test component of final scoring.
@@ -131,7 +131,7 @@ Each track carries an independent USD $10,000 pool — the prizes below apply to
 | 🥇 | 1st Place | **$6,000** |
 | 🥈 | 2nd Place | **$3,000** |
 | 🥉 | 3rd Place | **$1,000** |
-| 📄 | Best Report Award | Open to the final Top 20 teams · selected by review committee |
+| 📄 | Best Report Award | Open to formally invited top-ranked teams · selected by review committee |
 | ⭐ | Most Popular Award | Community vote / most innovative |
 | 🎓 | Best Faculty Advisor Award | Advisor of the highest-scoring student team |
 
