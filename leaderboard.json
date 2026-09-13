@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-12T02:04:19.166792Z",
+  "updated_at": "2026-09-13T02:04:26.195571Z",
   "small": {
     "entries": [
       {
@@ -42,11 +42,11 @@
         "team": "Lazyshu",
         "score": "0.92039",
         "submissions": "—",
-        "last_submission": "2026-09-12"
+        "last_submission": "2026-09-13"
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-small-model-track/leaderboard",
-    "team_count": 314
+    "team_count": 316
   },
   "large": {
     "entries": [
@@ -55,7 +55,7 @@
         "team": "Bull & Ivarick",
         "score": "0.98538",
         "submissions": "—",
-        "last_submission": "2026-09-12"
+        "last_submission": "2026-09-13"
       },
       {
         "rank": 2,
@@ -69,31 +69,31 @@
         "team": "Fluxx",
         "score": "0.97076",
         "submissions": "—",
-        "last_submission": "2026-09-11"
+        "last_submission": "2026-09-12"
       },
       {
         "rank": 4,
-        "team": "Salty Taro",
-        "score": "0.95321",
+        "team": "AICL",
+        "score": "0.97076",
         "submissions": "—",
-        "last_submission": "2026-09-06"
+        "last_submission": "2026-09-12"
       },
       {
         "rank": 5,
-        "team": "AICL",
-        "score": "0.94736",
+        "team": "Salty Taro",
+        "score": "0.95906",
         "submissions": "—",
-        "last_submission": "2026-09-08"
+        "last_submission": "2026-09-12"
       },
       {
         "rank": 6,
         "team": "zoro9292",
-        "score": "0.94444",
+        "score": "0.94736",
         "submissions": "—",
-        "last_submission": "2026-09-11"
+        "last_submission": "2026-09-13"
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-large-model-track/leaderboard",
-    "team_count": 198
+    "team_count": 202
   }
 }
