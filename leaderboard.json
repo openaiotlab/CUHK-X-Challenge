@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-13T02:04:26.195571Z",
+  "updated_at": "2026-09-14T02:07:14.742586Z",
   "small": {
     "entries": [
       {
@@ -7,7 +7,7 @@
         "team": "Knight of Favonius",
         "score": "0.98507",
         "submissions": "—",
-        "last_submission": "2026-09-11"
+        "last_submission": "2026-09-13"
       },
       {
         "rank": 2,
@@ -26,9 +26,9 @@
       {
         "rank": 4,
         "team": "Shuning Zhang",
-        "score": "0.95522",
+        "score": "0.96019",
         "submissions": "—",
-        "last_submission": "2026-09-04"
+        "last_submission": "2026-09-13"
       },
       {
         "rank": 5,
@@ -42,11 +42,11 @@
         "team": "Lazyshu",
         "score": "0.92039",
         "submissions": "—",
-        "last_submission": "2026-09-13"
+        "last_submission": "2026-09-14"
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-small-model-track/leaderboard",
-    "team_count": 316
+    "team_count": 321
   },
   "large": {
     "entries": [
@@ -55,25 +55,25 @@
         "team": "Bull & Ivarick",
         "score": "0.98538",
         "submissions": "—",
-        "last_submission": "2026-09-13"
+        "last_submission": "2026-09-14"
       },
       {
         "rank": 2,
-        "team": "Knight of Favonius",
-        "score": "0.97660",
+        "team": "AICL",
+        "score": "0.98538",
         "submissions": "—",
-        "last_submission": "2026-09-11"
+        "last_submission": "2026-09-14"
       },
       {
         "rank": 3,
-        "team": "Fluxx",
-        "score": "0.97076",
+        "team": "Knight of Favonius",
+        "score": "0.97660",
         "submissions": "—",
-        "last_submission": "2026-09-12"
+        "last_submission": "2026-09-13"
       },
       {
         "rank": 4,
-        "team": "AICL",
+        "team": "Fluxx",
         "score": "0.97076",
         "submissions": "—",
         "last_submission": "2026-09-12"
@@ -87,13 +87,13 @@
       },
       {
         "rank": 6,
-        "team": "zoro9292",
-        "score": "0.94736",
+        "team": "没落者",
+        "score": "0.95029",
         "submissions": "—",
         "last_submission": "2026-09-13"
       }
     ],
     "kaggle_url": "https://www.kaggle.com/competitions/cuhk-x-competition-large-model-track/leaderboard",
-    "team_count": 202
+    "team_count": 205
   }
 }
