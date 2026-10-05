@@ -4,6 +4,15 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>CUHK-X Multimodal Human Activity Challenge</title>
+<meta name="description" content="CUHK-X RGB-free multimodal challenge: six sensing modalities, two tracks, USD $20,000 in prizes, and Grand Finals on October 12, 2026 in Shanghai. Kaggle submissions are closed."/>
+<link rel="canonical" href="https://openaiotlab.github.io/CUHK-X-Challenge/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="CUHK-X Multimodal Human Activity Challenge"/>
+<meta property="og:description" content="Kaggle submissions are closed. Grand Finals: October 12, 2026, Shanghai. Two RGB-free tracks and USD $20,000 in prizes."/>
+<meta property="og:url" content="https://openaiotlab.github.io/CUHK-X-Challenge/"/>
+<meta property="og:image" content="https://openaiotlab.github.io/CUHK-X-Challenge/assets/banner.png"/>
+<meta property="og:image:alt" content="CUHK-X Multimodal Human Activity Challenge"/>
+<meta name="twitter:card" content="summary_large_image"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
@@ -52,14 +61,14 @@
     height: 58px;
     backdrop-filter: blur(12px);
   }
-  .nav-logo { font-weight: 700; font-size: 1.05rem; color: var(--text-primary); }
+  .nav-logo { font-weight: 700; font-size: 1.05rem; color: var(--text-primary); white-space: nowrap; flex-shrink: 0; }
   .nav-logo span { color: var(--cyan); }
-  .nav-links { display: flex; gap: 1rem; list-style: none; align-items: center; }
+  .nav-links { display: flex; gap: 1rem; list-style: none; align-items: center; min-width: 0; overflow-x: auto; white-space: nowrap; margin: 0 1rem; }
   .nav-links a { font-size: 0.88rem; font-weight: 500; color: var(--text-secondary); transition: color 0.15s; }
   .nav-links a:hover { color: var(--text-primary); }
   .nav-page-divider { color: var(--text-muted); opacity: 0.4; font-size: 1.1rem; user-select: none; padding: 0 0.3rem; }
   .nav-page-label { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); padding: 0.18rem 0.5rem; border: 1px solid var(--border); border-radius: 3px; user-select: none; }
-  .nav-past { font-size: 0.88rem; border: 1px solid var(--border2); padding: 0.4rem 1rem; border-radius: 4px; color: var(--text-secondary); font-weight: 500; transition: all 0.15s; }
+  .nav-past { font-size: 0.88rem; border: 1px solid var(--border2); padding: 0.4rem 1rem; border-radius: 4px; color: var(--text-secondary); font-weight: 500; transition: all 0.15s; white-space: nowrap; flex-shrink: 0; }
   .nav-past:hover { color: var(--cyan); border-color: var(--cyan); }
 
   section { padding: 80px 3rem; }
@@ -480,7 +489,7 @@
     <li><a href="#dataset">Dataset Intro</a></li>
     <li><a href="#verification">Rules</a></li>
   </ul>
-  <a href="#registration" class="nav-past">Register Now</a>
+  <a href="#timeline" class="nav-past">Finals Timeline</a>
 </nav>
 
 <!-- HERO -->
@@ -488,10 +497,11 @@
   <div class="inner">
     <div class="hero-badge">Co-located with UbiComp 2026 · Kaggle · Two Tracks</div>
     <h1>CUHK-X Multimodal<br/><span>Human Activity</span> Challenge</h1>
-    <p class="lead">An international competition spanning lightweight efficient models and frontier multimodal LLMs on depth, IMU, mmWave radar, and skeleton modalities — built on the CUHK-X benchmark for HAR, HAU, and HARn tasks.</p>
+    <p class="lead">An international competition spanning lightweight efficient models and frontier multimodal LLMs on depth, infrared, thermal, IMU, mmWave radar, and skeleton modalities — built on the CUHK-X benchmark for HAR, HAU, and HARn tasks.</p>
+    <p class="section-desc" style="margin:1rem auto;max-width:760px;"><strong style="color:var(--teal)">Update · October 5, 2026:</strong> Kaggle submissions closed on September 15, 2026. The Grand Finals are scheduled for October 12, 2026 in Shanghai. See the <a href="#timeline">finals timeline</a>; existing teams can contact the organizers about registration records and finals logistics.</p>
     <div class="hero-btns">
       <div class="hero-dd">
-        <button type="button" class="btn-p hero-dd-toggle" aria-haspopup="true" aria-expanded="false">Join on Kaggle <span class="caret">▾</span></button>
+        <button type="button" class="btn-p hero-dd-toggle" aria-haspopup="true" aria-expanded="false">View Kaggle Tracks <span class="caret">▾</span></button>
         <div class="hero-dd-menu" role="menu">
           <a href="https://www.kaggle.com/competitions/cuhk-x-competition-small-model-track" role="menuitem" target="_blank" rel="noopener">Small Model Track<span class="dd-sub">Lightweight HAR</span></a>
           <a href="https://www.kaggle.com/competitions/cuhk-x-competition-large-model-track" role="menuitem" target="_blank" rel="noopener">Large Model Track<span class="dd-sub">VQA · HAU &amp; HARn</span></a>
@@ -529,7 +539,7 @@
     <span class="section-tag">The Challenge</span>
     <h2 class="section-title">Competition Overview</h2>
     <p class="section-desc">
-      The CUHK-X Multimodal Human Activity Challenge is the first large-scale international competition that <strong style="color:var(--text-primary)">excludes RGB data entirely</strong> — models learn human dynamics information from <strong style="color:var(--text-primary)">depth, IMU, mmWave radar, and skeleton</strong> modalities. This privacy-preserving design mirrors the deployment reality of healthcare, smart home, and elderly-care systems, where visual privacy must be preserved at every stage of training, validation, and inference.
+      The CUHK-X Multimodal Human Activity Challenge is the first large-scale international competition that <strong style="color:var(--text-primary)">excludes RGB data entirely</strong> — models learn human dynamics information from <strong style="color:var(--text-primary)">depth, infrared, thermal, IMU, mmWave radar, and skeleton</strong> modalities. This privacy-preserving design mirrors the deployment reality of healthcare, smart home, and elderly-care systems, where visual privacy must be preserved at every stage of training, validation, and inference.
     </p>
     <p class="section-desc" style="margin-top:0.8rem;">
       Hosted by the AIoT Lab at The Chinese University of Hong Kong on Kaggle across two parallel tracks, with finals held alongside <strong style="color:var(--text-primary)">UbiComp 2026 in Shanghai</strong>. The Small Model Track targets efficient, edge-deployable HAR; the Large Model Track pushes multimodal LLMs on VQA covering action understanding and reasoning. Total prize pool: <strong style="color:var(--amber)">USD $20,000</strong>.
@@ -632,7 +642,7 @@
         </div>
         <div class="track-body">
           <p class="tdesc">Targeted at <strong style="color:var(--text-primary)">resource-constrained edge deployment</strong> in smart home and healthcare scenarios — applications such as Alzheimer's monitoring, fall detection, and elderly care, where models must run on low-power devices with limited memory and compute.</p>
-          <p class="tdesc">Participants build lightweight multimodal models that fuse <strong style="color:var(--text-primary)">depth imagery, IMU streams, mmWave radar, and skeleton keypoints</strong> to classify 40 daily activities under strict <strong style="color:var(--text-primary)">cross-subject</strong> evaluation. Traditional architectures (CNN, RNN, Transformer) are encouraged; large pretrained foundation models are not permitted — placing the spotlight on architecture design, sensor fusion, and inference efficiency.</p>
+          <p class="tdesc">Participants build lightweight multimodal models that fuse <strong style="color:var(--text-primary)">depth, infrared, and thermal imagery, IMU streams, mmWave radar, and skeleton keypoints</strong> to classify 40 daily activities under strict <strong style="color:var(--text-primary)">cross-subject</strong> evaluation. Traditional architectures (CNN, RNN, Transformer) are encouraged; large pretrained foundation models are not permitted — placing the spotlight on architecture design, sensor fusion, and inference efficiency.</p>
           <div class="spec-list">
             <div class="spec-item"><span class="spec-k">Task</span><span class="spec-v">40-class HAR · Cross-Subject</span></div>
             <div class="spec-item"><span class="spec-k">Cross-Subject Split</span><span class="spec-v">Train: user 1–9, 16–24 · Test: user 10–11, 25–26</span></div>
@@ -698,7 +708,7 @@
       <div class="stage stage-selection">
         <div class="stage-n">02</div>
         <h4>Verification &amp; Evaluation</h4>
-        <div class="stage-period">Sep 19 – Sep 30, 2026 · 2 weeks</div>
+        <div class="stage-period">Sep 19 – Sep 30, 2026 · 12 days</div>
         <ul>
           <li>Top 15 submit the <strong>verification package</strong> (code, weights, inference script, README, final submission, signed honor declaration) by <strong>Sep 18, 23:59 UTC</strong></li>
           <li>Organizing Committee reproduces each solution from the submitted code, model artifacts, configuration, and setup instructions</li>
@@ -837,9 +847,9 @@
 <!-- LEADERBOARD -->
 <section id="leaderboard" data-page="2">
   <div class="inner">
-    <span class="section-tag">Live Rankings</span>
+    <span class="section-tag">Public Leaderboard Snapshot</span>
     <h2 class="section-title">Leaderboard</h2>
-    <p class="section-desc">Top 6 teams per track, auto-synced from Kaggle every day at 02:00 UTC.</p>
+    <p class="section-desc">Last published public leaderboard snapshot: top 6 teams per track. Automatic refreshes stop at the September 15, 2026 freeze to avoid publishing private leaderboard results. These public ranks are not the verified Grand Finals shortlist or the final competition standings.</p>
 
     <div class="lb-tabs">
       <div class="lb-tab active" data-track="small">Small Model Track</div>
@@ -848,7 +858,7 @@
 
     <div class="lb-meta">
       <span class="lb-updated" id="lb-updated">Last updated: —</span>
-      <a class="lb-source-link" id="lb-source-link" href="https://www.kaggle.com/" target="_blank" rel="noopener">View full leaderboard on Kaggle →</a>
+      <a class="lb-source-link" id="lb-source-link" href="https://www.kaggle.com/" target="_blank" rel="noopener">View Kaggle leaderboard →</a>
     </div>
 
     <div class="lb-table-wrap">
@@ -943,14 +953,14 @@
 <!-- REGISTRATION -->
 <section id="registration" data-page="2">
   <div class="inner">
-    <span class="section-tag">How to participate</span>
-    <h2 class="section-title">Registration</h2>
-    <p class="section-desc"><strong style="color:var(--text-primary)">Step 1.</strong> Register your team on this official website using the form below — required to be eligible for prizes, announcements, and finals invitations. <strong style="color:var(--text-primary)">Step 2.</strong> Join the competition on Kaggle and create your team there with the <strong style="color:var(--text-primary)">same team name</strong>. <strong style="color:var(--red)">⚠ Your Kaggle team name must exactly match the team name registered here — otherwise your certificate and shortlist notification cannot reach you.</strong></p>
+    <span class="section-tag">Existing Team Records</span>
+    <h2 class="section-title">Team Registration Records</h2>
+    <p class="section-desc"><strong style="color:var(--text-primary)">Kaggle submissions closed on September 15, 2026.</strong> The registration form remains available for existing participating teams to provide organizer contact records; it does not reopen Kaggle entries or extend any deadline. For corrections or finals logistics, email <a href="mailto:cuhkx.competition@gmail.com">cuhkx.competition@gmail.com</a>. <strong style="color:var(--red)">Your registered team name must exactly match your Kaggle team name so certificates and notifications can be matched correctly.</strong></p>
 
     <div class="prereg-card">
       <div class="prereg-left">
-        <h3>Step 1 — Register Your Team</h3>
-        <p>Submit your team info so we can keep you in the loop on competition news, finals logistics, prize coordination, and last-minute announcements. Takes about 2 minutes to fill out.</p>
+        <h3>Existing Teams — Registration Records</h3>
+        <p>Provide team contact information for certificates, finals logistics, and prize coordination. This organizer form does not create a new Kaggle competition entry.</p>
         <button type="button" class="btn-p prereg-cta" id="prereg-open">Open Registration Form →</button>
       </div>
       <div class="prereg-right">
@@ -967,23 +977,23 @@
       </div>
     </div>
 
-    <p class="tag-label" style="margin-top:2rem;">Step 2 — Join on Kaggle (use the same team name)</p>
+    <p class="tag-label" style="margin-top:2rem;">Kaggle track pages (submissions closed)</p>
     <div class="reg-tracks">
       <div class="reg-track-card">
         <span class="reg-tag sm">Small Model Track</span>
         <h3>Lightweight HAR</h3>
         <p>Multimodal action recognition under resource constraints. Build efficient CNN / RNN / Transformer architectures — no large pretrained backbones permitted.</p>
-        <a href="https://www.kaggle.com/competitions/cuhk-x-competition-small-model-track" class="btn-p reg-btn" target="_blank" rel="noopener">Register on Kaggle →</a>
+        <a href="https://www.kaggle.com/competitions/cuhk-x-competition-small-model-track" class="btn-p reg-btn" target="_blank" rel="noopener">View Competition →</a>
       </div>
       <div class="reg-track-card">
         <span class="reg-tag lm">Large Model Track</span>
         <h3>VQA · HAU &amp; HARn</h3>
         <p>Vision-language models on depth and non-RGB modalities. Tackle 6,160 VQA questions across five reasoning types — no parameter limit.</p>
-        <a href="https://www.kaggle.com/competitions/cuhk-x-competition-large-model-track" class="btn-p reg-btn" target="_blank" rel="noopener">Register on Kaggle →</a>
+        <a href="https://www.kaggle.com/competitions/cuhk-x-competition-large-model-track" class="btn-p reg-btn" target="_blank" rel="noopener">View Competition →</a>
       </div>
     </div>
 
-    <p class="tag-label">Registration Steps</p>
+    <p class="tag-label">Original Registration Steps (Kaggle Phase Closed)</p>
     <div class="reg-steps">
       <div class="reg-step">
         <div class="reg-step-n">01</div>
@@ -1366,7 +1376,7 @@
   <div class="modal">
     <button type="button" class="modal-close" id="reg-modal-close" aria-label="Close">×</button>
     <h3 id="reg-modal-title">Team Registration</h3>
-    <p class="modal-sub">CUHK-X Multimodal Human Activity Challenge · 2026</p>
+    <p class="modal-sub">Existing team records only · Kaggle submissions closed September 15, 2026. This form does not reopen entries.</p>
 
     <form id="reg-form">
       <div class="form-row">
@@ -1490,12 +1500,12 @@ function renderLeaderboard(track) {
     const tc = trackData && (trackData.team_count ?? trackData.teamCount);
     const label = track === 'small' ? 'Small Model Track' : 'Large Model Track';
     teamCountEl.innerHTML = (typeof tc === 'number' && tc >= 0)
-      ? `<strong>${tc}</strong> teams competing in the ${label}`
+      ? `<strong>${tc}</strong> teams recorded in the ${label}`
       : '';
   }
 
   if (!trackData || !trackData.entries || trackData.entries.length === 0) {
-    body.innerHTML = '<tr><td colspan="4" class="lb-empty"><strong>Leaderboard not yet available</strong>Competition opens Jun 20, 2026. Rankings will populate automatically once submissions begin.</td></tr>';
+    body.innerHTML = '<tr><td colspan="4" class="lb-empty"><strong>Public snapshot unavailable</strong>The saved public leaderboard could not be loaded. Please try again later; private results are not published here.</td></tr>';
     return;
   }
 

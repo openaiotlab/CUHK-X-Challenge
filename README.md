@@ -19,7 +19,7 @@
 </p>
 
 <p align="center">
-  <a href="https://openaiotlab.github.io/CUHK-X-Challenge/#registration"><b>📝 Register your team</b></a> &nbsp;·&nbsp;
+  <a href="https://openaiotlab.github.io/CUHK-X-Challenge/#registration"><b>📝 Existing team records</b></a> &nbsp;·&nbsp;
   <a href="#-the-two-tracks"><b>🎯 Pick a track</b></a> &nbsp;·&nbsp;
   <a href="#-dataset"><b>📥 Get the data</b></a> &nbsp;·&nbsp;
   <a href="#-rules--verification"><b>📋 Read the rules</b></a> &nbsp;·&nbsp;
@@ -28,13 +28,17 @@
 
 > The **CUHK-X Multimodal Human Activity Challenge** is the first large-scale international competition that **excludes RGB data entirely**. Models learn human dynamics from **depth, IMU, mmWave radar, skeleton, thermal and infrared** streams — mirroring the deployment reality of healthcare, smart-home and elderly-care systems, where visual privacy must be preserved during training, validation *and* inference. Two parallel Kaggle tracks, USD $20,000 in prizes, finals alongside UbiComp 2026 in Shanghai.
 
-## 🚀 Quick start
+## 📌 Current status (October 5, 2026)
+
+Kaggle submissions closed on **September 15, 2026**. The **Grand Finals are scheduled for October 12, 2026 in Shanghai**. Existing teams should contact **cuhkx.competition@gmail.com** for registration-record corrections and finals logistics. The organizer registration form does not reopen Kaggle entries or extend competition deadlines.
+
+## 🚀 Original participation steps (Kaggle phase closed)
 
 ```
 1. Register your team  →  openaiotlab.github.io/CUHK-X-Challenge/#registration
 2. Join on Kaggle      →  create a team with the EXACT SAME name
 3. Download the data   →  Hugging Face / Google Drive / Baidu Netdisk (below)
-4. Submit predictions  →  the private leaderboard decides your ranking
+4. Submit predictions  →  the private leaderboard selects the verification shortlist
 ```
 
 > [!IMPORTANT]
@@ -47,7 +51,7 @@
 | **Host** | The Chinese University of Hong Kong · [AIoT Lab](https://github.com/openaiotlab) |
 | **Platform** | Kaggle — two parallel competitions |
 | **Duration** | June 20 – September 15, 2026 |
-| **Finals** | UbiComp 2026 · Shanghai · October 11, 2026 |
+| **Finals** | UbiComp 2026 · Shanghai · October 12, 2026 |
 | **Tracks** | Small Model (HAR) · Large Model (VQA) |
 | **Modalities** | Depth · IMU · mmWave · Skeleton · Thermal · Infrared — **no RGB** |
 | **Action classes** | 40 daily activities |
@@ -149,9 +153,9 @@ Beyond the prize tiers, every participating team is recognised through a **five-
 
 ## 📊 Leaderboard
 
-The [official site](https://openaiotlab.github.io/CUHK-X-Challenge/#leaderboard) shows the **top 6 teams per track**, auto-synced from Kaggle every day at **02:00 UTC** by [`.github/workflows/update-leaderboard.yml`](.github/workflows/update-leaderboard.yml) into [`leaderboard.json`](leaderboard.json).
+The [official site](https://openaiotlab.github.io/CUHK-X-Challenge/#leaderboard) shows the **last published public leaderboard snapshot (top 6 per track)** from [`leaderboard.json`](leaderboard.json). The [daily workflow](.github/workflows/update-leaderboard.yml) runs at **02:00 UTC**, but the updater intentionally skips refreshes after the September 15 freeze to prevent disclosure of private leaderboard results.
 
-The public leaderboard is for reference only — **the private leaderboard decides the final ranking.**
+The public snapshot is for reference only and **is not the verified Grand Finals shortlist**. The Kaggle private leaderboard selects the verification shortlist and contributes **20%** of finalist scoring; the final standings combine all six scoring components listed above.
 
 <p align="center">
   <a href="https://www.kaggle.com/competitions/cuhk-x-competition-small-model-track/leaderboard"><b>Small Model Track leaderboard →</b></a> &nbsp;·&nbsp;
@@ -205,7 +209,7 @@ This repository hosts the challenge website (GitHub Pages) and its supporting sc
 | Path | What it is |
 |---|---|
 | [`index.html`](index.html) | The entire single-page website — no build step, no framework |
-| [`leaderboard.json`](leaderboard.json) | Top 6 per track, auto-synced from Kaggle |
+| [`leaderboard.json`](leaderboard.json) | Last published public snapshot, top 6 per track |
 | [`Rule/`](Rule/) | Dataset license and the bilingual IP clauses PDF |
 | [`scripts/update_leaderboard.py`](scripts/update_leaderboard.py) | Fetches both Kaggle leaderboards → `leaderboard.json` |
 | [`scripts/make_ip_pdf.py`](scripts/make_ip_pdf.py) | Generates the bilingual IP clauses PDF |
