@@ -135,8 +135,8 @@ Each track carries an independent USD $10,000 pool — the prizes below apply to
 | 🥇 | 1st Place | **$6,000** |
 | 🥈 | 2nd Place | **$3,000** |
 | 🥉 | 3rd Place | **$1,000** |
-| 📄 | Best Report Award | Open to formally invited top-ranked teams · selected by review committee |
-| ⭐ | Most Popular Award | Community vote / most innovative |
+| 📄 | Best Report Award | Open to top-ranked teams that received a formal invitation · recipients selected by the review committee |
+| ⭐ | Most Popular Award | Online community vote · opened Oct 1, closed Oct 10, 2026 (23:59 UTC) |
 | 🎓 | Best Faculty Advisor Award | Selected by the competition committee in recognition of outstanding mentorship, considering factors such as team performance and overall contribution to the challenge. |
 
 Beyond the prize tiers, every participating team is recognised through a **five-tier certificate system** per track. Tiers are nested — each team receives only its highest-qualifying award.
@@ -149,7 +149,7 @@ Beyond the prize tiers, every participating team is recognised through a **five-
 | 📜 | Distinction Award | Kaggle private LB Top 30% (excl. above) |
 | ✨ | Successful Participation Award | Teams with ≥ 1 valid submission |
 
-✈️ **Travel grants** — up to **USD $500 per finalist team** attending in person at UbiComp 2026 Shanghai, reimbursed against actual expenses. Teams unable to travel may join remotely via Zoom (organizers run the projector and coordinate live Q&A) and remain fully eligible for prizes and awards.
+✈️ **Travel grants** — up to **USD $500 per finalist team** attending in person at UbiComp 2026 Shanghai, reimbursed against actual expenses. Teams unable to travel may join remotely via Zoom (organizers run the projector and coordinate live Q&A) and remain fully eligible for prizes and awards. Teams joining the Grand Finals remotely via Zoom do not need to register for the UbiComp / ISWC 2026 conference.
 
 ## 📊 Leaderboard
 
