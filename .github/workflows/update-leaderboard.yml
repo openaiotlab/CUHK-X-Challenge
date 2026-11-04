@@ -1,10 +1,8 @@
 name: Update Leaderboard
 
 on:
-  schedule:
-    # 02:00 UTC = 10:00 HKT (UTC+8) every day
-    - cron: '0 2 * * *'
-  # Allow manual trigger from the Actions tab
+  # Scheduled daily updates disabled after the competition ended (finals 2026-10-11).
+  # Manual trigger only — run from the Actions tab if a one-off update is ever needed.
   workflow_dispatch:
 
 permissions:
