@@ -193,12 +193,12 @@
   }
 
   /* HERO */
-  #hero { padding-top: 2.5rem; padding-bottom: 3rem; text-align: center; }
-  .hero-badge { display: inline-block; font-size: 0.82rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; background: var(--cyan-dim); border: 1px solid var(--border2); padding: 0.4rem 1.1rem; border-radius: 20px; color: var(--cyan); margin-bottom: 1rem; }
-  #hero h1 { font-size: clamp(2.2rem, 4.5vw, 3rem); font-weight: 700; line-height: 1.15; color: var(--text-primary); margin-bottom: 1rem; letter-spacing: -0.02em; }
-  #hero h1 span { color: var(--cyan); }
-  #hero .lead { font-size: 1.1rem; color: var(--text-secondary); max-width: 660px; margin: 0 auto 1.8rem; line-height: 1.8; }
+  #hero { padding-top: 1.5rem; padding-bottom: 2rem; text-align: center; }
+  #hero h1 { font-size: clamp(1.8rem, 4.5vw, 2.6rem); font-weight: 700; line-height: 1.15; color: var(--text-primary); margin-bottom: 0.6rem; letter-spacing: -0.02em; }
+  #hero .lead { font-size: 0.95rem; color: var(--text-secondary); margin: 0 auto; line-height: 1.6; }
+  .home-thanks { margin: 1.2rem auto; color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; }
   .hero-btns { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; }
+  #overview .hero-btns { justify-content: flex-start; margin-top: 1.5rem; }
   .btn-p { background: var(--cyan); color: #ffffff; font-weight: 600; font-size: 0.95rem; padding: 0.75rem 1.8rem; border-radius: 5px; transition: background-color 0.15s; }
   .btn-p:hover { background: #174c9f; color: #ffffff; }
   .btn-o { background: var(--card-bg); border: 1px solid var(--border2); color: var(--text-secondary); font-size: 0.95rem; padding: 0.75rem 1.8rem; border-radius: 5px; transition: all 0.15s; font-weight: 500; }
@@ -222,7 +222,7 @@
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1.2rem;
-    margin-top: 2rem;
+    margin-top: 1.3rem;
     text-align: left;
   }
   .finals-gallery figure {

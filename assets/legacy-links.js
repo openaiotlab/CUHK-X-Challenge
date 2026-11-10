@@ -1,6 +1,7 @@
 // Keep links to sections of the original single-page site working.
 (() => {
   const destinations = {
+    "overview": "competition.html#overview",
     "results": "results.html#results",
     "news": "news.html#news",
     "format": "competition.html#format",
