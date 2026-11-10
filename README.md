@@ -12,15 +12,15 @@
 </p>
 
 <p align="center">
-  <a href="#-timeline"><img src="https://img.shields.io/badge/Submissions%20close-Sep%2015%2C%202026-F87171" alt="Submissions close September 15, 2026"></a>
+  <a href="#final-results"><img src="https://img.shields.io/badge/Final%20results-Published-2DD4BF" alt="Final results published"></a>
   <a href="#-timeline"><img src="https://img.shields.io/badge/Finals-UbiComp%202026%20·%20Shanghai-8A2BE2" alt="Finals at UbiComp 2026, Shanghai"></a>
   <a href="https://dl.acm.org/doi/epdf/10.1145/3745756.3809209"><img src="https://img.shields.io/badge/Paper-MobiSys'26-red?logo=acm&logoColor=white" alt="MobiSys 2026 paper"></a>
   <a href="https://openaiotlab.github.io/CUHK-X/"><img src="https://img.shields.io/badge/Dataset-CUHK--X-2DD4BF" alt="CUHK-X dataset"></a>
 </p>
 
 <p align="center">
-  <a href="https://openaiotlab.github.io/CUHK-X-Challenge/#registration"><b>📝 Existing team records</b></a> &nbsp;·&nbsp;
-  <a href="#-the-two-tracks"><b>🎯 Pick a track</b></a> &nbsp;·&nbsp;
+  <a href="#final-results"><b>🏅 Final results</b></a> &nbsp;·&nbsp;
+  <a href="#-the-two-tracks"><b>🎯 Explore the tracks</b></a> &nbsp;·&nbsp;
   <a href="#-dataset"><b>📥 Get the data</b></a> &nbsp;·&nbsp;
   <a href="#-rules--verification"><b>📋 Read the rules</b></a> &nbsp;·&nbsp;
   <a href="#-leaderboard"><b>📊 Leaderboard</b></a>
@@ -28,21 +28,17 @@
 
 > The **CUHK-X Multimodal Human Activity Challenge** is the first large-scale international competition that **excludes RGB data entirely**. Models learn human dynamics from **depth, IMU, mmWave radar, skeleton, thermal and infrared** streams — mirroring the deployment reality of healthcare, smart-home and elderly-care systems, where visual privacy must be preserved during training, validation *and* inference. Two parallel Kaggle tracks, USD $20,000 in prizes, finals alongside UbiComp 2026 in Shanghai.
 
-## 📌 Current status (October 5, 2026)
+## Final results
 
-Kaggle submissions closed on **September 15, 2026**. The **Grand Finals are scheduled for October 12, 2026 in Shanghai**. Existing teams should contact **cuhkx.competition@gmail.com** for registration-record corrections and finals logistics. The organizer registration form does not reopen Kaggle entries or extend competition deadlines.
+**Noahksz** won the Small Model Track for human activity recognition. **Salty Taro** won the Large Model Track for visual question answering. The awards ceremony took place at UbiComp 2026 in Shanghai.
 
-## 🚀 Original participation steps (Kaggle phase closed)
+| Place | Small Model Track | Large Model Track |
+|---|---|---|
+| 🥇 Gold | **Noahksz**<br><img src="assets/results/small-gold.jpg" width="320" alt="Gold award presentation for Noahksz in the Small Model Track"> | **Salty Taro**<br><img src="assets/results/large-gold.jpg" width="320" alt="Gold award presentation for Salty Taro in the Large Model Track"> |
+| 🥈 Silver | **YE Mao1023**<br><img src="assets/results/small-silver.jpg" width="320" alt="Silver award presentation for YE Mao1023 in the Small Model Track"> | **KURONAME**<br><img src="assets/results/large-silver.jpg" width="320" alt="Silver award presentation for KURONAME in the Large Model Track"> |
+| 🥉 Bronze | **han jack72819**<br><img src="assets/results/small-bronze.jpg" width="320" alt="Bronze award presentation for han jack72819 in the Small Model Track"> | **azamat1ch**<br><img src="assets/results/large-bronze.jpg" width="320" alt="Bronze award presentation for azamat1ch in the Large Model Track"> |
 
-```
-1. Register your team  →  openaiotlab.github.io/CUHK-X-Challenge/#registration
-2. Join on Kaggle      →  create a team with the EXACT SAME name
-3. Download the data   →  Hugging Face / Google Drive / Baidu Netdisk (below)
-4. Submit predictions  →  the private leaderboard selects the verification shortlist
-```
-
-> [!IMPORTANT]
-> Your Kaggle team name must match the name you register on the website **exactly** — otherwise your certificate and shortlist notification cannot reach you. Registering on the website is what makes you eligible for prizes, announcements and finals invitations.
+[View the awards ceremony gallery on the challenge website.](https://openaiotlab.github.io/CUHK-X-Challenge/#results)
 
 ## 📌 At a glance
 
@@ -61,7 +57,7 @@ Kaggle submissions closed on **September 15, 2026**. The **Grand Finals are sche
 
 ## 🎯 The two tracks
 
-Two independent competitions, each with its own Kaggle leaderboard, prize pool and evaluation criteria. You may enter **both**, but each individual may join only one team *per track*.
+Each track had its own Kaggle leaderboard, prize pool and evaluation criteria. Participants could enter both tracks with one team per track.
 
 | | 🪶 **Small Model Track** | 🧠 **Large Model Track** |
 |---|---|---|
@@ -71,7 +67,7 @@ Two independent competitions, each with its own Kaggle leaderboard, prize pool a
 | **Model constraint** | CNN / RNN / Transformer · **≤ 100 MB** · no large pretrained backbones | **No parameter limit** · LVLMs and closed-source APIs encouraged |
 | **Why it matters** | Alzheimer's monitoring, fall detection, elderly care on low-power devices | Action understanding and causal reasoning without ever seeing a face |
 | **Prize pool** | USD $10,000 | USD $10,000 |
-| **Join** | [**Kaggle →**](https://www.kaggle.com/competitions/cuhk-x-competition-small-model-track) | [**Kaggle →**](https://www.kaggle.com/competitions/cuhk-x-competition-large-model-track) |
+| **Competition page** | [Small Model Track on Kaggle](https://www.kaggle.com/competitions/cuhk-x-competition-small-model-track) | [Large Model Track on Kaggle](https://www.kaggle.com/competitions/cuhk-x-competition-large-model-track) |
 
 Both tracks share the same **cross-subject** split — train on users 1–9 & 16–24, public test on users 10–11 & 25–26, with a further private test set held out entirely.
 
@@ -91,7 +87,7 @@ Both tracks share the same **cross-subject** split — train on users 1–9 & 16
 
 ## 🗓️ Timeline
 
-The challenge runs in **three stages**: a three-month Kaggle phase, a committee-run verification and private-data evaluation stage, and the Grand Finals at UbiComp 2026.
+The challenge opened with a three-month Kaggle phase. The committee then verified submissions and evaluated them on private data before the Grand Finals at UbiComp 2026.
 
 | Date | Milestone | |
 |---|---|---|
@@ -153,9 +149,9 @@ Beyond the prize tiers, every participating team is recognised through a **five-
 
 ## 📊 Leaderboard
 
-The [official site](https://openaiotlab.github.io/CUHK-X-Challenge/#leaderboard) shows the **last published public leaderboard snapshot (top 6 per track)** from [`leaderboard.json`](leaderboard.json). The [daily workflow](.github/workflows/update-leaderboard.yml) runs at **02:00 UTC**, but the updater intentionally skips refreshes after the September 15 freeze to prevent disclosure of private leaderboard results.
+The [official site](https://openaiotlab.github.io/CUHK-X-Challenge/#leaderboard) shows the **last published public leaderboard snapshot (top 6 per track)** from [`leaderboard.json`](leaderboard.json). The public snapshot was frozen on September 15, 2026.
 
-The public snapshot is for reference only and **is not the verified Grand Finals shortlist**. The Kaggle private leaderboard selects the verification shortlist and contributes **20%** of finalist scoring; the final standings combine all six scoring components listed above.
+The Kaggle private leaderboard determined the verification shortlist and contributed **20%** of each finalist’s score. The final awards reflect all six scoring components. [See the winners above.](#final-results)
 
 <p align="center">
   <a href="https://www.kaggle.com/competitions/cuhk-x-competition-small-model-track/leaderboard"><b>Small Model Track leaderboard →</b></a> &nbsp;·&nbsp;
@@ -215,7 +211,7 @@ This repository hosts the challenge website (GitHub Pages) and its supporting sc
 | [`scripts/make_ip_pdf.py`](scripts/make_ip_pdf.py) | Generates the bilingual IP clauses PDF |
 | [`scripts/make_readme_assets.py`](scripts/make_readme_assets.py) | Renders the banner and organizer portraits used above |
 | [`photos/`](photos/) | Full-resolution organizer portraits |
-| [`.github/workflows/`](.github/workflows/) | Daily leaderboard sync — 02:00 UTC, plus manual dispatch |
+| [`.github/workflows/`](.github/workflows/) | Manually triggered leaderboard workflow |
 
 The leaderboard workflow requires the `KAGGLE_USERNAME` and `KAGGLE_KEY` repository secrets.
 
@@ -278,7 +274,7 @@ If the CUHK-X dataset or this challenge supports your research, please cite the 
 
 ## 📬 Contact
 
-Technical questions, registration help, or anything else about the challenge:
+For questions about the challenge or corrections to an existing team record, contact the organizing committee. [Existing team records](https://openaiotlab.github.io/CUHK-X-Challenge/#registration)
 
 <p align="center">
   <a href="mailto:cuhkx.competition@gmail.com"><b>cuhkx.competition@gmail.com</b></a>

@@ -80,6 +80,24 @@
   #overview .section-desc, #dataset .section-desc { max-width: none; text-align: justify; }
   .divider { height: 1px; background: var(--border); }
 
+  /* Grand Finals photo gallery */
+  #results { background: var(--section-alt); }
+  .results-track { margin-top: 2rem; }
+  .results-track h3 { margin-bottom: 0.85rem; font-size: 1.25rem; }
+  .results-podium { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+  .results-podium figure { border: 1px solid var(--border2); border-radius: 8px; background: var(--card-bg); }
+  .results-podium a { display: block; }
+  .results-podium img { display: block; width: 100%; height: auto; border-radius: 7px 7px 0 0; }
+  .results-podium figcaption { padding: 0.8rem 1rem 1rem; line-height: 1.45; }
+  .results-podium strong { display: block; font-size: 1.1rem; }
+  .result-place { font-size: 0.8rem; font-weight: 600; }
+  .result-place.gold { color: var(--amber); }
+  .result-place.silver { color: #c7d3e1; }
+  .result-place.bronze { color: #edb289; }
+  @media (max-width: 650px) {
+    .results-podium { grid-template-columns: 1fr; }
+  }
+
   /* HERO */
   #hero { padding-top: 150px; padding-bottom: 80px; text-align: center; }
   .hero-badge { display: inline-block; font-size: 0.82rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; background: var(--cyan-dim); border: 1px solid var(--border2); padding: 0.4rem 1.1rem; border-radius: 20px; color: var(--cyan); margin-bottom: 1.5rem; }
@@ -489,7 +507,7 @@
     <li><a href="#dataset">Dataset Intro</a></li>
     <li><a href="#verification">Rules</a></li>
   </ul>
-  <a href="#timeline" class="nav-past">Finals Timeline</a>
+  <a href="#results" class="nav-past">Final Results</a>
 </nav>
 
 <!-- HERO -->
@@ -498,10 +516,10 @@
     <div class="hero-badge">Co-located with UbiComp 2026 · Kaggle · Two Tracks</div>
     <h1>CUHK-X Multimodal<br/><span>Human Activity</span> Challenge</h1>
     <p class="lead">An international competition spanning lightweight efficient models and frontier multimodal LLMs on depth, infrared, thermal, IMU, mmWave radar, and skeleton modalities — built on the CUHK-X benchmark for HAR, HAU, and HARn tasks.</p>
-    <p class="section-desc" style="margin:1rem auto;max-width:760px;"><strong style="color:var(--teal)">Update · October 5, 2026:</strong> Kaggle submissions closed on September 15, 2026. The Grand Finals are scheduled for October 12, 2026 in Shanghai. See the <a href="#timeline">finals timeline</a>; existing teams can contact the organizers about registration records and finals logistics.</p>
     <div class="hero-btns">
+      <a href="#results" class="btn-p">View Final Results</a>
       <div class="hero-dd">
-        <button type="button" class="btn-p hero-dd-toggle" aria-haspopup="true" aria-expanded="false">View Kaggle Tracks <span class="caret">▾</span></button>
+        <button type="button" class="btn-o hero-dd-toggle" aria-haspopup="true" aria-expanded="false">View Kaggle Tracks <span class="caret">▾</span></button>
         <div class="hero-dd-menu" role="menu">
           <a href="https://www.kaggle.com/competitions/cuhk-x-competition-small-model-track" role="menuitem" target="_blank" rel="noopener">Small Model Track<span class="dd-sub">Lightweight HAR</span></a>
           <a href="https://www.kaggle.com/competitions/cuhk-x-competition-large-model-track" role="menuitem" target="_blank" rel="noopener">Large Model Track<span class="dd-sub">VQA · HAU &amp; HARn</span></a>
@@ -527,6 +545,50 @@
       <div class="hero-stat"><div class="val">6</div><div class="lbl">Modalities</div></div>
       <div class="hero-stat"><div class="val">40</div><div class="lbl">Action Classes</div></div>
       <div class="hero-stat"><div class="val">$20K</div><div class="lbl">Total Prize Pool</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- FINAL RESULTS -->
+<section id="results" data-page="1">
+  <div class="inner">
+    <span class="section-tag">Shanghai · October 12, 2026</span>
+    <h2 class="section-title">Grand Finals Results</h2>
+    <div class="results-track">
+      <h3>Small Model Track</h3>
+      <div class="results-podium">
+        <figure>
+          <a href="assets/results/small-gold.jpg"><img src="assets/results/small-gold.jpg" width="1200" height="800" loading="lazy" alt="Gold award presentation for Noahksz in the Small Model Track"></a>
+          <figcaption><span class="result-place gold">1st place · Gold</span><strong>Noahksz</strong></figcaption>
+        </figure>
+        <figure>
+          <a href="assets/results/small-silver.jpg"><img src="assets/results/small-silver.jpg" width="1200" height="800" loading="lazy" alt="Silver award presentation for YE Mao1023 in the Small Model Track"></a>
+          <figcaption><span class="result-place silver">2nd place · Silver</span><strong>YE Mao1023</strong></figcaption>
+        </figure>
+        <figure>
+          <a href="assets/results/small-bronze.jpg"><img src="assets/results/small-bronze.jpg" width="1200" height="800" loading="lazy" alt="Bronze award presentation for han jack72819 in the Small Model Track"></a>
+          <figcaption><span class="result-place bronze">3rd place · Bronze</span><strong>han jack72819</strong></figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="results-track">
+      <h3>Large Model Track</h3>
+      <div class="results-podium">
+        <figure>
+          <a href="assets/results/large-gold.jpg"><img src="assets/results/large-gold.jpg" width="1200" height="800" loading="lazy" alt="Gold award presentation for Salty Taro in the Large Model Track"></a>
+          <figcaption><span class="result-place gold">1st place · Gold</span><strong>Salty Taro</strong></figcaption>
+        </figure>
+        <figure>
+          <a href="assets/results/large-silver.jpg"><img src="assets/results/large-silver.jpg" width="1200" height="800" loading="lazy" alt="Silver award presentation for KURONAME in the Large Model Track"></a>
+          <figcaption><span class="result-place silver">2nd place · Silver</span><strong>KURONAME</strong></figcaption>
+        </figure>
+        <figure>
+          <a href="assets/results/large-bronze.jpg"><img src="assets/results/large-bronze.jpg" width="1200" height="800" loading="lazy" alt="Bronze award presentation for azamat1ch in the Large Model Track"></a>
+          <figcaption><span class="result-place bronze">3rd place · Bronze</span><strong>azamat1ch</strong></figcaption>
+        </figure>
+      </div>
     </div>
   </div>
 </section>
@@ -594,6 +656,10 @@
     <span class="section-tag">Latest</span>
     <h2 class="section-title">News</h2>
     <div class="news-list">
+      <div class="news-item">
+        <div class="news-date">Oct 12, 2026</div>
+        <div><span class="news-tag green">Finals</span><span class="news-text">Noahksz won the Small Model Track and Salty Taro won the Large Model Track at UbiComp 2026 in Shanghai. <a href="#results">See all six medalists and ceremony photos →</a></span></div>
+      </div>
       <div class="news-item">
         <div class="news-date">Jul 14, 2026</div>
         <div><span class="news-tag green">Dataset</span><span class="news-text">Non-visual modalities for the Large Model track — IMU, skeleton, and radar data — are now uploaded and available for download.</span></div>
@@ -846,7 +912,7 @@
   <div class="inner">
     <span class="section-tag">Public Leaderboard Snapshot</span>
     <h2 class="section-title">Leaderboard</h2>
-    <p class="section-desc">Last published public leaderboard snapshot: top 6 teams per track. Automatic refreshes stop at the September 15, 2026 freeze to avoid publishing private leaderboard results. These public ranks are not the verified Grand Finals shortlist or the final competition standings.</p>
+    <p class="section-desc">This snapshot shows the top six teams per track on the public Kaggle leaderboard at the September 15 freeze. <a href="#results">See the Grand Finals results →</a></p>
 
     <div class="lb-tabs">
       <div class="lb-tab active" data-track="small">Small Model Track</div>
@@ -1707,7 +1773,7 @@ regForm?.addEventListener('submit', async (e) => {
   // Map: section ID → which page (1 or 2)
   // Page 1 = main info; Page 2 = Leaderboard + Verification & Rules
   const PAGE_MAP = {
-    overview: 1, format: 1, awards: 1, timeline: 1, organizers: 1, contact: 1,
+    overview: 1, results: 1, format: 1, awards: 1, timeline: 1, organizers: 1, contact: 1,
     leaderboard: 2, news: 2, registration: 2, dataset: 2, verification: 2
   };
   const HOME = 'overview';
@@ -1750,7 +1816,7 @@ regForm?.addEventListener('submit', async (e) => {
 
     // Update document title
     const titles = {
-      overview: 'Overview', news: 'News', format: 'Challenge Format',
+      overview: 'Overview', results: 'Grand Finals Results', news: 'News', format: 'Challenge Format',
       awards: 'Awards', verification: 'Rules & Verification',
       leaderboard: 'Leaderboard', timeline: 'Timeline',
       registration: 'Registration', dataset: 'Dataset Introduction',
