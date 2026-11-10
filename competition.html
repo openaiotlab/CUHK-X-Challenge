@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Challenge Format · CUHK-X Challenge</title>
+<meta name="description" content="Challenge Format for the CUHK-X Multimodal Human Activity Challenge at UbiComp 2026 in Shanghai."/>
+<link rel="canonical" href="https://openaiotlab.github.io/CUHK-X-Challenge/competition.html"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Challenge Format · CUHK-X Challenge"/>
+<meta property="og:description" content="Challenge Format for the CUHK-X Multimodal Human Activity Challenge at UbiComp 2026 in Shanghai."/>
+<meta property="og:url" content="https://openaiotlab.github.io/CUHK-X-Challenge/competition.html"/>
+<meta property="og:image" content="https://openaiotlab.github.io/CUHK-X-Challenge/assets/banner.png"/>
+<meta property="og:image:alt" content="CUHK-X Multimodal Human Activity Challenge"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="assets/site.css"/>
+<script src="assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-header">
+  <nav class="site-nav" aria-label="Main navigation">
+    <a href="index.html" class="nav-logo">CUHK<span>-X</span> Challenge</a>
+    <button type="button" class="nav-toggle" aria-controls="site-menu" aria-expanded="false" hidden>Menu</button>
+    <ul class="nav-links" id="site-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="results.html">Results</a></li>
+        <li><a href="competition.html" class="active" aria-current="page">Challenge</a></li>
+        <li><a href="dataset.html">Dataset</a></li>
+        <li><a href="rules.html">Rules</a></li>
+        <li><a href="organizers.html">Organizers</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+<nav class="page-nav" aria-label="Challenge pages">
+  <a href="competition.html" aria-current="page">Tracks and Format</a>
+  <a href="awards.html">Awards</a>
+  <a href="timeline.html">Timeline</a>
+</nav>
+<main id="main-content" tabindex="-1">
+<section id="format">
+  <div class="inner">
+    <span class="section-tag">Competition structure</span>
+    <h1 class="section-title">Challenge Format</h1>
+    <p class="section-desc">Two independent parallel tracks, each with its own Kaggle leaderboard, prize pool, and evaluation criteria.</p>
+
+    <div class="tracks">
+      <div class="track-card">
+        <div class="track-head">
+          <div class="track-head-top">
+            <h3>Small Model Track</h3>
+            <span class="track-badge sm">HAR · Lightweight</span>
+          </div>
+          <p>Efficient multimodal Human Activity Recognition</p>
+        </div>
+        <div class="track-body">
+          <p class="tdesc">Targeted at <strong style="color:var(--text-primary)">resource-constrained edge deployment</strong> in smart home and healthcare scenarios — applications such as Alzheimer's monitoring, fall detection, and elderly care, where models must run on low-power devices with limited memory and compute.</p>
+          <p class="tdesc">Participants build lightweight multimodal models that fuse <strong style="color:var(--text-primary)">depth, infrared, and thermal imagery, IMU streams, mmWave radar, and skeleton keypoints</strong> to classify 40 daily activities under strict <strong style="color:var(--text-primary)">cross-subject</strong> evaluation. Traditional architectures (CNN, RNN, Transformer) are encouraged; large pretrained foundation models are not permitted — placing the spotlight on architecture design, sensor fusion, and inference efficiency.</p>
+          <div class="spec-list">
+            <div class="spec-item"><span class="spec-k">Task</span><span class="spec-v">40-class HAR · Cross-Subject</span></div>
+            <div class="spec-item"><span class="spec-k">Cross-Subject Split</span><span class="spec-v">Train: user 1–9, 16–24 · Test: user 10–11, 25–26</span></div>
+            <div class="spec-item"><span class="spec-k">Primary Modalities</span><span class="spec-v">Depth, IMU, mmWave, Skeleton, IR, Thermal</span></div>
+            <div class="spec-item"><span class="spec-k">Model Constraint</span><span class="spec-v">CNN / RNN / Transformer · <strong style="color:var(--text-primary)">model size ≤ 100 MB</strong> · no large pretrained backbones</span></div>
+            <div class="spec-item"><span class="spec-k">Prize Pool</span><span class="spec-v" style="color:var(--amber);font-weight:600;">USD $10,000</span></div>
+          </div>
+          <div class="score-h">Final Scoring Breakdown (for finalists)</div>
+          <div class="sc-row"><span class="sc-label">Kaggle Private LB</span><div class="sc-bg"><div class="sc-bar t" style="width:20%"></div></div><span class="sc-pct">20%</span></div>
+          <div class="sc-row"><span class="sc-label">Organizer-Run Private-Data Evaluation</span><div class="sc-bg"><div class="sc-bar t" style="width:30%"></div></div><span class="sc-pct">30%</span></div>
+          <div class="sc-row"><span class="sc-label">Reproducibility (Selection Stage)</span><div class="sc-bg"><div class="sc-bar t" style="width:10%"></div></div><span class="sc-pct">10%</span></div>
+          <div class="sc-row"><span class="sc-label">Technical Report</span><div class="sc-bg"><div class="sc-bar t" style="width:20%"></div></div><span class="sc-pct">20%</span></div>
+          <div class="sc-row"><span class="sc-label">Presentation</span><div class="sc-bg"><div class="sc-bar t" style="width:10%"></div></div><span class="sc-pct">10%</span></div>
+          <div class="sc-row"><span class="sc-label">Model Efficiency</span><div class="sc-bg"><div class="sc-bar t" style="width:10%"></div></div><span class="sc-pct">10%</span></div>
+        </div>
+      </div>
+
+      <div class="track-card">
+        <div class="track-head">
+          <div class="track-head-top">
+            <h3>Large Model Track</h3>
+            <span class="track-badge lm">VQA · HAU &amp; HARn</span>
+          </div>
+          <p>LVLMs on depth &amp; non-RGB modalities</p>
+        </div>
+        <div class="track-body">
+          <p class="tdesc">Pushes the frontier of <strong style="color:var(--text-primary)">Large Vision-Language Models</strong> on non-RGB modalities.</p>
+          <p class="tdesc">Participants tackle <strong style="color:var(--text-primary)">Human Action Understanding (HAU)</strong> and <strong style="color:var(--text-primary)">Human Action Reasoning (HARn)</strong> through privacy-preserving video <strong style="color:var(--text-primary)">Visual Question Answering</strong>. There is no parameter limit, encouraging exploration of prompt design, modality alignment, and fine-tuning at scale.</p>
+          <div class="spec-list">
+            <div class="spec-item"><span class="spec-k">Task</span><span class="spec-v">VQA on privacy-preserving videos</span></div>
+            <div class="spec-item"><span class="spec-k">Cross-Subject Split</span><span class="spec-v">Train: user 1–9, 16–24 · Test: user 10–11, 25–26</span></div>
+            <div class="spec-item"><span class="spec-k">Primary Modalities</span><span class="spec-v">Depth, Thermal, IR</span></div>
+            <div class="spec-item"><span class="spec-k">Model Constraint</span><span class="spec-v">No parameter limit · LVLMs encouraged</span></div>
+            <div class="spec-item"><span class="spec-k">Prize Pool</span><span class="spec-v" style="color:var(--amber);font-weight:600;">USD $10,000</span></div>
+          </div>
+          <div class="score-h">Final Scoring Breakdown (for finalists)</div>
+          <div class="sc-row"><span class="sc-label">Kaggle Private LB</span><div class="sc-bg"><div class="sc-bar c" style="width:20%"></div></div><span class="sc-pct">20%</span></div>
+          <div class="sc-row"><span class="sc-label">Organizer-Run Private-Data Evaluation</span><div class="sc-bg"><div class="sc-bar c" style="width:30%"></div></div><span class="sc-pct">30%</span></div>
+          <div class="sc-row"><span class="sc-label">Reproducibility (Selection Stage)</span><div class="sc-bg"><div class="sc-bar c" style="width:10%"></div></div><span class="sc-pct">10%</span></div>
+          <div class="sc-row"><span class="sc-label">Technical Report</span><div class="sc-bg"><div class="sc-bar c" style="width:20%"></div></div><span class="sc-pct">20%</span></div>
+          <div class="sc-row"><span class="sc-label">Presentation</span><div class="sc-bg"><div class="sc-bar c" style="width:10%"></div></div><span class="sc-pct">10%</span></div>
+          <div class="sc-row"><span class="sc-label">Model Efficiency</span><div class="sc-bg"><div class="sc-bar c" style="width:10%"></div></div><span class="sc-pct">10%</span></div>
+        </div>
+      </div>
+    </div>
+
+    <p style="font-size:0.72rem;font-weight:600;text-transform:uppercase;letter-spacing:0.09em;color:var(--text-muted);margin-top:2.5rem;margin-bottom:0.5rem;">Three-Stage Competition · Both Tracks</p>
+    <div class="stages-intro">
+      The CUHK-X Challenge runs across <strong>three stages</strong>: a 3-month Kaggle phase, a committee-run verification and private-data evaluation stage, and the <strong>Grand Finals at UbiComp 2026 in Shanghai</strong>. Top 15 teams per track on the Kaggle private leaderboard advance to verification; top 6 then advance to the Grand Finals.
+    </div>
+    <div class="stages">
+      <div class="stage">
+        <div class="stage-n">01</div>
+        <h4>Kaggle Open Competition</h4>
+        <div class="stage-period">Jun 20 – Sep 15, 2026 · 3 months</div>
+        <ul>
+          <li>Submit prediction CSVs to Kaggle</li>
+          <li>Public leaderboard for reference; <strong>private leaderboard</strong> decides ranking</li>
+          <li>Certificate awards: <strong>Excellence (Top 15%)</strong>, Distinction (Top 30%), Successful Participation</li>
+          <li><strong>Top 15 teams per track</strong> advance to Verification &amp; Evaluation</li>
+        </ul>
+      </div>
+      <div class="stage stage-selection">
+        <div class="stage-n">02</div>
+        <h4>Verification &amp; Evaluation</h4>
+        <div class="stage-period">Sep 19 – Sep 30, 2026 · 12 days</div>
+        <ul>
+          <li>Top 15 submit the <strong>verification package</strong> (code, weights, inference script, README, final submission, signed honor declaration) by <strong>Sep 18, 23:59 UTC</strong></li>
+          <li>Organizing Committee reproduces each solution from the submitted code, model artifacts, configuration, and setup instructions</li>
+          <li>Organizer-run <strong>private-data evaluation</strong> on organizer-controlled private data (30% of final scoring)</li>
+          <li><strong>Top 6 teams per track</strong> advance to the Grand Finals</li>
+        </ul>
+      </div>
+      <div class="stage stage-finals">
+        <div class="stage-n">03</div>
+        <h4>Grand Finals <span class="ubicomp-badge">UbiComp 2026</span></h4>
+        <div class="stage-period">Oct 12, 2026 · Shanghai · 1 day</div>
+        <ul>
+          <li><strong>No on-site private-test inference</strong> — the private-data evaluation is completed before the finals</li>
+          <li><strong>Finalist presentations:</strong> 5 minutes + 5 minutes Q&amp;A per team, in English</li>
+          <li>Awards ceremony + <strong>USD $500 travel grant</strong> per attending finalist team</li>
+          <li>Remote participation via Zoom supported if travel is not possible</li>
+        </ul>
+      </div>
+    </div>
+    <div class="stages-intro report-award-note" style="margin-top:1.5rem;">
+      <p><strong>Technical Report and Best Report Award.</strong> Following the leaderboard freeze, a broader group of top-ranked teams in each track will be formally invited by the Organizing Committee to submit a technical report for consideration for the Best Report Award. Reports from invited teams are due by <strong>23:59 UTC on October 1, 2026</strong> (07:59 UTC+8 on October 2).</p>
+      <p style="margin-top:0.8rem;"><strong>All invited teams</strong> remain eligible for the Best Report Award whether or not they advance to the Grand Finals. Award recipients who do not advance will be notified by email and receive an electronic certificate. <strong>For finalist teams,</strong> the report also contributes to the 20% Technical Report component of final scoring. Selection for the Best Report Award is conducted independently of Grand Finals qualification.</p>
+    </div>
+  </div>
+</section>
+</main>
+<footer>
+  <p>© CUHK-X Multimodal Human Activity Challenge 2026 · CUHK AIoT Lab</p>
+  <p class="footer-links">
+    <a href="news.html">News</a>
+    <a href="timeline.html">Timeline</a>
+    <a href="leaderboard.html">Kaggle Public Snapshot</a>
+    <a href="registration.html">Team Records</a>
+    <a href="https://github.com/openaiotlab/CUHK-X-Challenge">GitHub</a>
+  </p>
+</footer>
+</body>
+</html>

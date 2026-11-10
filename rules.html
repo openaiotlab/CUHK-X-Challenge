@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Verification and Rules · CUHK-X Challenge</title>
+<meta name="description" content="Verification and Rules for the CUHK-X Multimodal Human Activity Challenge at UbiComp 2026 in Shanghai."/>
+<link rel="canonical" href="https://openaiotlab.github.io/CUHK-X-Challenge/rules.html"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Verification and Rules · CUHK-X Challenge"/>
+<meta property="og:description" content="Verification and Rules for the CUHK-X Multimodal Human Activity Challenge at UbiComp 2026 in Shanghai."/>
+<meta property="og:url" content="https://openaiotlab.github.io/CUHK-X-Challenge/rules.html"/>
+<meta property="og:image" content="https://openaiotlab.github.io/CUHK-X-Challenge/assets/banner.png"/>
+<meta property="og:image:alt" content="CUHK-X Multimodal Human Activity Challenge"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="assets/site.css"/>
+<script src="assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-header">
+  <nav class="site-nav" aria-label="Main navigation">
+    <a href="index.html" class="nav-logo">CUHK<span>-X</span> Challenge</a>
+    <button type="button" class="nav-toggle" aria-controls="site-menu" aria-expanded="false" hidden>Menu</button>
+    <ul class="nav-links" id="site-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="results.html">Results</a></li>
+        <li><a href="competition.html">Challenge</a></li>
+        <li><a href="dataset.html">Dataset</a></li>
+        <li><a href="rules.html" class="active" aria-current="page">Rules</a></li>
+        <li><a href="organizers.html">Organizers</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+<main id="main-content" tabindex="-1">
+<section id="verification">
+  <div class="inner">
+    <span class="section-tag">Anti-Cheating &amp; Reproducibility</span>
+    <h1 class="section-title">Verification &amp; Rules</h1>
+    <p class="section-desc">The Top 15 teams per track on the Kaggle private leaderboard submit a verification package. The Organizing Committee reproduces each solution from the submitted code, model artifacts, configuration, and setup instructions to verify successful execution and consistency with the team's selected Kaggle submission. The organizer-run private-data evaluation also takes place during this period.</p>
+
+    <div class="verif-cards">
+      <div class="verif-card">
+        <span class="verif-badge a">What you submit</span>
+        <h3>Submission Package</h3>
+        <p>By Sep 18, 2026, 23:59 UTC, Top 15 teams upload:</p>
+        <ul>
+          <li><code>code/</code> — full training and inference code</li>
+          <li><code>checkpoints/model.pth</code> — final model weights</li>
+          <li><code>inference.sh</code> — single entry script (data_dir → CSV)</li>
+          <li><code>README.md</code> — reproducibility artifact</li>
+          <li><code>final_submission.csv</code> — final Kaggle submission</li>
+          <li><code>honor_declaration.pdf</code> — signed</li>
+        </ul>
+      </div>
+      <div class="verif-card">
+        <span class="verif-badge b">How verification runs</span>
+        <h3>Reproduction and Private-Data Evaluation</h3>
+        <p>The committee follows each team's README and uses the submitted code, model artifacts, and configuration to run the submitted solution.</p>
+        <ul>
+          <li>Verifies successful execution and consistency with the selected Kaggle submission</li>
+          <li>Organizer-run private-data evaluation on organizer-controlled private data (30% of final scoring)</li>
+          <li>Issues → committee contacts the team privately for clarification or a closed verification session</li>
+          <li>Teams that cannot be verified may be replaced by reserve teams</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 class="verif-section-h3">Track-Specific Rules</h3>
+
+    <div class="rules-block">
+      <h4 class="rules-h4">Both Tracks · Strictly Forbidden</h4>
+      <ul class="rules-list">
+        <li>Manual labeling of test samples</li>
+        <li>Using test set ground-truth labels in training (any form)</li>
+        <li>Multi-account registration or collusion between teams</li>
+      </ul>
+    </div>
+
+    <div class="rules-block">
+      <h4 class="rules-h4">Small Model Track · Additional Restrictions</h4>
+      <ul class="rules-list">
+        <li>No large pretrained backbones</li>
+        <li>No closed-source APIs or LLMs for development</li>
+        <li>No API / LLM labeling of training data</li>
+      </ul>
+    </div>
+
+    <div class="rules-block">
+      <h4 class="rules-h4 ok">Large Model Track</h4>
+      <ul class="rules-list ok">
+        <li>Any pretrained model allowed (including LVLMs)</li>
+        <li>Closed-source APIs encouraged</li>
+        <li>LLM-based pseudo-labeling of training data permitted</li>
+        <li>Prompt engineering is part of the expected toolkit</li>
+      </ul>
+    </div>
+
+    <h3 class="verif-section-h3">IP &amp; Code Usage (Kaggle Standard)</h3>
+
+    <div class="rules-block">
+  <ul class="rules-list ok">
+    <li>
+      Participants <strong style="color:var(--text-primary)">retain full copyright</strong>
+      on all submitted code and models
+    </li>
+
+    <li>
+      All competition data are the exclusive property of
+      <strong style="color:var(--text-primary)">AIoT Lab</strong>.
+      Please download and review the detailed data license and terms here:
+      <a
+        href="Rule/LICENSE.txt"
+        download
+        style="color:var(--accent-primary); font-weight:600; text-decoration:underline;"
+      >
+        LICENSE.txt
+      </a>
+    </li>
+
+    <li>
+      Non-finalist code is <strong style="color:var(--text-primary)">destroyed</strong>
+      after the competition — no public release
+    </li>
+
+    <li>
+      <strong style="color:var(--text-primary)">Finalist teams</strong>
+      (Champion Award, Top 6 per track) must open-source their solution under
+      <strong style="color:var(--text-primary)">Apache 2.0 license</strong>
+      within 30 days of UbiComp 2026 finals — standard Kaggle Winner License practice
+    </li>
+
+    <li>
+      Finalist teams unwilling to open-source may decline their finalist status;
+      the slot is then passed to the next-ranked team
+    </li>
+  </ul>
+</div>
+  </div>
+</section>
+</main>
+<footer>
+  <p>© CUHK-X Multimodal Human Activity Challenge 2026 · CUHK AIoT Lab</p>
+  <p class="footer-links">
+    <a href="news.html">News</a>
+    <a href="timeline.html">Timeline</a>
+    <a href="leaderboard.html">Kaggle Public Snapshot</a>
+    <a href="registration.html">Team Records</a>
+    <a href="https://github.com/openaiotlab/CUHK-X-Challenge">GitHub</a>
+  </p>
+</footer>
+</body>
+</html>

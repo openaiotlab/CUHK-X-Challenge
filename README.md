@@ -34,11 +34,11 @@
 
 | Place | Small Model Track | Large Model Track |
 |---|---|---|
-| 🥇 Gold | **Noahksz**<br><img src="assets/results/small-gold.jpg" width="320" alt="Gold award presentation for Noahksz in the Small Model Track"> | **Salty Taro**<br><img src="assets/results/large-gold.jpg" width="320" alt="Gold award presentation for Salty Taro in the Large Model Track"> |
-| 🥈 Silver | **YE Mao1023**<br><img src="assets/results/small-silver.jpg" width="320" alt="Silver award presentation for YE Mao1023 in the Small Model Track"> | **KURONAME**<br><img src="assets/results/large-silver.jpg" width="320" alt="Silver award presentation for KURONAME in the Large Model Track"> |
-| 🥉 Bronze | **han jack72819**<br><img src="assets/results/small-bronze.jpg" width="320" alt="Bronze award presentation for han jack72819 in the Small Model Track"> | **azamat1ch**<br><img src="assets/results/large-bronze.jpg" width="320" alt="Bronze award presentation for azamat1ch in the Large Model Track"> |
+| 🥇 Gold | **Noahksz**<br>Noah Deniz Oksuz · London Metropolitan University<br><img src="assets/results/small-gold.jpg" width="320" alt="Gold award presentation for Noahksz in the Small Model Track"> | **Salty Taro**<br>Madhav Pallathery Vinod · Independent<br><img src="assets/results/large-gold.jpg" width="320" alt="Gold award presentation for Salty Taro in the Large Model Track"> |
+| 🥈 Silver | **YE Mao1023**<br>YE Mao · Peking University<br><img src="assets/results/small-silver.jpg" width="320" alt="Silver award presentation for YE Mao1023 in the Small Model Track"> | **KURONAME**<br>Zeyang Cao · Zhejiang University<br>Yanqing Zhou · The Chinese University of Hong Kong, Shenzhen<br><img src="assets/results/large-silver.jpg" width="320" alt="Silver award presentation for KURONAME in the Large Model Track"> |
+| 🥉 Bronze | **han jack72819**<br>Ruihan Jia · University of Chinese Academy of Sciences<br>Chang Su · University of Chinese Academy of Sciences<br><img src="assets/results/small-bronze.jpg" width="320" alt="Bronze award presentation for han jack72819 in the Small Model Track"> | **azamat1ch**<br>Azamat Yelmagambetov · Hong Kong Baptist University<br>Matthew Liew · Deloitte<br><img src="assets/results/large-bronze.jpg" width="320" alt="Bronze award presentation for azamat1ch in the Large Model Track"> |
 
-[View the awards ceremony gallery on the challenge website.](https://openaiotlab.github.io/CUHK-X-Challenge/#results)
+[View the awards ceremony gallery on the challenge website.](https://openaiotlab.github.io/CUHK-X-Challenge/results.html)
 
 ## 📌 At a glance
 
@@ -149,7 +149,7 @@ Beyond the prize tiers, every participating team is recognised through a **five-
 
 ## 📊 Leaderboard
 
-The [official site](https://openaiotlab.github.io/CUHK-X-Challenge/#leaderboard) shows the **last published public leaderboard snapshot (top 6 per track)** from [`leaderboard.json`](leaderboard.json). The public snapshot was frozen on September 15, 2026.
+The [official site](https://openaiotlab.github.io/CUHK-X-Challenge/leaderboard.html) shows the **last published public leaderboard snapshot (top 6 per track)** from [`leaderboard.json`](leaderboard.json). The public snapshot was frozen on September 15, 2026.
 
 The Kaggle private leaderboard determined the verification shortlist and contributed **20%** of each finalist’s score. The final awards reflect all six scoring components. [See the winners above.](#final-results)
 
@@ -204,7 +204,10 @@ This repository hosts the challenge website (GitHub Pages) and its supporting sc
 
 | Path | What it is |
 |---|---|
-| [`index.html`](index.html) | The entire single-page website — no build step, no framework |
+| [`index.html`](index.html) | Challenge homepage |
+| [`results.html`](results.html) | Medalists, team members, affiliations, and ceremony photos |
+| Other `.html` pages | News, challenge format, awards, timeline, dataset, rules, organizers, and contact |
+| [`assets/site.css`](assets/site.css), [`assets/site.js`](assets/site.js) | Shared page styling and navigation — no build step |
 | [`leaderboard.json`](leaderboard.json) | Last published public snapshot, top 6 per track |
 | [`Rule/`](Rule/) | Dataset license and the bilingual IP clauses PDF |
 | [`scripts/update_leaderboard.py`](scripts/update_leaderboard.py) | Fetches both Kaggle leaderboards → `leaderboard.json` |
@@ -274,7 +277,7 @@ If the CUHK-X dataset or this challenge supports your research, please cite the 
 
 ## 📬 Contact
 
-For questions about the challenge or corrections to an existing team record, contact the organizing committee. [Existing team records](https://openaiotlab.github.io/CUHK-X-Challenge/#registration)
+For questions about the challenge or corrections to an existing team record, contact the organizing committee. [Existing team records](https://openaiotlab.github.io/CUHK-X-Challenge/registration.html)
 
 <p align="center">
   <a href="mailto:cuhkx.competition@gmail.com"><b>cuhkx.competition@gmail.com</b></a>

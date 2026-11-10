@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Dataset · CUHK-X Challenge</title>
+<meta name="description" content="Dataset for the CUHK-X Multimodal Human Activity Challenge at UbiComp 2026 in Shanghai."/>
+<link rel="canonical" href="https://openaiotlab.github.io/CUHK-X-Challenge/dataset.html"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Dataset · CUHK-X Challenge"/>
+<meta property="og:description" content="Dataset for the CUHK-X Multimodal Human Activity Challenge at UbiComp 2026 in Shanghai."/>
+<meta property="og:url" content="https://openaiotlab.github.io/CUHK-X-Challenge/dataset.html"/>
+<meta property="og:image" content="https://openaiotlab.github.io/CUHK-X-Challenge/assets/banner.png"/>
+<meta property="og:image:alt" content="CUHK-X Multimodal Human Activity Challenge"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="assets/site.css"/>
+<script src="assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-header">
+  <nav class="site-nav" aria-label="Main navigation">
+    <a href="index.html" class="nav-logo">CUHK<span>-X</span> Challenge</a>
+    <button type="button" class="nav-toggle" aria-controls="site-menu" aria-expanded="false" hidden>Menu</button>
+    <ul class="nav-links" id="site-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="results.html">Results</a></li>
+        <li><a href="competition.html">Challenge</a></li>
+        <li><a href="dataset.html" class="active" aria-current="page">Dataset</a></li>
+        <li><a href="rules.html">Rules</a></li>
+        <li><a href="organizers.html">Organizers</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+<main id="main-content" tabindex="-1">
+<section id="dataset">
+  <div class="inner">
+    <span class="section-tag">The data behind the challenge</span>
+    <h1 class="section-title">Dataset Introduction</h1>
+    <p class="section-desc">
+      Most large vision-language models still depend almost entirely on RGB data, while modalities such as depth, thermal imaging, IMU, and millimeter-wave radar remain severely underrepresented. The root cause is a lack of large-scale, high-quality paired multimodal datasets.
+    </p>
+    <p class="section-desc" style="margin-top:0.8rem;">
+      CUHK-X, built by the AIoT Lab at CUHK, addresses this gap with <strong style="color:var(--text-primary)">64,267 samples</strong> across seven fully synchronized modalities collected from 30 participants performing 40 daily activities across two real-world indoor environments. Annotations follow a Ground-Truth First strategy, combining LLM-generated scene descriptions with human review to ensure temporal and logical consistency. The dataset supports three progressive tasks: HAR (action classification), HAU (action understanding), and HARn (action reasoning).
+    </p>
+
+    <div class="ov-cols">
+      <div>
+        <div class="info-block">
+          <dt>Total Samples</dt>
+          <dd>64,267 fully synchronized recordings</dd>
+        </div>
+        <div class="info-block">
+          <dt>Participants</dt>
+          <dd>30 (diverse age and gender)</dd>
+        </div>
+        <div class="info-block">
+          <dt>Environments</dt>
+          <dd>2 real-world indoor settings</dd>
+        </div>
+        <div class="info-block">
+          <dt>Action Classes</dt>
+          <dd>40 daily life activities</dd>
+        </div>
+      </div>
+      <div>
+        <div class="info-block">
+          <dt>Dataset Modalities</dt>
+          <dd>RGB · Depth · Thermal · Infrared · Skeleton · IMU (×5) · mmWave</dd>
+        </div>
+        <div class="info-block">
+          <dt>Challenge Modalities</dt>
+          <dd style="color:var(--cyan);font-weight:600;">All except RGB</dd>
+        </div>
+        <div class="info-block">
+          <dt>Benchmark Tasks</dt>
+          <dd>HAR · HAU · HARn</dd>
+        </div>
+        <div class="info-block">
+          <dt>Annotation Strategy</dt>
+          <dd>Ground-Truth First · LLM + human review</dd>
+        </div>
+      </div>
+    </div>
+
+    <div class="split-card">
+      <h4>Cross-Subject Split — 30 Participants</h4>
+      <div class="split-row">
+        <div class="split-item">
+          <div class="sv">18</div>
+          <div class="sl">Training Set</div>
+          <div class="su">user 1–9 · 16–24</div>
+        </div>
+        <div class="split-item">
+          <div class="sv" style="color:var(--teal)">4</div>
+          <div class="sl">Public Test Set</div>
+          <div class="su">user 10,11,25–26</div>
+        </div>
+        <div class="split-item">
+          <div class="sv" style="color:var(--amber)">8</div>
+          <div class="sl">Private Test Set</div>
+          <div class="su">held out</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="dataset-actions">
+      <a href="https://openaiotlab.github.io/CUHK-X/" class="dl-btn" target="_blank" rel="noopener">
+        <div class="dl-icon">🌐</div>
+        <div class="dl-text">
+          <strong>CUHK-X Dataset Homepage</strong>
+          <span>Train &amp; test splits · 30 participants</span>
+        </div>
+      </a>
+    </div>
+
+    <p class="tag-label">Modalities — Available in Dataset</p>
+    <div class="tag-row">
+      <span class="tag tag-excluded">RGB (challenge-excluded)</span>
+      <span class="tag b">Depth</span>
+      <span class="tag b">Thermal</span>
+      <span class="tag b">Infrared</span>
+      <span class="tag b">Skeleton</span>
+      <span class="tag b">IMU ×5</span>
+      <span class="tag b">mmWave Radar</span>
+    </div>
+
+    <p class="tag-label">Benchmark Tasks</p>
+    <div class="tag-row">
+      <span class="tag t">HAR — Action Classification</span>
+      <span class="tag t">HAU — Action Understanding</span>
+      <span class="tag t">HARn — Action Reasoning</span>
+    </div>
+  </div>
+</section>
+</main>
+<footer>
+  <p>© CUHK-X Multimodal Human Activity Challenge 2026 · CUHK AIoT Lab</p>
+  <p class="footer-links">
+    <a href="news.html">News</a>
+    <a href="timeline.html">Timeline</a>
+    <a href="leaderboard.html">Kaggle Public Snapshot</a>
+    <a href="registration.html">Team Records</a>
+    <a href="https://github.com/openaiotlab/CUHK-X-Challenge">GitHub</a>
+  </p>
+</footer>
+</body>
+</html>
